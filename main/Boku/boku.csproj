@@ -170,7 +170,10 @@
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -1117,6 +1120,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>c:\windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe "$(SolutionDir)ContentHiDef\ContentHiDef.contentproj" /p:XNAContentPipelineTargetPlatform=Windows;XNAContentPipelineTargetProfile=HiDef;Configuration=$(ConfigurationName);OutDir="$(ProjectDir)bin\x86\$(ConfigurationName)" /v:Normal /t:Rebuild</PostBuildEvent>
+    <PostBuildEvent>c:\windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe "$(SolutionDir)ContentHiDef\ContentHiDef.contentproj" /p:XNAContentPipelineTargetPlatform=Windows;XNAContentPipelineTargetProfile=HiDef;Configuration=$(ConfigurationName);OutDir="$(ProjectDir)bin\x86\$(ConfigurationName)\\" /v:Normal /t:Rebuild</PostBuildEvent>
   </PropertyGroup>
 </Project>
