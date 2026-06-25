@@ -704,19 +704,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
      <yes>Так</yes>
      <no>Ні</no>
    </textDialog>
-   <microbitPatternEditor>
-     <brightness>Яскравість</brightness>
-     <duration>Тривалість</duration>
-  <toggleLED>Перемикач LED</toggleLED>
-   </microbitPatternEditor>
-
-   <microbitNeedsDriverDlg>
-     <title>BBC micro:bit потребує драйвера</title>
-     <message>Нам потрібно встановити драйвер, щоб Kodu міг спілкуватися з вашим BBC micro:bit. Щоб почати, натисніть кнопку «Встановити». Натисніть посилання нижче, щоб дізнатися більше.</message>
-     <linkLabel>Kodu та BBC micro:bit – посібник із початку роботи</linkLabel>
-     <cancelLabel>Скасувати</cancelLabel>
-     <installLabel>Встановити</installLabel>
-   </microbitNeedsDriverDlg>
 
    <buttonAliasStrings>
      <aButton>
@@ -1318,7 +1305,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
       
        Наприклад: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
      </switchNoTargetModal>
-     <microbitNeedsResetHintToast>Прошивка вашого BBC micro:bit, зачекайте...</microbitNeedsResetHintToast>
     
    </toast>
 

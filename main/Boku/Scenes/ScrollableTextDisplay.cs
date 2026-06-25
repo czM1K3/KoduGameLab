@@ -136,20 +136,6 @@ namespace Boku
 
                 GamePadInput pad = GamePadInput.GetGamePad0();
 
-                // For games using micro:bit, allow buttons to dismiss ingame dialogs.
-                if (InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.RunSim)
-                {
-                    Microbit bit = MicrobitExtras.GetMicrobitOrNull(GamePadSensor.PlayerId.All);
-                    if (bit != null)
-                    {
-                        // Allow either button to dismiss display.
-                        if (bit.State.ButtonA.IsPressed() || bit.State.ButtonB.IsPressed())
-                        {
-                            Deactivate();
-                        }
-                    }
-                }
-
                 if (Actions.Select.WasPressed)
                 {
                     Actions.Select.ClearAllWasPressedState();

@@ -82,7 +82,6 @@ namespace Boku
 
                 ThoughtBalloonManager.Update(shared.camera);
                 SaidStringManager.Update();
-                MicrobitManager.Update();
 
                 // Start with visible cursor.
                 parent.cursor3D.Activate();
@@ -995,13 +994,7 @@ namespace Boku
                     //parent.RemoveCreatablesFromScene();
 
                     timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameRunSim);
-
-                    // Refresh the list of attached microbits.
-                    {
-                        System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(MicrobitManager.RefreshWorker));
-                        t.Start();
-                    }
-
+                    
                     // Be sure all Auth UI is hidden.
                     AuthUI.HideAllDialogs();
 
@@ -1046,8 +1039,6 @@ namespace Boku
                     HelpOverlay.Pop();
 
                     Instrumentation.StopTimer(timerInstrument);
-
-                    MicrobitManager.ReleaseDevices();
 
                     base.Deactivate();
 

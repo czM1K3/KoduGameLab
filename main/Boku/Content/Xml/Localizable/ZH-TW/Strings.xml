@@ -668,12 +668,6 @@
     <no>否</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>亮度</brightness>
-    <duration>期間</duration>
-    <toggleLED>切換 LED</toggleLED>
-  </microbitPatternEditor>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1273,8 +1267,6 @@
 
 	  例如：&lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
 	</switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>正在更新你的 BBC micro:bit，請稍候...</microbitNeedsResetHintToast>
 
   </toast>
 

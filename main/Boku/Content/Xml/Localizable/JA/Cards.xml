@@ -4,7 +4,6 @@
     <keyboard label="キーボード">プレーヤーがボットを、そうさできるようにする。はんのうするキーボードのキーを指定する。</keyboard>
     <mouse label="マウス">マウスの動きにはんのうする。</mouse>
     <touch label="タッチ">画面のタッチにはんのうする。</touch>
-    <microbit label="BBC micro:bit">BBC micro:bitの入力にはんのうする。</microbit>
     <eyes label="見る">指定したタイプや色のものを見たときにはんのうする。し線フィルタを使えば、山やカベがあるときには見えないようにもできる。</eyes>
     <ears label="聞く">指定したものやタイプの音を聞いたときにはんのうする。カベが間にあっても聞こえる。</ears>
     <bumpers label="ぶつかる">指定しタイプや色、その他の物にぶつかったときにはんのうする。</bumpers>
@@ -157,14 +156,6 @@
     <righttrigger label="Rボタン">ゲームパッドの右トリガーボタンにはんのうする。</righttrigger>
     <lefttrigger_analog label="Lボタン">ゲームパッドの左トリガーボタンにはんのうする。</lefttrigger_analog>
     <righttrigger_analog label="Rボタン">ゲームパッドの右トリガーボタンにはんのうする。</righttrigger_analog>
-    <microbit label="BBC micro:bit">
-      <tilt label="tilt">BBC micro:bitからのななめの入力にはんのうする。</tilt>
-      <leftbutton label="A button">BBC micro:bitからのボタンAの入力にはんのうする。</leftbutton>
-      <rightbutton label="B button">BBC micro:bitからのボタンBの入力にはんのうする</rightbutton>
-      <pin1 label="pin 0">BBC micro:bitのピン0のステイトを読む。</pin1>
-      <pin2 label="pin 1">BBC micro:bitのピン1のステイトを読む。</pin2>
-      <pin3 label="pin 2">BBC micro:bitのピン2のステイトを読む。</pin3>
-    </microbit>
     <mouse>
       <button>
         <left label="左クリック">マウスの左クリックにはんのうする。</left>
@@ -857,7 +848,6 @@
     </constraint>
     <once label="１回">”なにする？”の後のプログラムは、”いつ？”でセットしたものと同じ時、1回だけ実行される。</once>
     <watertype label="水のタイプ">水のタイプをセットする。</watertype>
-    <microbit.pattern label="パターン">BBC micro:bitの画面に見せるパターン。</microbit.pattern>
     <on label="オン">今のステイトをオンにする。</on>
     <off label="オフ">今のステイトをオフにする。</off>
   </modifier>
@@ -930,15 +920,6 @@
       <ignoreme label="むしする">カメラはこのキャラクターを気にしないで動く。</ignoreme>
       <firstperson label="自分視点">このキャラクターの目をカメラの場所にする。</firstperson>
     </camera>
-    <microbit>
-      <say label="say">BBC micro:bit 画面でテキストをスクロールする。</say>
-      <block label="block">BBC micro:bitのライトをすべてコントロールする。</block>
-      <sequential label="meter">BBC micro:bitのライトを順番に着ける。</sequential>
-      <show label="show pattern">BBC micro:bit LED 画面に、パターンを見せる。</show>
-      <setpin1 label="set pin 0">BBC micro:bit のピン0のステイトをセットする。</setpin1>
-      <setpin2 label="set pin 1">BBC micro:bit のピン1のステイトをセットする。</setpin2>
-      <setpin3 label="set pin 2">BBC micro:bit のピン2のステイトをセットする。</setpin3>
-    </microbit>
   </actuator>
   <root />
   <group>

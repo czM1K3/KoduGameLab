@@ -52,7 +52,6 @@ namespace Boku.UI
         public const string idPlus = "plus";
         protected const int indexNoChange = -2;
         protected const int indexNullCard = -1;
-        private const int kMaxMicrobitSayLength = 45;//Max chars. TODO. Increase when we fix long text clipping bug.
 
         public class UpdateObjEditCards : UpdateControl
         {
@@ -107,35 +106,13 @@ namespace Boku.UI
                         Modifier modifier = ReflexCard.LastPickedCard as Modifier;
                         Filter filter = parent.pendingCard as Filter;
 
-                        // If the tile we just chose was the say verb or the microbit say verb then 
+                        // If the tile we just chose was the say verb
                         // automatically activate the text editor.
                         if (verbActuator != null && (verbActuator.upid == "actuator.say" && prevUpid == "actuator.say"))
                         {
                             InGame.inGame.shared.textEditor.Activate(parent.reflex.Data, "say", useRtCoords: false);
                         }
-                        if (verbActuator != null && (verbActuator.upid == "actuator.microbit.say" && prevUpid == "actuator.microbit.say"))
-                        {
-                            TextLineDialog.OnDialogDone callback = delegate(bool canceled, string newText)
-                            {
-                                if (!canceled && newText.Length > 0)
-                                {
-                                    parent.reflex.Data.sayString = newText;
-                                }
-                            };
-                            TextLineEditor.ValidateText validateCallback = delegate(TextBlob textBlob)
-                            {
-                                //Deterimine if text will fit.
-                                bool valid = textBlob.RawText.Length <= kMaxMicrobitSayLength;
-                                return valid;
-                            };
-                            InGame.inGame.shared.textLineDialog.Activate(callback, parent.reflex.Data.sayString, validateCallback);
-                        }
-                        else if (modifier != null && modifier.upid == "modifier.microbit.pattern")
-                        {
-                            // Adding a new tile.  Pass in null to indicate it's the last one we care about since modifier is actually the one from the pie menu.
-                            InGame.inGame.shared.microbitPatternEditor.Activate(parent.reflex.Data, null);
-                        }
-                        else if (verbActuator != null && verbActuator.upid == "actuator.rescale" && prevUpid == "actuator.rescale")
+                        if (verbActuator != null && verbActuator.upid == "actuator.rescale" && prevUpid == "actuator.rescale")
                         {
                             InGame.inGame.shared.editObjectParameters.Activate(parent.reflex.Data, parent.reflex.Task.GameActor, EditObjectParameters.Control.ReScale);
                         }
@@ -318,42 +295,9 @@ namespace Boku.UI
                 {
                     InGame.inGame.shared.textEditor.Activate(parent.reflex.Data, "say", useRtCoords: false);
                 }
-                else if (actuator != null && actuator is VerbActuator && ((actuator as VerbActuator).Verb == GameThing.Verbs.MicrobitSay))
-                {
-                    TextLineDialog.OnDialogDone callback = delegate(bool canceled, string newText)
-                    {
-                        if (!canceled && newText.Length > 0)
-                        {
-                            parent.reflex.Data.sayString = newText;
-                        }
-                    };
-                    TextLineEditor.ValidateText validateCallback = delegate(TextBlob textBlob)
-                    {
-                        //Deterimine if text will fit.
-                        bool valid = textBlob.RawText.Length <= kMaxMicrobitSayLength;
-                        return valid;
-                    };
-                    InGame.inGame.shared.textLineDialog.Activate(callback, parent.reflex.Data.sayString, validateCallback);
-                }
                 else if (filter != null && filter.upid == "filter.said")
                 {
                     InGame.inGame.shared.textEditor.Activate(parent.reflex.Data, "said", useRtCoords: false);
-                }
-                else if (modifier != null && modifier.upid == "modifier.microbit.pattern")
-                {
-                    // We have no easy way to figure out which tile was clicked.  Crap.
-                    int index = ((ReflexPanel)(parent.parent)).ActiveCard;
-                    // This "-3" relies on knowing the internal layout of the reflex.  Kind of a hack.
-                    index -= 3;
-                    // Account for sensor.
-                    if (parent.reflex.Sensor != null)
-                    {
-                        --index;
-                    }
-                    // Account for any filter tiles.
-                    index -= parent.reflex.Data.GetNonHiddenDefaultFilterCount();
-                    modifier = parent.reflex.Modifiers[index];
-                    InGame.inGame.shared.microbitPatternEditor.Activate(parent.reflex.Data, modifier);
                 }
                 else
                 {
@@ -850,10 +794,6 @@ namespace Boku.UI
 
                 // Don't show elements incompatible with this one.
                 if (!progElement.ReflexCompatible(this.reflex, this.card, false))
-                    continue;
-
-                // Don't show microbit tiles if settings disallows it.
-                if (!XmlOptionsData.ShowMicrobitTiles && MicrobitExtras.IsMicrobitTile(progElement))
                     continue;
 
                 // If this is an inline, we need to do a recursion check to not allow
@@ -1505,7 +1445,6 @@ namespace Boku.UI
             //it will likely need to be added to this list.              
             if (pendingCard != null &&
                 !(pendingCard.upid == "actuator.say" ||
-                  pendingCard.upid == "actuator.microbit.say" || 
                   pendingCard.upid == "filter.said" || 
                   pendingCard.upid == "actuator.movementspeedmodify" || 
                   pendingCard.upid == "actuator.turningspeedmodify" ||
@@ -1647,31 +1586,6 @@ namespace Boku.UI
             else if (this.pendingCard.upid == "actuator.worldskychange" || this.pendingCard.upid == "actuator.worldskychangeinstant")
             {
                 this.reflex.Data.WorldSkyChangeEnabled = false;
-            }
-            else if (this.pendingCard.upid == "modifier.microbit.pattern")
-            {
-                // Figure out index of this card.
-                int index = -1;
-                for (int i=0; i<Reflex.Modifiers.Count; i++)
-                {
-                    if (Reflex.Modifiers[i].upid == "modifier.microbit.pattern")
-                    {
-                        ++index;
-                    }
-                    if (Reflex.Modifiers[i] == this.pendingCard)
-                    {
-                        break;
-                    }
-                }
-
-                Debug.Assert(index > -1);
-                Debug.Assert(index < Reflex.MicrobitPatterns.Count);
-
-                // Need to remove this tile's pattern from the pattern array.
-                if (index != -1)
-                {
-                    Reflex.MicrobitPatterns.RemoveAt(index);
-                }
             }
 
             // rely on the change event to cause things to be removed 

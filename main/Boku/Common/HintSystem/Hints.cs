@@ -71,7 +71,6 @@ namespace Boku.Common
             hints.Add(new GamepadNoFilterHint());
             hints.Add(new SwitchNoTargetHint());
             hints.Add(new NoTerrainToRaiseHint());
-            hints.Add(new MicrobitNeedsResetHint());
 
             // Disable hints that the user has previously dismissed.
             // Yes this is n^2 but the lists should be short enough 

@@ -4,7 +4,6 @@
     <keyboard label="키보드">Allow a player to control a character.  Specify which key.</keyboard>
     <mouse label="마우스">Respond to mouse input.</mouse>
     <touch label="터치">Respond to touch input.</touch>
-    <microbit label="BBC micro:bit">Respond to BBC micro:bit input.</microbit>
     <eyes label="보다">React when you see an object depending on type or color. Hills and walls can block sight if you use the line-of-sight(LOS) filter.</eyes>
     <ears label="듣다">React when you hear an object depending on type or sound. Hearing works through walls.</ears>
     <bumpers label="부딪치다">React when you bump into another object depending on type, color, etc.</bumpers>
@@ -157,14 +156,6 @@
     <righttrigger label="오른쪽 트리거">React to the right trigger on a controller.</righttrigger>
     <lefttrigger_analog label="왼쪽 트리거">React to the left trigger on a controller.</lefttrigger_analog>
     <righttrigger_analog label="오른쪽 트리거">React to the right trigger on a controller.</righttrigger_analog>
-    <microbit label="BBC 마이크로빗">
-      <tilt label="기울기">React to tilt input from the BBC micro:bit.</tilt>
-      <leftbutton label="A 버튼">React to pressing the BBC micro:bit A button.</leftbutton>
-      <rightbutton label="B 버튼">React to pressing the BBC micro:bit B button.</rightbutton>
-      <pin1 label="핀 0">Read state of BBC micro:bit pin 0.</pin1>
-      <pin2 label="핀 1">Read state of BBC micro:bit pin 1.</pin2>
-      <pin3 label="핀 2">Read state of BBC micro:bit pin 2.</pin3>
-    </microbit>
     <mouse>
       <button>
         <left label="왼쪽 클릭">React to the mouse left button.</left>
@@ -857,7 +848,6 @@
     </constraint>
     <once label="한번">The code after DO will only be run once each time the WHEN condition is activated.</once>
     <watertype label="물 타입">Set the water type.</watertype>
-    <microbit.pattern label="패턴">Pattern to display on BBC micro:bit display.</microbit.pattern>
     <on label="켜다">Set the current state to 'on'.</on>
     <off label="끄다">Set the current state to 'off'.</off>
   </modifier>
@@ -931,15 +921,6 @@
       <ignoreme label="무시하기">Don't worry about keeping this character in view.</ignoreme>
       <firstperson label="일인칭시점">See through this character's eyes.</firstperson>
     </camera>
-    <microbit>
-      <say label="말하기">Scroll text on the BBC micro:bit display.</say>
-      <block label="블럭">Control all the BBC micro:bit lights.</block>
-      <sequential label="장치">Turn on the BBC micro:bit lights sequentially.</sequential>
-      <show label="패턴 보기">Show a patten of lights on the BBC micro:bit LED display.</show>
-      <setpin1 label="핀 설정 0">Set the state of BBC micro:bit pin 0.</setpin1>
-      <setpin2 label="핀 설정 1">Set the state of BBC micro:bit pin 1.</setpin2>
-      <setpin3 label="핀 설정 2">Set the state of BBC micro:bit pin 2.</setpin3>
-    </microbit>
   </actuator>
   <root />
   <group>

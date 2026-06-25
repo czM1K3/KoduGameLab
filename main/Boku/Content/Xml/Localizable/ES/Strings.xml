@@ -708,20 +708,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
     <no>No</no>
   </textDialog>
   
-  <microbitPatternEditor>
-    <brightness>Brillo</brightness>
-    <duration>Duración</duration>
-    <toggleLED>Conmutar LED</toggleLED>
-  </microbitPatternEditor>
-
-  <microbitNeedsDriverDlg>
-    <title>BBC micro:bit necesita un driver</title>
-    <message>Necesitamos instalar un driver para que Kodu pueda hablar con BBC micro:bit. Presiona el Botón instalar para empezar. Presiona el vínculo inferior para mayor información.</message>
-    <linkLabel>Kodu y BBC micro:bit - Guía de Inicio</linkLabel>
-    <cancelLabel>Cancelar</cancelLabel>
-    <installLabel>Instalar</installLabel>
-  </microbitNeedsDriverDlg>
-  
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1325,8 +1311,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
       
       Por ejemplo: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-	
-    <microbitNeedsResetHintToast>Flashing tu BBC micro:bit, por favor espera...</microbitNeedsResetHintToast>
     
   </toast>
   

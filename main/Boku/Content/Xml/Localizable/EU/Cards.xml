@@ -5,7 +5,6 @@
     <keyboard label="teklatua">Jokalariari baimentzen dio pertsonai bat kontrolatzea.  Zehaztu zein botoi.</keyboard>
     <mouse label="arratoia">Arratoiaren sarrera bati erantzuten dio .</mouse>
     <touch label="touch">Ukitzearen sarrera bati erantzuten dio .</touch>
-    <microbit label="BBC micro:bit">BBC mikro:bit sarrera bati erantzuten dio .</microbit>
     <eyes label="ikusi">Objektu bat ikusten duenean erreakzionatzen du, mota edo kolore arabera . Muino eta haranak ikusmena blokeatu dezakete.</eyes>
     <ears label="hear">Objektu bat entzuten duenean erreakzionatzen du, mota edo soinu arabera . Hormen bidez entzun daiteke.</ears>
     <bumpers label="bump">Objketu batekin talka egitean erreakzionatzen du, mota, colore, etc. arabera.</bumpers>
@@ -158,14 +157,6 @@
     <righttrigger label="right trig">Erreakzionatzen du kontrolatzaile batengo eskuineko katura.</righttrigger>
     <lefttrigger_analog label="left trig">Erreakzionatzen du kontrolatzaile batengo ezkerreko katura.</lefttrigger_analog>
     <righttrigger_analog label="right trig">Erreakzionatzen du kontrolatzaile batengo eskuineko katura.</righttrigger_analog>
-    <microbit label="BBC micro:bit">
-      <tilt label="tilt">Erreakzionatzen du BBC micro:bit sarrera okertzeko.</tilt>
-      <leftbutton label="A button">Erreakzionatzen du BBC micro:bit A botoia sakatzean. </leftbutton>
-      <rightbutton label="B button">Erreakzionatzen du BBC micro:bit B botoia sakatzean.</rightbutton>
-      <pin1 label="pin 0">BBC micro:bit pin 0 egoera irakurtzen du.</pin1>
-      <pin2 label="pin 1">BBC micro:bit pin 1 egoera irakurtzen du.</pin2>
-      <pin3 label="pin 2">BBC micro:bit pin 2 egoera irakurtzen du.</pin3>
-    </microbit>
     <mouse>
       <button>
         <left label="ezkerra">Erreakzionatzen du saguaren ezkerreko botoiara</left>
@@ -802,7 +793,6 @@
     </constraint>
     <once label="once">The code after DO will only be run once each time the WHEN condition is activated.</once>
     <watertype label="water type">Ezarri uraren mota.</watertype>
-    <microbit.pattern label="pattern">Pattern to display on BBC micro:bit display.</microbit.pattern>
     <on label="on">Ezarri oraingo egoera 'on'-era.</on>
     <off label="off">Ezarri oraingo egoera 'off'-era.</off>
   </modifier>
@@ -877,15 +867,6 @@
       <ignoreme label="ignore">Ez arduratu pertsonai hau ikusten mantentzeaz.</ignoreme>
       <firstperson label="1st person">Ikusi pertsonai honen begietatik.</firstperson>
     </camera>
-    <microbit>
-      <say label="say">Mugi ezazu testua BBCeko micro:bit-etako erakusketan.</say>
-      <block label="block">BBC mikro guztiak kontrolatu:bit argiak.</block>
-      <sequential label="meter">Piztu BBC mikro:bit argiak zekuentzialki.</sequential>
-      <show label="show pattern">Erakuts ezazu argien kolpe errepikatu bat BBCeko micro:bit-etako LEDeko erakusketan..</show>
-      <setpin1 label="set pin 0">BBC mikroaren estatua:bit pin 0.</setpin1>
-      <setpin2 label="set pin 1">BBC mikroaren estatua:bit pin 1.</setpin2>
-      <setpin3 label="set pin 2">BBC mikroaren estatua:bit pin 2.</setpin3>
-    </microbit>
   </actuator>
   <root />
   <group>

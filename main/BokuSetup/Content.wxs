@@ -71,12 +71,6 @@
             <Component Id="cmpF825D1D346E20D323A47F226E9E32A0F" Directory="dirB366D9D5A475E066DE58751753C151D1" Guid="{368B4281-9CC4-41EE-A15D-0C9734AAC339}">
                 <File Id="filFAC6A93971C82CCF7068CAF68DF33336" KeyPath="yes" Source="SourceDir\Content\Fonts\SegoeUI30.xnb" />
             </Component>
-            <Component Id="cmpA3FB835E9E0F19B2B15B0D6859F0AAB4" Directory="dir9D7FDF732A990F10F3F8F3E7C985503B" Guid="{A8C1AF97-C40E-4B74-AC7E-B801DF460EDC}">
-                <File Id="fil34FC6DA2D5D1AD07EB0E5ADF33F08A0F" KeyPath="yes" Source="SourceDir\Content\Microbit\kodu-microbit-combined.hex" />
-            </Component>
-            <Component Id="cmpC56E3F1F68D4B7E9DEB85E2EF32266EE" Directory="dir9D7FDF732A990F10F3F8F3E7C985503B" Guid="{BA09368A-21D6-4FDB-B859-B40165336DB6}">
-                <File Id="filF6BF9BE108D54CA1C5F86D35234EB44E" KeyPath="yes" Source="SourceDir\Content\Microbit\mbedWinSerial_16466.exe" />
-            </Component>
             <Component Id="cmpEF88FBA711F8410EDBD95B8824854A5A" Directory="dir365F992B91EBE77CBCBCE1783DF98EAD" Guid="{F2300333-9A50-48E6-835A-6086E8906C37}">
                 <File Id="filEF2928FA9D1648830B3B649ABDF18F6F" KeyPath="yes" Source="SourceDir\Content\Models\balloon.xnb" />
             </Component>
@@ -2243,45 +2237,6 @@
             <Component Id="cmp036539AB411F4CE9C1EBD73CB44317DD" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{A1BC512A-F516-4222-AC9B-EFFC2BC6E30E}">
                 <File Id="fil9F3B2B2CABFBF05EB5122C16EFF41B2F" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.maxhitpoints.xnb" />
             </Component>
-            <Component Id="cmpE847E95CD851BB90049962073042CFB2" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{291C205F-63F4-486D-AE32-866519BA8425}">
-                <File Id="fil526F6F334B6A47A515FB24DE49266AA4" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.block.xnb" />
-            </Component>
-            <Component Id="cmp660C78AD10D18C978CE895E61ACC3B58" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{4461DBD5-7F4A-486D-8CCE-02608EE727A0}">
-                <File Id="fil10F7F41FC53955E957945D93640C3C63" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.say.xnb" />
-            </Component>
-            <Component Id="cmp8F72BC1C3A59BC18D4011146484969E7" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{DC67976E-3D23-4445-AB91-F930EBBED017}">
-                <File Id="fil00D5D152846FC389DDB23FE9EA9CD8D5" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.sequential.xnb" />
-            </Component>
-            <Component Id="cmp4E144FD2A22528537751DB570B5B1C32" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{9604BF52-FD69-4D59-B8EE-26A09F07BC44}">
-                <File Id="fil70190724E101ECA4CA89F570A69BAC4F" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpin1.xnb" />
-            </Component>
-            <Component Id="cmp1548B1898727A66D90F3542A10B06240" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{5431DB8B-18B3-46D7-A2FA-5D9535549665}">
-                <File Id="filD15792B2B40B3ACE32709FB5F4D26E9D" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpin2.xnb" />
-            </Component>
-            <Component Id="cmp620B132AE459534BF276F6F200285D61" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{F1F317A9-B35E-4AEC-928F-90B94098F253}">
-                <File Id="fil4B7C772E1AA13C986A3E365DB3AEB676" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpin3.xnb" />
-            </Component>
-            <Component Id="cmpDC90DD93021AED7EB6574CFDCDB2B059" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{8412F68D-A808-42CA-BF07-566AE47BF9E6}">
-                <File Id="fil61B97E440293A98CD338CAED4B9B1C11" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmdutycycle.pin1.xnb" />
-            </Component>
-            <Component Id="cmpAD14D1D0C60D0F58531E527C4E9A3BA8" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{A2143B36-F19E-4FD3-A674-53600D488E72}">
-                <File Id="filC72A53F103108AC679AB22E92300FBE3" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmdutycycle.pin2.xnb" />
-            </Component>
-            <Component Id="cmp060A2950610134A4AE70FDA44367D1EB" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{E9F787D9-A1D5-4833-8213-B4DC21EC2774}">
-                <File Id="fil8FD8024504EAABE43C140C804CC37B37" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmdutycycle.pin3.xnb" />
-            </Component>
-            <Component Id="cmpBB711711942CBB8834D567496FA3E52E" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{BBE874C1-3F9E-4D18-AB41-BAF652E0AEBA}">
-                <File Id="fil02EA27A14AB03FCB528F479B27455DF6" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmfrequency.pin1.xnb" />
-            </Component>
-            <Component Id="cmp29E6552A555895CAC86A98C9C9F2D360" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{7C31E7F4-D460-42C6-B6DF-1267A9D5882D}">
-                <File Id="fil72EB2B3EAABDD549F124C735495B4D72" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmfrequency.pin2.xnb" />
-            </Component>
-            <Component Id="cmp6D9B1BE0B9022EAA90BE2C0D01256951" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{69BE5461-B685-4235-B7DC-3F8EBBC37603}">
-                <File Id="fil7FF72A848A4B1DA5E9C87FD9B9260BC6" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.setpwmfrequency.pin3.xnb" />
-            </Component>
-            <Component Id="cmpCB97CD1CE6CD9F56A3123C2413429555" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{F7545B19-285C-4E74-B94E-3CB6F75B34B7}">
-                <File Id="fil0F62D3A12F109EB057F295332E09069D" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.microbit.show.xnb" />
-            </Component>
             <Component Id="cmp47C2C7C7FC92D798F440513C2219A343" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{1639463F-DFEA-4CDA-8621-A52B8928C143}">
                 <File Id="fil219EC2D96B46284C5550DA51FF882695" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\actuator.missilereloadtime.xnb" />
             </Component>
@@ -2584,27 +2539,6 @@
             </Component>
             <Component Id="cmp355459B01FFE657381C4BBD71E613D01" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{FC5B3E78-2C85-42E5-B05D-1958F30B5894}">
                 <File Id="fil56229C3B77C08032A66977EB3EDF7681" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.me.xnb" />
-            </Component>
-            <Component Id="cmpFEB8768A0B62D2DE03602D2DB339773B" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{3BD9D87E-F919-4C17-A505-9F1B09634408}">
-                <File Id="fil6D8B250472A14F5A00C9F4249203F23B" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.leftbutton.xnb" />
-            </Component>
-            <Component Id="cmp5F58A13349561CF4468692FB993ED926" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{ACA0D0E2-2BB6-4DF2-A09C-B018E8EBD772}">
-                <File Id="fil90938EA2D63009A121978297A5492E62" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.pin1.xnb" />
-            </Component>
-            <Component Id="cmp5ADFCD149A3D119957064358631FC307" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{F0CBF690-439F-4A17-BB76-E380EEDF86D1}">
-                <File Id="fil0FF80BEA1ADDBC200548178D61B0F6DD" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.pin2.xnb" />
-            </Component>
-            <Component Id="cmpB21AB2C43BB60DC53F6913646780FD0E" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{44547936-6A4E-439B-B114-B4EF0F3281D3}">
-                <File Id="fil176765D80C0379F317D86D88705CBD97" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.pin3.xnb" />
-            </Component>
-            <Component Id="cmp0540AC2E9525359E07BABCBA251010E9" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{C785E2FF-6A3B-4C1E-9682-33D8BD53C6F5}">
-                <File Id="fil747C4AD997B0A176DA19602813DD2E88" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.rightbutton.xnb" />
-            </Component>
-            <Component Id="cmpE30AB1B9E94F8BDD670844C9A20AB0B6" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{64CF5727-D1A5-4ED3-BA39-18A0AE060D09}">
-                <File Id="fil51EB1B2C86A9602D005298186A4D6420" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.shake.xnb" />
-            </Component>
-            <Component Id="cmpB57899882018BD0043EF96E07835BADA" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{F6A99118-45A7-47B9-98F6-2EC508A234FC}">
-                <File Id="fil1C2D39F0821D58E2AEB49EAF69E10094" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.microbit.tilt.xnb" />
             </Component>
             <Component Id="cmp2F18CE0D918A2AAAEB32ED92A504E03B" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{060772A0-2915-4CCA-8468-7DD8CBDE8F8E}">
                 <File Id="filE9B0ACD94EE57199DE1CFC4CABC30D57" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\filter.mine.xnb" />
@@ -2942,9 +2876,6 @@
             <Component Id="cmpB94782549DECFB08A9CB298FA6DADAF4" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{DAEFE572-D6B4-44C3-90DE-2C2BCFE5C8D4}">
                 <File Id="fil7ADFA1E4209E992401AF93113D9DD547" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\group.loft.xnb" />
             </Component>
-            <Component Id="cmpC8E4615E58811CE660367698F558EB87" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{22AC5711-E2AC-4BF6-BBC6-2F78349F78F2}">
-                <File Id="filBA634F21F9DE90FF7C441AA31C9A0096" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\group.microbit.actions.gpio.xnb" />
-            </Component>
             <Component Id="cmpE5BC1EFCD33E6443637A9E5564CB13E4" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{0FEDA01E-47E9-4D7E-835B-2319EDA445C6}">
                 <File Id="fil4CCC848580ADB63BDB2A3B48094764CA" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\group.objects.xnb" />
             </Component>
@@ -3094,9 +3025,6 @@
             </Component>
             <Component Id="cmp8836194C0324641C6FF85AFA3E3837B2" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{DB7C4541-1E69-4650-BE06-CDE855BECBB1}">
                 <File Id="filE10CFB220B0B72E07EAAA82F1B680AA2" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\modifier.me.xnb" />
-            </Component>
-            <Component Id="cmp0F5938CE1D54F4B2C552B0EF66C32EFF" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{FFB501AD-2E1C-44D0-B774-8B2E53419AAE}">
-                <File Id="fil6E97BBE60C577418AA7DF8D74EE63A05" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\modifier.microbit.pattern.xnb" />
             </Component>
             <Component Id="cmp7769211A476B2C1658AAD1F6247D89C7" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{E164BEAD-7F42-4597-A1A1-5FD9C5FD7320}">
                 <File Id="filF4951E420AFD8EC97DEB42F76D614955" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\modifier.north.xnb" />
@@ -3478,9 +3406,6 @@
             </Component>
             <Component Id="cmp1F388B332FB5F538CAA4F85386125126" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{DADBC224-8E16-4650-AC8E-92D3163FBBFF}">
                 <File Id="filA41A33B8392FFE366C35D7A662C4D1F9" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\sensor.land.xnb" />
-            </Component>
-            <Component Id="cmpD5BF951A70DAE6C6A858B45850073589" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{0FF616DE-C974-42F1-A93C-2844917AA9B5}">
-                <File Id="fil2C9B8E482A4DDAC1FC9D0F3AA70E5D64" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\sensor.microbit.xnb" />
             </Component>
             <Component Id="cmp929EA07F95044FC97B1AD1AF74BE44F0" Directory="dir4976587E1FBF5505B23B4D6155937F09" Guid="{E193E634-8AA5-4AE8-A1A3-85620007B6C0}">
                 <File Id="fil143FF47B3F65C8312A0A4D54BCADAD3C" KeyPath="yes" Source="SourceDir\Content\Textures\Tiles\sensor.mouse.xnb" />
@@ -5998,11 +5923,6 @@
     <Fragment>
         <DirectoryRef Id="dirDB5EAB964C58EFD8C9BE69A38B4F1F28">
             <Directory Id="dir9B6CBE2A5A935A50B36F85DF854335EC" Name="MainMenu" />
-        </DirectoryRef>
-    </Fragment>
-    <Fragment>
-        <DirectoryRef Id="dir28AB5CCC3A8203CB4603FA2473C0D120">
-            <Directory Id="dir9D7FDF732A990F10F3F8F3E7C985503B" Name="Microbit" />
         </DirectoryRef>
     </Fragment>
     <Fragment>

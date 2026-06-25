@@ -50,9 +50,6 @@ namespace Boku.Common
             // Level that was loaded on exit
             FinalLevel,
 
-            // Logged when the microbit tiles become enabled.
-            MicrobitTilesEnabled,
-
             // User searched levels.
             SearchLevels,
 
@@ -122,9 +119,6 @@ namespace Boku.Common
             FPS_90to95,
             FPS_95to100,
             FPS_100plus,
-
-            // Records how many microbits are attached to the computer.
-            MicrobitCount,
 
             // Add your counter ids above this comment line
             SIZEOF,
@@ -336,7 +330,7 @@ namespace Boku.Common
                 return;
 
             // We only really care about these two events.  Ignore the rest.
-            if (id != EventId.LevelUploaded && id != EventId.MicrobitTilesEnabled)
+            if (id != EventId.LevelUploaded)
             {
                 return;
             }

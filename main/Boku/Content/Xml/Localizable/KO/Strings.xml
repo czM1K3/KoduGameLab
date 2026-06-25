@@ -661,12 +661,6 @@
     <no>아니오</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>밝기</brightness>
-    <duration>지속</duration>
-    <toggleLED>토글 LED</toggleLED>
-  </microbitPatternEditor>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1265,8 +1259,6 @@
       
       예시: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>하나 또는 그 이상의 BBC micro:bit이 재설정 되어야 합니다. 장치 뒤 쪽의 재설정 버튼을 눌러주세요.</microbitNeedsResetHintToast>
     
   </toast>
 

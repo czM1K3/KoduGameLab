@@ -79,8 +79,6 @@ namespace Boku
 
         public static CmdLine CmdLine;
 
-        public static string MicrobitCmdLine = null;
-
         public static SiteOptions SiteOptions;
 
         public static bool InstallerOptCheckForUpdates;
@@ -134,8 +132,6 @@ namespace Boku
                         "  /ANALYTICS \t- run analytics on game being loaded\r\n" +
                         "  /LOCALIZATION <language> \t- report localization information that is missing in the specified language.\r\n" +
                         "  /PIESIZE <int> \t- pie menu maximum size.\r\n" +
-                        "  /NOMICROBIT \t- Do not scan for attached BBC micro:bits\r\n" +
-                        "  /MICROBIT \"COM3 E:\"\t- Try to enable micro:bit with given com port and drive letter.  The quotes are required.\r\n" +
                         "  /COMMUNITY <URL>\r\n" +
                         "  /SERVICE_API_URL <URL>\r\n" +
                         "");
@@ -449,10 +445,6 @@ namespace Boku
                         // Note that this seems inverted because of the stupid naming.
                         SiteOptions.InstrumentationUnchecked = false;
                     }
-                    if (CmdLine.Exists("MICROBIT"))
-                    {
-                        MicrobitCmdLine = CmdLine.GetString("MICROBIT", null);
-                    }
 
                     /// This is fortuitously timed. We have already pulled the settings file
                     /// out of the real user folder (somewhere in Documents\Saved Games\...).
@@ -467,14 +459,6 @@ namespace Boku
                     if (!string.IsNullOrEmpty(settings.UserFolder))
                     {
                         Storage4.UserOverrideLocation = settings.UserFolder;
-                    }
-
-                    if (!XmlOptionsData.ShowMicrobitTiles)
-                    {
-                        // Scan for attached microbits (but don't connect to them yet). If any are found,
-                        // RefreshDevices will modify XmlOptionsData to make the microbit programming tiles
-                        // permanently visible in the tile picker.
-                        Input.MicrobitManager.RefreshDevices(false);
                     }
                     // ====================================================
                 }
@@ -601,10 +585,6 @@ namespace Boku
                         }
                     }
                     */
-
-                    // In case the app was closed while in play mode with a microbit attached. Release microbits
-                    // so that the serial port receive thread doesn't block application exit.
-                    Boku.Input.MicrobitManager.ReleaseDevices();
 
                     FlushInstrumentation();
 

@@ -722,7 +722,6 @@ namespace Boku
                 if (tapGesture.WasRecognized && !hitSomething &&
                     !InGame.inGame.shared.programmingHelpCard.WasTouchedThisFrame &&
                     !InGame.inGame.shared.textEditor.WasTouchedThisFrame &&
-                    !InGame.inGame.shared.microbitPatternEditor.WasTouchedThisFrame &&
                     !InGame.inGame.shared.ToolBox.WaterPicker.Active &&
                     !InGame.inGame.shared.ToolBox.MaterialPicker.Active)
                 {
@@ -1133,8 +1132,7 @@ namespace Boku
                 ReflexBlock.ReflexComparer comp = new ReflexBlock.ReflexComparer();
                 InGame.inGame.Editor.renderObj.renderList.Sort(comp);
 
-                bool editorActive = InGame.inGame.shared.textEditor.Active 
-                                    || InGame.inGame.shared.microbitPatternEditor.Active 
+                bool editorActive = InGame.inGame.shared.textEditor.Active
                                     || InGame.inGame.shared.editObjectParameters.Active
                                     || InGame.inGame.shared.editWorldParameters.Active;
 
@@ -1145,7 +1143,6 @@ namespace Boku
                 {
                     InGame.inGame.shared.textLineDialog.Update();
                 }
-                InGame.inGame.shared.microbitPatternEditor.Update();
                 InGame.inGame.shared.editObjectParameters.Update();
                 InGame.inGame.shared.editWorldParameters.Update();
 
@@ -1310,7 +1307,6 @@ namespace Boku
                     && !CommandStack.Peek().name.StartsWith(@"PieSelector")
                     && !CommandStack.Peek().name.StartsWith(@"NotPieSelector")
                     && !CommandStack.Peek().name.StartsWith(@"TextEditor")
-                    && !CommandStack.Peek().name.StartsWith(@"MicrobitPatternEditor")
                     && !editObjectParametersActive
                     && !editWorldParametersActive
                     && !CommandStack.Peek().name.StartsWith(@"InGameEditWorldParameters"))
@@ -1560,8 +1556,7 @@ namespace Boku
                 bool pickerActive = CommandStack.Peek().name.StartsWith(@"TerrainEdit");
                 bool notPieActive = CommandStack.Peek().name.StartsWith(@"NotPieSelector");
                 bool textEditorActive = CommandStack.Peek().name.StartsWith(@"TextEditor");
-                bool microbitPatternEditorActive = CommandStack.Peek().name.StartsWith(@"MicrobitPatternEditor");
-                if (!(dialogActive || pieActive || pickerActive || notPieActive || textEditorActive || microbitPatternEditorActive || editObjectParametersActive || editWorldParametersActive || ProgrammingHelpCard.Instance.Active))
+                if (!(dialogActive || pieActive || pickerActive || notPieActive || textEditorActive || editObjectParametersActive || editWorldParametersActive || ProgrammingHelpCard.Instance.Active))
                 {
                     // In touch mode this can get out of sync.
                     // Force it to a good state.  (HACK)
@@ -1672,7 +1667,7 @@ namespace Boku
                 // we want to disable the tooltip since it will be rendered on top
                 // of the editor.
                 if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch ||
-                    textEditorActive || microbitPatternEditorActive || editObjectParametersActive || editWorldParametersActive)
+                    textEditorActive || editObjectParametersActive || editWorldParametersActive)
                 {
                     ToolTipManager.Clear();
                 }
@@ -1786,7 +1781,7 @@ namespace Boku
 
                 // Don't render editor UI when HelpCard is active.  It
                 // still works if you do but it looks more cluttered.
-                if (!(InGame.inGame.shared.programmingHelpCard.Active || InGame.inGame.shared.addItemHelpCard.Active || InGame.inGame.shared.textEditor.Active || InGame.inGame.shared.microbitPatternEditor.Active || InGame.inGame.shared.editObjectParameters.Active || InGame.inGame.shared.editWorldParameters.Active))
+                if (!(InGame.inGame.shared.programmingHelpCard.Active || InGame.inGame.shared.addItemHelpCard.Active || InGame.inGame.shared.textEditor.Active || InGame.inGame.shared.editObjectParameters.Active || InGame.inGame.shared.editWorldParameters.Active))
                 {
 
                     Editor.effect.Parameters["LightDirection0"].SetValue(new Vector4(Vector3.Normalize(new Vector3(4.0f, -4.0f, -11.5f)), 1.0f));
@@ -2524,7 +2519,6 @@ namespace Boku
                 ProgrammingHelpCard.Instance.Deactivate();
                 InGame.inGame.Editor.RightClickMenu.Deactivate();
                 InGame.inGame.shared.textEditor.Deactivate();
-                InGame.inGame.shared.microbitPatternEditor.Deactivate(saveChanges:false);
                 InGame.inGame.shared.editObjectParameters.Deactivate();
                 InGame.inGame.shared.editWorldParameters.Deactivate(false);
 

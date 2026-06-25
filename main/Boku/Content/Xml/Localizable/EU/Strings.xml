@@ -663,12 +663,6 @@
     <no>Ez</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>Argitasuna</brightness>
-    <duration>Iraupen</duration>
-    <toggleLED>Piztu LED</toggleLED>
-  </microbitPatternEditor>
-
     <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1143,8 +1137,6 @@
       
       Adibidez: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>Mikro BBC bat abino gehiago konektatuta:zatitxoek birdoikuntzeko beharra dute. Mesedez sakatu birdoikuntza botoia gailuko atzeko partean</microbitNeedsResetHintToast>
     
   </toast>
 

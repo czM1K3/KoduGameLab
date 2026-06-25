@@ -83,12 +83,6 @@ namespace Boku
                 deadKoduTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\SleepyKodu");
             }
 
-            // Check if microbit:driver needs installing.
-            if (MicrobitManager.DriverInstalled == false)
-            {
-                MicrobitManager.ShowDriverDialog();
-            }
-
             for (int i = 0; i < updateList.Count; ++i)
             {
                 UpdateObject obj = updateList[i] as UpdateObject;

@@ -55,7 +55,6 @@ namespace Boku.Programming
         WhenMouse,
         WhenTouch,
         WhenKeyBoard,
-        WhenMicrobit,
         WhenUserInput,
         WhenSight,
         WhenHearing,
@@ -116,11 +115,6 @@ namespace Boku.Programming
         TapGestureFilter,
         TouchButtonFilter,
         TouchGUIButtonFilter,
-        MicrobitFilter,
-        MicrobitTiltFilter,
-        MicrobitButtonFilter,
-        MicrobitPinFilter,
-        MicrobitShakeFilter,
 
         RotateGestureFilter,
         SwipeGestureFilter,
@@ -238,13 +232,6 @@ namespace Boku.Programming
         DoFarAwayRangeChange,
         DoHearingRangeChange,
 
-        DoMicrobitSay,
-        DoMicrobitLights,
-        DoMicrobitShow,
-        DoMicrobitSetPin,
-        DoMicrobitSetPwmFrequency,
-        DoMicrobitSetPwmDutyCycle,
-
         // Selector categories
         ExplicitSelector,
         NonCardinalSelector,
@@ -317,7 +304,6 @@ namespace Boku.Programming
         ExpressFaceModifier,
         ExpressParticleModifier,
         ExpressNoneModifier,
-        MicrobitPatternModifier,
         OnOffModifier,
         FrequencyUnitsModifier,
 

@@ -612,12 +612,6 @@
     <no>لا</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>Brightness</brightness>
-    <duration>Duration</duration>
-    <toggleLED>Toggle LED</toggleLED>
-  </microbitPatternEditor>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1170,8 +1164,6 @@
     <switchNoTargetModal>عندما تستخدم لبنة التبديل &lt;actuator.switchtask&gt; يتوجب عليك أيضا أن تخبر النظام أي صفحة تريد التبديل إليها.
       
       على سبيل المثال: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;</switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>Flashing your BBC micro:bit, please wait...</microbitNeedsResetHintToast>
 
   </toast>
   <error>

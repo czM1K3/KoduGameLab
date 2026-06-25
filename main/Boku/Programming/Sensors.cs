@@ -175,7 +175,6 @@ namespace Boku.Programming
                 return
                     Categories.Get((int)BrainCategories.WhenUserInput) ||
                     Categories.Get((int)BrainCategories.WhenGamePad) ||
-                    Categories.Get((int)BrainCategories.WhenMicrobit) ||
                     Categories.Get((int)BrainCategories.WhenKeyBoard) ||
                     Categories.Get((int)BrainCategories.WhenTouch) ||
                     Categories.Get((int)BrainCategories.WhenMouse);

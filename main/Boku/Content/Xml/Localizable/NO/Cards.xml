@@ -4,7 +4,6 @@
     <keyboard label="tastatur">Reager på bruk av tastaturet.  Spesifiser en knapp.</keyboard>
     <mouse label="mus">Reager på musebevegelser.</mouse>
     <touch label="berører">Reager på bruk av berøringsskjerm.</touch>
-    <microbit label="BBC micro:bit">Reager på signaler fra BBC micro:bit innganger.</microbit>
     <eyes label="ser">Reager på noe karakteren ser avhengig av type eller farge. Bakketopper og vegger kan blokkere sikten dersom du benytter LOS (line-of-sight) filteret.</eyes>
     <ears label="hørere">Reager på noe karakteren hører avhengig av type og lyd. Lyder går gjennom bakketopper og vegger.</ears>
     <bumpers label="støter på">Reager dersom karakteren støter borti ett annet objekt avhengig av type, farge m.m.</bumpers>
@@ -160,15 +159,6 @@
     <righttrigger_analog label="høyre avtrekker">Reager på høyre avtrekker på spillekontrollen.</righttrigger_analog>
     <strongly label="sterkt">Oppdag en stor verdi eller ett sterkt signal.</strongly>
     <weakly label="svakt">Oppdag en liten verdi eller ett svakt signal</weakly>
-    <microbit label="BBC micro:bit">
-      <tilt label="tilt">Tilt fra BBC micro:bit.</tilt>
-      <leftbutton label="A knapp">BBC micro:bit - A knapp.</leftbutton>
-      <rightbutton label="B knapp">BBC micro:bit - B knapp.</rightbutton>
-      <pin0 label="pinne 0">BBC micro:bit - Inngang 0.</pin0>
-      <pin1 label="pinnne 1">BBC micro:bit - Inngang 1.</pin1>
-      <pin2 label="pinne 2">BBC micro:bit - Inngang 2.</pin2>
-      <shake label="risting">BBC micro:bit blir ristet på.</shake>
-    </microbit>
     <mouse>
       <button>
         <left label="venstre">Reager på venstre museknapp.</left>
@@ -866,9 +856,6 @@
     <watertype label="Type vann">Velg type vann.</watertype>
     <on label="på">Sett nåværende tilstand til 'på'.</on>
     <off label="av">Sett nåværende tilstand til 'av'.</off>
-    <microbit>
-      <pattern label="mønster">LED mønster viser på BBC micro:bit screen.</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="kHz">Verdien er målt kilohertz frekvens.</khz>
     </frequencyunits>
@@ -942,25 +929,6 @@
       <ignoreme label="ignorere">Ikke bry deg om å ha denne karakteren i synsfeltet.</ignoreme>
       <firstperson label="første person">Se gjennom denne karakterens øyne.</firstperson>
     </camera>
-    <microbit>
-      <say label="si"> Scroll text on the micro:bit display.</say>
-      <block label="block">Control all the micro:bit lights.</block>
-      <sequential label="meter">Turn on the micro:bit lights sequentially.</sequential>
-      <show label="show pattern">Show a pattern on the micro:bit display.</show>
-      <setpin1 label="sett pinne 0">Setter status på de digitale utgangene.</setpin1>
-      <setpin2 label="sett pinne 1">Setter status på de digitale utgangene.</setpin2>
-      <setpin3 label="sett pinne 2">Setter status på de digitale utgangene.</setpin3>
-      <setpwmfrequency>
-        <pin1 label="PWM 0 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin1>
-        <pin2 label="PWM 1 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin2>
-        <pin3 label="PWM 2 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        <pin1 label="PWM 0 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin1>
-        <pin2 label="PWM 1 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin2>
-        <pin3 label="PWM 2 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin3>
-      </setpwmdutycycle>
-    </microbit>
   </actuator>
   <root />
   <group>
@@ -1041,11 +1009,5 @@
     <scorefilters label="scores"></scorefilters>
     <scorebucketfilters label="world scores" />
     <scorebucketfilters.local label="private scores" />
-
-    <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
   </group>
 </Tiles>

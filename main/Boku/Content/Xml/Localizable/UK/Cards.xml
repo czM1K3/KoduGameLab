@@ -5,7 +5,6 @@
     <keyboard label="клавіатура">Дозволяє керувати персонаж. Вкажіть кнопку.</keyboard>
     <mouse label="мишка">Реагує на дії мишки.</mouse>
     <touch label="дотик">Реагує на введення дотиком.</touch>
-    <microbit label="BBC micro:bit">Відповідь на вхід BBC micro:bit.</microbit>
     <eyes label="бачу">Реагує на об'єкт в залежності від типу та кольору. Гори та стіни можуть блокувати вид.</eyes>
     <ears label="чую">Реагує, коли чує об'єкт в залежності від типу та звуку. Можу чути крізь стіни.</ears>
     <bumpers label="доторкання">Реагує, коли ви стикаєтеся з іншим об'єктом, залежно від його типу, кольору тощо.</bumpers>
@@ -167,15 +166,6 @@
   <righttrigger_analog label="аналоговий правий тригер">Реагує на правий аналоговий тригер на контролері.</righttrigger_analog>
   <strongly label="сильно">Виявити сильний сигнал або значення.</strongly>
   <weakly label="слабко">Виявити слабкий сигнал або значення.</weakly>
-  <microbit label="BBC micro:bit">
-    <tilt label="нахил">Реагує на вхід нахилу від BBC micro:bit.</tilt>
-    <leftbutton label="кнопка A">Реагує на натискання кнопки A на BBC micro:bit.</leftbutton>
-    <rightbutton label="кнопка B">Реагує на натискання кнопки B на BBC micro:bit.</rightbutton>
-    <pin1 label="пін 0">Читати стан піна 0 BBC micro:bit.</pin1>
-    <pin2 label="пін 1">Читати стан піна 1 BBC micro:bit.</pin2>
-    <pin3 label="пін 2">Читати стан піна 2 BBC micro:bit.</pin3>
-    <shake label="трясіння">Виявляється, коли BBC micro:bit струснутий.</shake>
-  </microbit>
   <mouse>
     <button>
       <left label="ліва">Реагує на ліву кнопку миші.</left>
@@ -890,9 +880,6 @@
     <watertype label="тип води">Встановити тип води.</watertype>
     <on label="увімкнено">Встановити поточний стан "увімкнено".</on>
     <off label="вимкнено">Встановити поточний стан "вимкнено".</off>
-    <microbit>
-      <pattern label="шаблон">Шаблон світлодіодів для відображення на екрані BBC micro:bit.</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="кГц">Значення - це частота в кілогерцах.</khz>
     </frequencyunits>
@@ -978,25 +965,6 @@
         <ignoreme label="ігноруйте мене">Не турбуйтеся про те, щоб тримати цього персонажа в полі зору.</ignoreme>
         <firstperson label="від першої особи">Бачити через очі цього персонажа.</firstperson>
       </camera>
-      <microbit>
-        <say label="повідомити">Прокручувати текст на дисплеї micro:bit.</say>
-        <block label="керування світлами">Управляти всіма світлами micro:bit.</block>
-        <sequential label="послідовність">Увімкнути світло на micro:bit послідовно.</sequential>
-        <show label="показати малюнок">Показати малюнок на дисплеї micro:bit.</show>
-        <setpin1 label="встановити пін 0">Встановлює стан цифрового виводу піна.</setpin1>
-        <setpin2 label="встановити пін 1">Встановлює стан цифрового виводу піна.</setpin2>
-        <setpin3 label="встановити пін 2">Встановлює стан цифрового виводу піна.</setpin3>
-        <setpwmfrequency>
-          <pin1 label="частота PWM 0">Активує сигнал з шириною імпульсу і встановлює частоту сигналу (у секундах) з опціональним модифікатором kHz.</pin1>
-          <pin2 label="частота PWM 1">Активує сигнал з шириною імпульсу і встановлює частоту сигналу (у секундах) з опціональним модифікатором kHz.</pin2>
-          <pin3 label="частота PWM 2">Активує сигнал з шириною імпульсу і встановлює частоту сигналу (у секундах) з опціональним модифікатором kHz.</pin3>
-        </setpwmfrequency>
-        <setpwmdutycycle>
-          <pin1 label="добовий цикл PWM 0">Активує сигнал з шириною імпульсу і встановлює час, протягом якого сигнал перебуває в стані "увімкнено" (у відсотках).</pin1>
-          <pin2 label="добовий цикл PWM 1">Активує сигнал з шириною імпульсу і встановлює час, протягом якого сигнал перебуває в стані "увімкнено" (у відсотках).</pin2>
-          <pin3 label="добовий цикл PWM 2">Активує сигнал з шириною імпульсу і встановлює час, протягом якого сигнал перебуває в стані "увімкнено" (у відсотках).</pin3>
-        </setpwmdutycycle>
-      </microbit>
   </actuator>
   <root />
   <group>
@@ -1080,11 +1048,6 @@
     <scorebucketfilters.local label="приватні результати" />
     <settingsfilters label="установки" />
     <settingsmodifiers label="установки" />
-   <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
   </group>
 
 </Tiles>

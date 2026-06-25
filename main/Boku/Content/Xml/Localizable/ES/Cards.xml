@@ -5,7 +5,6 @@
     <keyboard label="teclado">Permite a un jugador controlar a un personaje. Especifica cual tecla.</keyboard>
     <mouse label="ratón">Responde a una entrada del ratón.</mouse>
     <touch label="tocar">Responde a una entrada touch.</touch>
-    <microbit label="BBC micro:bit">Responde a una entrada BBC micro:bit.</microbit>
     <eyes label="mira">Reacciona cuando mira un objeto, dependiendo del tipo o color. Colinas y valles pueden bloquear la vista si utilizas un filtro de linea-de-visión.</eyes>
     <ears label="escucha">Reacciona cuando escucha un objeto, dependiendo del tipo o sonido. Escuchar funciona a través de las paredes.</ears>
     <bumpers label="choca">Reacciona cuando se choca contra otro objeto, dependiendo del tipo, color, etc.</bumpers>
@@ -166,15 +165,6 @@
     <righttrigger_analog label="disp derecho">Reacciona al disparador derecho del controlador.</righttrigger_analog>
     <strongly label="fuerte">Detecta una señal o valor fuerte.</strongly>
     <weakly label="débil">Detecta una señal o valor débil.</weakly>
-    <microbit label="BBC micro:bit">
-      <tilt label="inclinación">Reacciona a la inclinación del BBC micro:bit.</tilt>
-      <leftbutton label="botón A">Reacciona a presionar el botón A del BBC micro:bit.</leftbutton>
-      <rightbutton label="botón B">Reacciona a presionar el botón B BBC micro:bit.</rightbutton>
-      <pin1 label="pin 0">Leer el estado del pin 0 del BBC micro:bit.</pin1>
-      <pin2 label="pin 1">Leer el estado del pin 1 del BBC micro:bit.</pin2>
-      <pin3 label="pin 2">Leer el estado del pin 2 del BBC micro:bit.</pin3>
-      <shake label="sacudir">Detecta cuando el micro:bit es sacudido.</shake>
-    </microbit>
     <mouse>
       <button>
         <left label="izquierdo">Reacciona al botón izquierdo del ratón.</left>
@@ -891,9 +881,6 @@
     <watertype label="tipo de agua">Fijar el tipo de agua.</watertype>
     <on label="encendido">Fijar el estado actual a 'encendido'.</on>
     <off label="apagado">Fijar el estado actual a 'apagado'.</off>
-    <microbit>
-      <pattern label="patrón">El patrón LED a mostrar en la pantalla de BBC micro:bit.</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="kHz">El valor es una frecuencia en kilohertzios.</khz>
     </frequencyunits>
@@ -979,25 +966,6 @@
       <ignoreme label="ignorar">No te preocupes por mantener este personaje visible.</ignoreme>
       <firstperson label="1ra persona">Ver a través de los ojos de este personaje.</firstperson>
     </camera>
-    <microbit>
-      <say label="decir">Desplazar texto en la pantalla de micro:bit.</say>
-      <block label="bloquear">Controlar todas las luces de micro:bit.</block>
-      <sequential label="medidor">Encender las luces de micro:bit secuencialmente.</sequential>
-      <show label="mostrar patrón">Mostrar un patrón en la pantalla de micro:bit.</show>
-      <setpin1 label="fijar pin 0">Fijar la salida digital de el pin.</setpin1>
-      <setpin2 label="fijar pin 1">Fijar la salida digital de el pin.</setpin2>
-      <setpin3 label="fijar pin 2">Fijar la salida digital de el pin.</setpin3>
-      <setpwmfrequency>
-        <pin1 label="PWM 0 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin1>
-        <pin2 label="PWM 1 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin2>
-        <pin3 label="PWM 2 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        <pin1 label="PWM 0 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin1>
-        <pin2 label="PWM 1 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin2>
-        <pin3 label="PWM 2 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin3>
-      </setpwmdutycycle>
-    </microbit>
   </actuator>
   <root />
   <group>
@@ -1081,12 +1049,6 @@
     <scorebucketfilters.local label="puntajes privados" />
     <settingsfilters label="configuración" />
     <settingsmodifiers label="configuración" />
-
-    <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
   </group>
 
 </Tiles>

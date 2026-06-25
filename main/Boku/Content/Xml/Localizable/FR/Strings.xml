@@ -704,20 +704,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
     <no>Non</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>Luminosité</brightness>
-    <duration>Durée</duration>
-    <toggleLED>Changer LED</toggleLED>
-  </microbitPatternEditor>
-
-  <microbitNeedsDriverDlg>
-    <title>BBC micro:bit a besoin d'un driver</title>
-    <message>Nous avons besoin d'installer un driver pour permettre à Kodu de dialoguer avec votre BBC micro:bit. Cliquer sur le bouton Installer pour commencer. Cliquer sur le lien ci-dessous pour plus d'informations.</message>
-    <linkLabel>Kodu et le BBC micro:bit - Obtenir le Guide de Démarrage</linkLabel>
-    <cancelLabel>Annuler</cancelLabel>
-    <installLabel>Installer</installLabel>
-  </microbitNeedsDriverDlg>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1282,7 +1268,6 @@ Cela vous permet de charger et de jouer un niveau déjà existant.</quietMainMen
 	  Quand vous utilisez un Switch &lt;actuator.switchtask&gt;, vous devez également indiquer au système vers quelle page aller.
           Par exemple: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-    <microbitNeedsResetHintToast>Flashez votre BBC micro:bit, attendez um moment...</microbitNeedsResetHintToast>
   </toast>
 
   <error>

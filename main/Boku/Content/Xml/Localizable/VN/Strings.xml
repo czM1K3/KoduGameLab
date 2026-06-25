@@ -1253,28 +1253,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
     <no>Không</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    
-    <brightness>Độ sáng</brightness>
-    
-    <duration>Thời lượng</duration>
-    
-    <toggleLED>Chuyển đổi đèn LED</toggleLED>
-  </microbitPatternEditor>
-
-  <microbitNeedsDriverDlg>
-    
-    <title>Cần driver BBC micro:bit </title>
-    
-    <message>Chúng tôi cần cài đặt trình điều khiển để Kodu có thể nói chuyện với BBC micro: bit của bạn. Nhấp vào nút Cài đặt để bắt đầu. Nhấp vào liên kết dưới đây để biết thêm thông tin.</message>
-    
-    <linkLabel>Kodu và BBC micro: bit - Hướng dẫn bắt đầu</linkLabel>
-    
-    <cancelLabel>Quay lại</cancelLabel>
-    
-    <installLabel>Cài đặt</installLabel>
-  </microbitNeedsDriverDlg>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1947,9 +1925,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
       
     Ví dụ: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-
-    
-    <microbitNeedsResetHintToast>Đang ghi mã vào BBC micro:bit, vui lòng đợi ...</microbitNeedsResetHintToast>
     
   </toast>
 

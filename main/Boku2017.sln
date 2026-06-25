@@ -60,14 +60,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuSetupTool", "BokuSetupT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentHiDef", "ContentHiDef\ContentHiDef.contentproj", "{879814ED-E14F-43E4-B5AB-A9A881FE9D37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitScan", "MicrobitScan\MicrobitScan.csproj", "{2762131B-2E93-4D8E-A5B7-DBE02D149F74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitNeedDriverDlg", "MicrobitNeedDriverDlg\MicrobitNeedDriverDlg.csproj", "{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicrobitUtils", "MicrobitUtils", "{CDD23AE3-B79A-4053-9BFD-FD5F14816A61}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitTest", "MicrobitTest\MicrobitTest.csproj", "{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}"
-EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "KoduUWP", "KoduUWP\KoduUWP.wapproj", "{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}"
 EndProject
 Global
@@ -335,17 +327,8 @@ Global
 		SccProjectUniqueName21 = ContentHiDef\\ContentHiDef.contentproj
 		SccProjectName21 = ContentHiDef
 		SccLocalPath21 = ContentHiDef
-		SccProjectUniqueName22 = MicrobitScan\\MicrobitScan.csproj
 		SccProjectTopLevelParentUniqueName22 = Boku2017.sln
-		SccProjectName22 = MicrobitScan
-		SccLocalPath22 = MicrobitScan
-		SccProjectUniqueName23 = MicrobitNeedDriverDlg\\MicrobitNeedDriverDlg.csproj
-		SccProjectName23 = MicrobitNeedDriverDlg
-		SccLocalPath23 = MicrobitNeedDriverDlg
-		SccProjectUniqueName24 = MicrobitTest\\MicrobitTest.csproj
 		SccProjectTopLevelParentUniqueName24 = Boku2017.sln
-		SccProjectName24 = MicrobitTest
-		SccLocalPath24 = MicrobitTest
 		SccProjectUniqueName25 = KoduUWP\\KoduUWP.wapproj
 		SccProjectName25 = KoduUWP
 		SccLocalPath25 = KoduUWP

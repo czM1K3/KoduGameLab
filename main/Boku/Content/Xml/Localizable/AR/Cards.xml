@@ -6,8 +6,6 @@
     <mouse label="الفأرة">استجابة لإدخالات الفأرة.</mouse>
     <touch label="لمس">استجابة للتعليمت الدمدخلة عن طريق اللمس</touch>
 
-    <microbit label="BBC micro:bit">Respond to BBC micro:bit input.</microbit>
-
     <eyes label="رؤية">الاستجابة عند رؤية كائن, اعتمادا على النوع أو اللون. بإمكان الهضاب والجدران أن تحجب الرؤية عند استخدام فلتر خط-الرؤية.</eyes>
     <ears label="سماع">استجابة عند سماع كائن اعتمادا على النوع أو الصوت. السماع ممكن عبر الجدران.</ears>
     <bumpers label="اصطدام">استجابة عند الاصطدام بكائن آخر اعتمادا على النوع أو اللون...الخ</bumpers>
@@ -162,15 +160,6 @@
     
     <strongly label="strongly">Detect a strong signal or value.</strongly>
     <weakly label="weakly">Detect a weak signal or value.</weakly>
-    <microbit label="BBC micro:bit">
-      <tilt label="tilt">React to tilt input from the BBC micro:bit.</tilt>
-      <leftbutton label="A button">React to pressing the BBC micro:bit A button.</leftbutton>
-      <rightbutton label="B button">React to pressing the BBC micro:bit B button.</rightbutton>
-      <pin1 label="pin 0">Read state of BBC micro:bit pin 0.</pin1>
-      <pin2 label="pin 1">Read state of BBC micro:bit pin 1.</pin2>
-      <pin3 label="pin 2">Read state of BBC micro:bit pin 2.</pin3>
-      <shake label="shake">Detects when the micro:bit is shaken.</shake>
-    </microbit>
 
     <mouse>
       <button>
@@ -868,9 +857,6 @@
 
     <on label="on">Set the current state to 'on'.</on>
     <off label="off">Set the current state to 'off'.</off>
-    <microbit>
-      <pattern label="pattern">LED pattern to show on BBC micro:bit screen.</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="kHz">The value is a kilohertz frequency.</khz>
     </frequencyunits>
@@ -948,26 +934,6 @@
       <ignoreme label="تجاهل">لا تقلق بشأن إبقاء هذه الشخصية رهن المشاهدة.</ignoreme>
       <firstperson label="شخصية أولى">المشاهدة من خلال عيون هذه الشخصية.</firstperson>
     </camera>
-
-    <microbit>
-      <say label="say">Scroll text on the micro:bit display.</say>
-      <block label="block">Control all the micro:bit lights.</block>
-      <sequential label="meter">Turn on the micro:bit lights sequentially.</sequential>
-      <show label="show pattern">Show a pattern on the micro:bit display.</show>
-      <setpin1 label="set pin 0">Sets the digital output state of the pin.</setpin1>
-      <setpin2 label="set pin 1">Sets the digital output state of the pin.</setpin2>
-      <setpin3 label="set pin 2">Sets the digital output state of the pin.</setpin3>
-      <setpwmfrequency>
-        <pin1 label="PWM 0 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin1>
-        <pin2 label="PWM 1 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin2>
-        <pin3 label="PWM 2 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        <pin1 label="PWM 0 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin1>
-        <pin2 label="PWM 1 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin2>
-        <pin3 label="PWM 2 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin3>
-      </setpwmdutycycle>
-    </microbit>
 
   </actuator>
   <root />
@@ -1049,12 +1015,6 @@
     <scorefilters label="scores"></scorefilters>
     <scorebucketfilters label="world scores" />
     <scorebucketfilters.local label="private scores" />
-
-    <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
 
   </group>
 </Tiles>

@@ -102,7 +102,6 @@ namespace Boku
             public TextEditor textEditor = null;         // Editor for 'say' verb and 'said' filter.
             public TextLineDialog textLineDialog = null;         // Editor for single line text.
 
-            public MicrobitPatternEditor microbitPatternEditor = null;
             public ScrollableTextDisplay scrollableTextDisplay = null;  // Modal display for 'say' verb in fullscreen mode.
             public TextDisplay smallTextDisplay = null;                 // Modal display for 'say' verb in fullscreen mode, for shorter messages.
 
@@ -200,7 +199,6 @@ namespace Boku
                 addItemHelpCard = new AddItemHelpCard();
                 textEditor = new TextEditor();
                 textLineDialog = new TextLineDialog();
-                microbitPatternEditor = new MicrobitPatternEditor();
                 scrollableTextDisplay = new ScrollableTextDisplay();
                 smallTextDisplay = new TextDisplay();
 
@@ -304,7 +302,6 @@ namespace Boku
                 BokuGame.Load(addItemHelpCard, immediate);
                 BokuGame.Load(textEditor, immediate);
                 BokuGame.Load(textLineDialog, immediate);
-                BokuGame.Load(microbitPatternEditor, immediate);
                 BokuGame.Load(scrollableTextDisplay, immediate);
                 BokuGame.Load(smallTextDisplay, immediate);
 
@@ -316,7 +313,6 @@ namespace Boku
                 addItemHelpCard.InitDeviceResources(device);
                 textEditor.InitDeviceResources(device);
                 textLineDialog.InitDeviceResources(device);
-                microbitPatternEditor.InitDeviceResources(device);
                 editObjectParameters.InitDeviceResources(device);
                 editWorldParameters.InitDeviceResources(device);
                 scrollableTextDisplay.InitDeviceResources(device);
@@ -336,7 +332,6 @@ namespace Boku
                 BokuGame.Unload(addItemHelpCard);
                 BokuGame.Unload(textEditor);
                 BokuGame.Unload(textLineDialog);
-                BokuGame.Unload(microbitPatternEditor);
                 BokuGame.Unload(scrollableTextDisplay);
                 BokuGame.Unload(smallTextDisplay);
             }   // end of InGame Shared UnloadContent()
@@ -358,7 +353,6 @@ namespace Boku
                 BokuGame.DeviceReset(addItemHelpCard, device);
                 BokuGame.DeviceReset(textEditor, device);
                 BokuGame.DeviceReset(textLineDialog, device);
-                BokuGame.DeviceReset(microbitPatternEditor, device);
                 BokuGame.DeviceReset(scrollableTextDisplay, device);
                 BokuGame.DeviceReset(smallTextDisplay, device);
             }
@@ -719,10 +713,6 @@ namespace Boku
                     else if (shared.textEditor.Active)
                     {
                         shared.textEditor.Render(camera);
-                    }
-                    else if (shared.microbitPatternEditor.Active)
-                    {
-                        shared.microbitPatternEditor.Render();
                     }
                     else if (shared.scrollableTextDisplay.Active && shared.scrollableTextDisplay.UseBackgroundThumbnail)
                     {
@@ -1592,7 +1582,7 @@ namespace Boku
                     !InGame.inGame.mouseEditUpdateObj.ToolBox.SlidersActive)
                 {
                     // Don't show any of the mouse edit menus if the AddItem help, programming editor, text editor or pattern editor is active.
-                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active && !InGame.inGame.shared.microbitPatternEditor.Active)
+                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active)
                     {
                         // Don't show the toolbar if the user is in camera set mode.
                         if (!EditWorldParameters.CameraSetMode)
@@ -1613,7 +1603,7 @@ namespace Boku
                     !InGame.inGame.touchEditUpdateObj.ToolBox.SlidersActive)
                 {
                     // Don't show any of the touch edit menus if the AddItem help, programming editor, text editor or pattern editor is active.
-                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active && !InGame.inGame.shared.microbitPatternEditor.Active)
+                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active)
                     {
                         // Don't show the toolbar if the user is in camera set mode.
                         if (!EditWorldParameters.CameraSetMode)

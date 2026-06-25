@@ -660,12 +660,6 @@
     <no>Nei</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>Lysstyrke</brightness>
-    <duration>Varighet</duration>
-    <toggleLED>Slå LED av/på</toggleLED>
-  </microbitPatternEditor>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1267,8 +1261,6 @@
       
       F.eks: &lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>Blinker med din BBC micro:bit, vennligs vent...</microbitNeedsResetHintToast>
     
   </toast>
 

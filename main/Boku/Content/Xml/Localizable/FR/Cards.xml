@@ -5,7 +5,6 @@
     <keyboard label="clavier">Permettre à un joueur de contrôler un personnage. Spécifier quelle touche.</keyboard>
     <mouse label="souris">Répondre à la souris.</mouse>
     <touch label="toucher">Répondre à un toucher d'écran tactile.</touch>
-    <microbit label="BBC micro:bit">Répondre à l'entrée BBC micro:bit.</microbit>
     <eyes label="voir">Réagir lorsque vous voyez un objet en fonction de sa couleur ou de son type. Collines et murs peuvent bloquer la vue.</eyes>
     <ears label="entendre">Réagir quand vous entendez un objet selon le type ou le son. L'écoute fonctionne à travers les murs.</ears>
     <bumpers label="contact">Réagir lorsque vous touchez un autre objet selon le type, la couleur, etc.</bumpers>
@@ -161,15 +160,6 @@
     <righttrigger_analog label="gâchette droite">Réagir à la gâchette droite du contrôleur.</righttrigger_analog>
     <strongly label="mauvais">Détecter un mauvais signal ou une mauvaise valeur.</strongly>
     <weakly label="basse">Détecter un signal ou une valeur faible.</weakly>
-    <microbit label="BBC micro:bit">
-      <tilt label="tilt">Réagir à une entrée du BBC micro:bit.</tilt>
-      <leftbutton label="bouton A">Réagir à une pression du BBC micro:bit bouton A.</leftbutton>
-      <rightbutton label="bouton B">Réagir à une pression du BBC micro:bit bouton B.</rightbutton>
-      <pin1 label="pin 0">Lire l'état du BBC micro:bit pin 0.</pin1>
-      <pin2 label="pin 1">Lire l'état du BBC micro:bit pin 1.</pin2>
-      <pin3 label="pin 2">Lire l'état du BBC micro:bit pin 2.</pin3>
-      <shake label="secousse">Détecter quand le micro:bit est secoué.</shake>
-    </microbit>
     <mouse>
       <button>
         <left label="gauche">Réagir au bouton gauche de la souris.</left>
@@ -865,9 +855,6 @@
     <watertype label="type d'eau">Choisir le type d'eau.</watertype>
     <on label="on">Mettre sur ON (activer).</on>
     <off label="off">Mettre sur OFF (désactiver).</off>
-    <microbit>
-      <pattern label="motif">Le motif de LED à montrer sur l'écran BBC micro:bit.</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="kHz">La valeur est la fréquence en kilohertz.</khz>
     </frequencyunits>
@@ -942,25 +929,6 @@
       <ignoreme label="ignorer">Ignorer le pint de vue de ce personnage.</ignoreme>
       <firstperson label="1ère personne">Voir à travers les yeux de ce personnage.</firstperson>
     </camera>
-    <microbit>
-      <say label="dire">Texte défilant sur l'écran micro:bit.</say>
-      <block label="bloc">Contrôler toutes les lumières micro:bit.</block>
-      <sequential label="mètre">Allumer les lumières micro:bit séquentiellement.</sequential>
-      <show label="montrer le motif">Montrer un motif sur l'écran micro:bit.</show>
-      <setpin1 label="définir pin 0">Définir l'état digital de "sortie" du pin.</setpin1>
-      <setpin2 label="définir pin 1">Définir l'état digital de "sortie" du pin.</setpin2>
-      <setpin3 label="définir pin 2">Définir l'état digital de "sortie" du pin.</setpin3>
-      <setpwmfrequency>
-        <pin1 label="fréquence PWM 0">Activer un signal de largeur d'impulsion modulé, et définir le signal de fréquence (en secondes), avec un modificateur de khz optionnel.</pin1>
-        <pin2 label="fréquence PWM 1">Activer un signal de largeur d'impulsion modulé, et définir le signal de fréquence (en secondes), avec un modificateur de khz optionnel.</pin2>
-        <pin3 label="fréquence PWM 2">Activer un signal de largeur d'impulsion modulé, et définir le signal de fréquence (en secondes), avec un modificateur de khz optionnel.</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        <pin1 label="cycle tâche PWM 0">Activer un signal de largeur d'impulsion modulé, et définir combien de temps le signal est sur ON (pourcentage a).</pin1>
-        <pin2 label="cycle tâche PWM 1">Activer un signal de largeur d'impulsion modulé, et définir combien de temps le signal est sur ON (pourcentage a).</pin2>
-        <pin3 label="cycle tâche PWM 2">Activer un signal de largeur d'impulsion modulé, et définir combien de temps le signal est sur ON (pourcentage a).</pin3>
-      </setpwmdutycycle>
-    </microbit>
   </actuator>
   <root />
   <group>
@@ -1041,11 +1009,6 @@
     <scorefilters label="scores"></scorefilters>
     <scorebucketfilters label="scores du monde" />
     <scorebucketfilters.local label="scores privés" />
-    <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
 
   </group>
 </Tiles>

@@ -661,12 +661,6 @@
     <no>いいえ</no>
   </textDialog>
 
-  <microbitPatternEditor>
-    <brightness>Brightness</brightness>
-    <duration>Duration</duration>
-    <toggleLED>Toggle LED</toggleLED>
-  </microbitPatternEditor>
-
   <buttonAliasStrings>
     <aButton>
       <alias>a</alias>
@@ -1270,8 +1264,6 @@
       
 たとえば: 　　　　&lt;actuator.switchtask&gt; &lt;modifier.taskb&gt;
     </switchNoTargetModal>
-
-    <microbitNeedsResetHintToast>One or more attached BBC micro:bits need to be reset. Please press the reset button on the back of the device.</microbitNeedsResetHintToast>
     
   </toast>
 

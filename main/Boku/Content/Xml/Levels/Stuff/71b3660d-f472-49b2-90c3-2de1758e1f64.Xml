@@ -154,7 +154,6 @@
               <SayJustification>Left</SayJustification>
               <SaidMode>1</SaidMode>
               <SaidJustification>Left</SaidJustification>
-              <MicrobitPatterns />
             </Reflex>
           </reflexes>
         </Task>
@@ -1482,7 +1481,6 @@
               <SayJustification>Left</SayJustification>
               <SaidMode>1</SaidMode>
               <SaidJustification>Left</SaidJustification>
-              <MicrobitPatterns />
             </Reflex>
           </reflexes>
         </Task>

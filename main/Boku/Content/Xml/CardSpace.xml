@@ -117,13 +117,6 @@
       </XmlCategories>
 
     </TouchSensor>
-    
-    <MicrobitSensor upid="sensor.microbit" icon="sensor.microbit" helpGroups="microbit">
-      <XmlCategories>
-        <Category>WhenMicrobit</Category>
-      </XmlCategories>
-
-    </MicrobitSensor>
 
     <SightSensor upid="sensor.eyes" helpGroups="ranges">
       <XmlOutputs>
@@ -3776,154 +3769,6 @@
     </GamePadTriggerFilter>
 
 
-    <MicrobitTiltFilter upid ="filter.microbit.tilt" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Vector</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MultipleDirectionFilter</Category>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitTiltFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitTiltFilter>
-
-    <MicrobitButtonFilter upid="filter.microbit.leftbutton" button="Left" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitButtonFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitButtonFilter>
-
-    <MicrobitButtonFilter upid="filter.microbit.rightbutton" button="Right" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitButtonFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitButtonFilter >
-
-    <MicrobitShakeFilter upid="filter.microbit.shake" helpGroups="microbit">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitShakeFilter</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitShakeFilter>
-
-    <MicrobitPinFilter upid="filter.microbit.pin1" pin="Pin1" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitPinFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitPinFilter>
-
-    <MicrobitPinFilter upid="filter.microbit.pin2" pin="Pin2" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitPinFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitPinFilter>
-
-    <MicrobitPinFilter upid="filter.microbit.pin3" pin="Pin3" helpGroups="microbit input">
-      <XmlOutputs>
-        <Output>Boolean</Output>
-      </XmlOutputs>
-
-      <XmlCategories>
-        <Category>MicrobitFilter</Category>
-        <Category>MicrobitPinFilter</Category>
-        <Category>WhenUserInput</Category>
-      </XmlCategories>
-
-      <XmlInclusions>
-        <Category>WhenMicrobit</Category>
-      </XmlInclusions>
-
-      <XmlExclusions>
-        <Category>MicrobitFilter</Category>
-      </XmlExclusions>
-
-    </MicrobitPinFilter>
-
-
 
     <!-- Mouse buttons -->
     <MouseFilter upid="filter.mouse.button.left" type="LeftButton" helpGroups="mouse input">
@@ -5800,7 +5645,6 @@
 
       <XmlInclusions>
         <Category>WhenGamePad</Category>
-        <Category>WhenMicrobit</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -5822,7 +5666,6 @@
 
       <XmlInclusions>
         <Category>WhenGamePad</Category>
-        <Category>WhenMicrobit</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -5844,7 +5687,6 @@
 
       <XmlInclusions>
         <Category>WhenGamePad</Category>
-        <Category>WhenMicrobit</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -5863,7 +5705,6 @@
 
       <XmlInclusions>
         <Category>WhenGamePad</Category>
-        <Category>WhenMicrobit</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -8075,10 +7916,6 @@
         <Category>WeaklyFilter</Category>
       </XmlCategories>
 
-      <XmlInclusions>
-        <Category>MicrobitShakeFilter</Category>
-      </XmlInclusions>
-
       <XmlExclusions>
         <Category>StronglyFilter</Category>
       </XmlExclusions>
@@ -8092,10 +7929,6 @@
         <Category>StrengthFilter</Category>
         <Category>StronglyFilter</Category>
       </XmlCategories>
-
-      <XmlInclusions>
-        <Category>MicrobitShakeFilter</Category>
-      </XmlInclusions>
 
       <XmlExclusions>
         <Category>WeaklyFilter</Category>
@@ -8419,8 +8252,6 @@
 
       <XmlInclusions>
         <Category>DoVictory</Category>
-        <Category>DoMicrobitShow</Category>
-        <Category>DoMicrobitSay</Category>
       </XmlInclusions>
 
       <XmlNegations>
@@ -8432,8 +8263,6 @@
 
       <XmlInclusions>
         <Category>DoVictory</Category>
-        <Category>DoMicrobitShow</Category>
-        <Category>DoMicrobitSay</Category>
       </XmlInclusions>
 
       <XmlNegations>
@@ -8445,8 +8274,6 @@
 
       <XmlInclusions>
         <Category>DoVictory</Category>
-        <Category>DoMicrobitShow</Category>
-        <Category>DoMicrobitSay</Category>
       </XmlInclusions>
 
       <XmlNegations>
@@ -8458,8 +8285,6 @@
 
       <XmlInclusions>
         <Category>DoVictory</Category>
-        <Category>DoMicrobitShow</Category>
-        <Category>DoMicrobitSay</Category>
       </XmlInclusions>
 
       <XmlNegations>
@@ -9629,9 +9454,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9654,9 +9476,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9679,9 +9498,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9704,9 +9520,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9729,9 +9542,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9754,9 +9564,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9779,9 +9586,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9804,9 +9608,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9829,9 +9630,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9854,9 +9652,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9880,9 +9675,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -9906,9 +9698,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on points.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -10424,8 +10213,6 @@
         <Category>DoMaxHitpointsChange</Category>
         <Category>DoBlipDamageChange</Category>
         <Category>DoMissileDamageChange</Category>
-        <Category>DoMicrobitSay</Category>
-        <Category>DoMicrobitLights</Category>
       </XmlExclusions>
 
     </OnceModifier>
@@ -10445,9 +10232,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10475,9 +10259,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10505,9 +10286,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10536,9 +10314,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
       </XmlInclusions>
 
       <XmlExclusions>
@@ -10565,9 +10340,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10595,9 +10367,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10625,9 +10394,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10655,9 +10421,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10685,9 +10448,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10715,9 +10475,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10745,9 +10502,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10776,9 +10530,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10806,9 +10557,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10836,9 +10584,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10866,9 +10611,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10896,9 +10638,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10926,9 +10665,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10956,9 +10692,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -10986,9 +10719,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11016,9 +10746,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11046,9 +10773,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11076,9 +10800,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11106,9 +10827,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11136,9 +10854,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11166,9 +10881,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11196,9 +10908,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11226,9 +10935,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11256,9 +10962,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11286,9 +10989,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11316,9 +11016,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11346,9 +11043,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11376,9 +11070,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11406,9 +11097,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11436,9 +11124,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11466,9 +11151,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11496,9 +11178,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11526,9 +11205,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11557,9 +11233,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11587,9 +11260,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11617,9 +11287,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11647,9 +11314,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11677,9 +11341,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11707,9 +11368,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11737,9 +11395,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11767,9 +11422,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11797,9 +11449,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11827,9 +11476,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11857,9 +11503,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11887,9 +11530,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11917,9 +11557,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11947,9 +11584,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -11977,9 +11611,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12007,9 +11638,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12037,9 +11665,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12067,9 +11692,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12097,9 +11719,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12127,9 +11746,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12157,9 +11773,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12187,9 +11800,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12217,9 +11827,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12247,9 +11854,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12277,9 +11881,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12307,9 +11908,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12335,21 +11933,6 @@
 
       <XmlInclusions>
         <Category>DoScoring</Category>
-
-        <!--
-        TODO Microbit
-        These would be nice in the future but right now the way Modifiers are 
-        set up this is kind of hard to do.  The problem occurs with Modifiers
-        that have dynamic values.  There's a GatherParams call that happens
-        at setup time but not at execution time.  So, for each of these cases
-        if we want the Health value to be available we have to special case 
-        the code.
-        
-        <Category>DoDamage</Category>
-        <Category>DoHeal</Category>
-        -->
-        <!-- Allow lights to be set based on health.-->
-        <Category>DoMicrobitLights</Category>
       </XmlInclusions>
 
     </HealthModifier>
@@ -12365,9 +11948,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12395,9 +11975,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12424,9 +12001,6 @@
         <Category>DoDamage</Category>
         <Category>DoHeal</Category>
         <!-- Allow lights to be set based on score.-->
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-        <Category>DoMicrobitSetPwmDutyCycle</Category>
         <Category>DoSetScore</Category>
       </XmlInclusions>
 
@@ -12486,10 +12060,6 @@
         <Category>DoScan</Category>
         <Category>DoPicture</Category>
         <Category>DoPush</Category>
-        <Category>DoMicrobitSay</Category>
-        <Category>DoMicrobitLights</Category>
-        <Category>DoMicrobitShow</Category>
-        <Category>DoMicrobitSetPin</Category>
         <Category>DoSetScore</Category>
       </XmlExclusions>
 
@@ -14410,8 +13980,6 @@
         <Category>DoWaterRaise</Category>
         <Category>DoWaterLower</Category>
         <Category>DoSetWater</Category>
-        <Category>DoMicrobitSay</Category>
-        <Category>DoMicrobitLights</Category>
       </XmlExclusions>
 
     </OnceModifier>
@@ -14423,24 +13991,10 @@
       </XmlInclusions>
     </WaterModifier>
 
-    <MicrobitPatternModifier upid="modifier.microbit.pattern" icon="modifier.microbit.pattern" helpGroups="bots">
-      <XmlInclusions>
-        <Category>DoMicrobitShow</Category>
-      </XmlInclusions>
-      
-      <MaxInstanceCount>10</MaxInstanceCount>
-      <MaxClassCount>10</MaxClassCount>
-      
-    </MicrobitPatternModifier>
-
     <OnOffModifier upid="modifier.on" helpGroups="bots">
       <XmlCategories>
         <Category>OnOffModifier</Category>
       </XmlCategories>
-      
-      <XmlInclusions>
-        <Category>DoMicrobitSetPin</Category>
-      </XmlInclusions>
 
       <XmlExclusions>
         <Category>ScoreModifier</Category>
@@ -14453,10 +14007,6 @@
         <Category>OnOffModifier</Category>
       </XmlCategories>
 
-      <XmlInclusions>
-        <Category>DoMicrobitSetPin</Category>
-      </XmlInclusions>
-
       <XmlExclusions>
         <Category>ScoreModifier</Category>
         <Category>ScoreBucketModifier</Category>
@@ -14467,10 +14017,6 @@
       <XmlCategories>
         <Category>FrequencyUnitsModifier</Category>
       </XmlCategories>
-
-      <XmlInclusions>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlInclusions>
 
       <XmlExclusions>
         <Category>FrequencyUnitsModifier</Category>
@@ -15301,138 +14847,6 @@
         <Category>MouseMoveFilter</Category>
       </XmlExclusions>
     </VerbActuator>
-
-    <!-- Microbit -->
-    <VerbActuator upid="actuator.microbit.say" Verb="MicrobitSay" group="group.actions" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSay</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-    
-    <VerbActuator upid="actuator.microbit.block" Verb="MicrobitLights" group="group.actions" helpGroups="actuators bots" archived="true">
-      <XmlCategories>
-        <Category>DoMicrobitLights</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.sequential" Verb="MicrobitLights" group="group.actions" helpGroups="actuators bots" archived="true">
-      <XmlCategories>
-        <Category>DoMicrobitLights</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.show" Verb="MicrobitShow" group="group.actions" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitShow</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpin1" Verb="MicrobitSetPin" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPin</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpin2" Verb="MicrobitSetPin" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPin</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpin3" Verb="MicrobitSetPin" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPin</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmfrequency.pin1" Verb="MicrobitSetPwmFrequency" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmfrequency.pin2" Verb="MicrobitSetPwmFrequency" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmfrequency.pin3" Verb="MicrobitSetPwmFrequency" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmdutycycle.pin1" Verb="MicrobitSetPwmDutyCycle" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmdutycycle.pin2" Verb="MicrobitSetPwmDutyCycle" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
-    <VerbActuator upid="actuator.microbit.setpwmdutycycle.pin3" Verb="MicrobitSetPwmDutyCycle" group="group.microbit.actions.gpio" helpGroups="actuators">
-      <XmlCategories>
-        <Category>DoMicrobitSetPwmFrequency</Category>
-      </XmlCategories>
-
-      <XmlExclusions>
-        <Category>MouseMoveFilter</Category>
-      </XmlExclusions>
-    </VerbActuator>
-
   </ActuatorPieces>
 
   <UpidMap>
@@ -15596,9 +15010,6 @@
     <Group upid="group.scorebucketfilters" icon="group.scores.global"/>
     <Group upid="group.scorebucketfilters.local" icon="group.scores.local"/>
     <Group upid="group.settingsfilters" icon="group.scores.settings"/>
-
-
-    <Group upid="group.microbit.actions.gpio" group="group.actions" minExpandElements="0"/>
   </GroupPieces>
 
 </CardSpace>

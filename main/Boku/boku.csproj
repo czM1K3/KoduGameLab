@@ -278,7 +278,6 @@
     <Compile Include="Common\HintSystem\FullResourceHint.cs" />
     <Compile Include="Common\HintSystem\GamepadNoFilterHint.cs" />
     <Compile Include="Common\HintSystem\Hints.cs" />
-    <Compile Include="Common\HintSystem\MicrobitNeedsResetHint.cs" />
     <Compile Include="Common\HintSystem\ModalHint.cs" />
     <Compile Include="Common\HintSystem\NoControllerHint.cs" />
     <Compile Include="Common\HintSystem\NoTerrainToRaiseHint.cs" />
@@ -422,15 +421,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="GraphicsDeviceService.cs" />
-    <Compile Include="Input\Microbit\CommBase.cs" />
-    <Compile Include="Input\Microbit\CommPort.cs" />
-    <Compile Include="Input\Microbit\Microbit.cs" />
-    <Compile Include="Input\Microbit\MicroBitDisplayFrame.cs" />
-    <Compile Include="Input\Microbit\MicrobitExtras.cs" />
-    <Compile Include="Input\Microbit\MicroBitImage.cs" />
-    <Compile Include="Input\Microbit\MicrobitManager.cs" />
-    <Compile Include="Input\Microbit\MicroBitMessageReader.cs" />
-    <Compile Include="Input\Microbit\MicroBitMessageWriter.cs" />
     <Compile Include="Input\VirtualKeyboard.cs" />
     <Compile Include="Input\VirtualKeyboard.Key.cs" />
     <Compile Include="Input\VirtualKeyboard.KeySet.cs" />
@@ -461,17 +451,10 @@
     <Compile Include="Programming\KeyBoardSensor.cs" />
     <Compile Include="Programming\MaxHealthFilter.cs" />
     <Compile Include="Programming\MaxHealthModifier.cs" />
-    <Compile Include="Programming\MicrobitShakeFilter.cs" />
     <Compile Include="Programming\NamedFilter.cs" />
     <Compile Include="Programming\NumericFilter.cs" />
     <Compile Include="Programming\NumericModifier.cs" />
     <Compile Include="Programming\MeFilter.cs" />
-    <Compile Include="Programming\MicrobitButtonFilter.cs" />
-    <Compile Include="Programming\MicrobitPatternModifier.cs" />
-    <Compile Include="Programming\MicrobitPinFilter.cs" />
-    <Compile Include="Programming\MicrobitSensor.cs" />
-    <Compile Include="Programming\MicrobitShowActuator.cs" />
-    <Compile Include="Programming\MicrobitTiltFilter.cs" />
     <Compile Include="Programming\MouseFilter.cs" />
     <Compile Include="Programming\MouseSensor.cs" />
     <Compile Include="Programming\MoveDownSelector.cs" />
@@ -540,7 +523,6 @@
     <Compile Include="Scenes\InGame\TouchOver.cs" />
     <Compile Include="Scenes\InGame\UnDoStack.cs" />
     <Compile Include="Scenes\LiveFeedDisplay.cs" />
-    <Compile Include="Scenes\MicrobitPatternEditor.cs" />
     <Compile Include="Scenes\OptionsMenu.cs" />
     <Compile Include="Scenes\PreGame\PreGameDesc.cs" />
     <Compile Include="Scenes\ScrollableTextDisplay.cs" />
@@ -991,10 +973,6 @@
       <Project>{B32F36E3-F39D-4A82-9E33-57145A7141C3}</Project>
       <Name>BokuShared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MicrobitNeedDriverDlg\MicrobitNeedDriverDlg.csproj">
-      <Project>{8104dae6-5b90-4b2d-99cb-fdf9eb6c94a3}</Project>
-      <Name>MicrobitNeedDriverDlg</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TouchHook\TouchHook\TouchHook.csproj">
       <Project>{B685FBCC-488C-4839-8636-8B034C94B65B}</Project>
       <Name>TouchHook</Name>
@@ -1098,10 +1076,10 @@
     <PublishFile Include="BokuNetInterop.dll">
       <Visible>False</Visible>
       <Group>Ignored</Group>
-      <TargetPath>
-      </TargetPath>
       <PublishState>Auto</PublishState>
       <IncludeHash>True</IncludeHash>
+      <TargetPath>
+      </TargetPath>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

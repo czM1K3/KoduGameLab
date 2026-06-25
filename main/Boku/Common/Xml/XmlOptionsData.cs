@@ -109,10 +109,6 @@ namespace Boku.Common.Xml
         //NOTE:Don't try to fix this. This value is read from xml based on this spelling.
         public string langauge = "";
 
-        // If true, BBC micro:bit tiles will be included in the tile picker.
-        public bool showMicrobitTiles = false;
-        private bool temporarilyShowMicrobitTiles = false;
-
         // Should we save the creator idHash of the current user when Kodu exits?
         public bool keepSignedInOnExit = false;
         public string creatorName = Auth.DefaultCreatorName;
@@ -499,28 +495,6 @@ namespace Boku.Common.Xml
                     Save();
                 }
             }
-        }
-
-        /// <summary>
-        /// Whether or not to show BBC micro:bit tiles in the tile picker.
-        /// </summary>
-        public static bool ShowMicrobitTiles
-        {
-            get { return Instance.showMicrobitTiles || Instance.temporarilyShowMicrobitTiles; }
-            set
-            {
-                if (Instance.showMicrobitTiles != value)
-                {
-                    Instance.showMicrobitTiles = value; 
-                    Save();
-                }
-            }
-        }
-
-        [XmlIgnore]
-        public bool TemporarilyShowMicrobitTiles
-        {
-            set { temporarilyShowMicrobitTiles = value; }
         }
 
         /// <summary>

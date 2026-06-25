@@ -47,42 +47,6 @@ namespace Boku.Programming
     }
 
     /// <summary>
-    /// Class containing the data needed for the Micro Bit Pattern tile.
-    /// LEDs is an array of booleans, one for each LED in the grid.
-    /// Brightness is the brightness of all the on LEDs in the pattern.
-    /// Duration is the time in seconds to show this pattern.
-    /// </summary>
-    public class MicroBitPattern : ICloneable
-    {
-        [XmlArray]
-        public bool[] LEDs;
-        [XmlAttribute]
-        public int Brightness;
-        [XmlAttribute]
-        public float Duration;
-
-        public MicroBitPattern()
-        {
-            LEDs = new bool[25];
-            Brightness = 255;
-            Duration = 1.0f;
-        }
-
-        public object Clone()
-        {
-            MicroBitPattern other = new MicroBitPattern();
-            other.LEDs = new bool[25];
-            for (int i = 0; i < 25; i++ )
-            {
-                other.LEDs[i] = LEDs[i];
-            }
-            other.Brightness = Brightness;
-            other.Duration = Duration;
-            return other;
-        }
-    }
-
-    /// <summary>
     /// Represents a program row without bindings to an actor or a task.
     /// Used for things like row copy/paste.
     public class ReflexData
@@ -228,13 +192,6 @@ namespace Boku.Programming
         {
             get { return _saidStrings; }
         }
-
-        /// <summary>
-        /// If this reflex has modifiers with Micro Bit light patterns this list will contain them.
-        /// </summary>
-        [XmlArray]
-        [XmlArrayItem(typeof(MicroBitPattern))]
-        public List<MicroBitPattern> microbitPatterns;
 
         [XmlIgnore]
         public ModifierParams modifierParams = new ModifierParams();
@@ -816,22 +773,6 @@ namespace Boku.Programming
             dstData.WorldSkyChangeIndex = srcData.WorldSkyChangeIndex;
             dstData.SetWaterTypeIndex = srcData.SetWaterTypeIndex;
 
-            if (srcData.microbitPatterns == null)
-            {
-                dstData.microbitPatterns = null;
-            }
-            else
-            {
-                if (dstData.microbitPatterns == null)
-                {
-                    dstData.microbitPatterns = new List<MicroBitPattern>();
-                    foreach (MicroBitPattern pattern in srcData.microbitPatterns)
-                    {
-                        dstData.microbitPatterns.Add(pattern.Clone() as MicroBitPattern);
-                    }
-                }
-            }
-
             return dstData;
         }   // end of DeepCopy()
 
@@ -1118,14 +1059,6 @@ namespace Boku.Programming
             get { return data.saidStrings; }
         }
 
-        [XmlArray]
-        [XmlArrayItem(typeof(MicroBitPattern))]
-        public List<MicroBitPattern> MicrobitPatterns
-        {
-            get { return data.microbitPatterns; }
-            set { data.microbitPatterns = value; }
-        }
-
         protected Sensor sensor
         {
             get { return data.Sensor; }
@@ -1328,22 +1261,6 @@ namespace Boku.Programming
             clip.WorldSkyChangeIndex = Data.WorldSkyChangeIndex;
             clip.SetWaterTypeIndex = Data.SetWaterTypeIndex;
 
-            if (Data.microbitPatterns == null)
-            {
-                clip.microbitPatterns = null;
-            }
-            else
-            {
-                if (clip.microbitPatterns == null)
-                {
-                    clip.microbitPatterns = new List<MicroBitPattern>();
-                    foreach (MicroBitPattern pattern in Data.microbitPatterns)
-                    {
-                        clip.microbitPatterns.Add(pattern.Clone() as MicroBitPattern);
-                    }
-                }
-            }
-
             return clip;
         }
 
@@ -1465,21 +1382,6 @@ namespace Boku.Programming
             data.WorldSkyChangeEnabled = clip.WorldSkyChangeEnabled;
             data.WorldSkyChangeIndex = clip.WorldSkyChangeIndex;
             data.SetWaterTypeIndex = clip.SetWaterTypeIndex;
-            
-            // Deep copy needed since we may paste multiple times.
-            // Could probably remove the deep copy for the Copy command.
-            if (clip.microbitPatterns == null)
-            {
-                data.microbitPatterns = null;
-            }
-            else
-            {
-                data.microbitPatterns = new List<MicroBitPattern>();
-                foreach (MicroBitPattern pattern in clip.microbitPatterns)
-                {
-                    data.microbitPatterns.Add(pattern.Clone() as MicroBitPattern);
-                }
-            }
             
             RebuildProcessFilters();
             TaskFixup();
@@ -2617,7 +2519,6 @@ namespace Boku.Programming
             {
                 Modifiers[i].GatherParams(data.modifierParams);
 
-                // TODO Microbit
                 // Hack to get hit points for HealthModifier.
                 if (Modifiers[i] is HealthModifier)
                 {

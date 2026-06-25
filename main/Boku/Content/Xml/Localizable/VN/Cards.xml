@@ -9,8 +9,6 @@
     
     <touch label="cảm ứng">Phản hồi với màn hình cảm ứng.</touch>
     
-    <microbit label="BBC micro:bit">Phần hồi với mạch BBC micro:bit.</microbit>
-    
     <eyes label="nhìn">Phản ứng khi bạn nhìn thấy một vật thể tùy vào loại hoặc màu. Đồi nút hoặc tường có thể chặn tầm nhìn nếu bạn cho bộ lọc tầm nhìn (LOS).</eyes>
     
     <ears label="nghe">Phản ứng khi bạn nghe thấy một vật thể, tùy vào loại vật thể đó hay loại âm thanh. Âm thanh truyền qua tường.</ears>
@@ -313,23 +311,6 @@
     <strongly label="mạnh"> Phát hiện tín hiệu hoặc giá trị mạnh.</strongly>
     
     <weakly label="yếu">Phát hiện tín hiệu hoặc giá trị yếu.</weakly>
-    
-    <microbit label="BBC micro:bit">
-      
-      <tilt label="nghiêng">Phản ứng đầu vào nghiêng từ BBC micro:bit.</tilt>
-      
-      <leftbutton label="nút A">Phản ứng với việc bấm nút A trong BBC micro:bit</leftbutton>
-      
-      <rightbutton label="nút B">Phản ứng với việc bấm nút A trong BBC micro:bit</rightbutton>
-      
-      <pin1 label="ghim 0">Đọc trạng thái của BBC micro:bit ghim 0.</pin1>
-      
-      <pin2 label="ghim 1">Đọc trạng thái của BBC micro:bit ghim 1.</pin2>
-      
-      <pin3 label="ghim 2">Đọc trạng thái của BBC micro:bit ghim 2.</pin3>
-      
-      <shake label="rung">Phát hiện khi mà micro:bit bị rung.</shake>
-    </microbit>
     <mouse>
       <button>
         
@@ -1620,10 +1601,6 @@
     <on label="bật"> Đặt trạng thái hiện tại thành 'bật'.</on>
     
     <off label="tắt"> Đặt trạng thái hiện tại thành 'tắt'.</off>
-    <microbit>
-      
-      <pattern label="mẫu"> Mẫu LED hiển thị trên màn hình trên BBCmicro:bit.</pattern>
-    </microbit>
     <frequencyunits>
       
       <khz label="kHz">Giá trị tần số tính theo kilohertz.</khz>
@@ -1766,38 +1743,6 @@
       
       <firstperson label="người thứ nhất"> Nhìn qua đôi mắt của nhân vật này.</firstperson>
     </camera>
-    <microbit>
-      
-      <say label="nói"> Di chuyển văn bản trên màn hình micro:bit.</say>
-      
-      <block label="chặn"> Điều khiển tất cả các đèn micro:bit.</block>
-      
-      <sequential label="mét"> Bật đèn micro: bit liên tục.</sequential>
-      
-      <show label="hiển thị mẫu "> Hiển thị một mẫu trên màn hình micro:bit.</show>
-      
-      <setpin1 label="đặt chân 0"> Đặt trạng thái đầu ra kỹ thuật số của chân số 0.</setpin1>
-      
-      <setpin2 label="đặt chân 1"> Đặt trạng thái đầu ra kỹ thuật số của chân số 1.</setpin2>
-      
-      <setpin3 label="đặt chân 2"> Đặt trạng thái đầu ra kỹ thuật số của chân số 2.</setpin3>
-      <setpwmfrequency>
-        
-        <pin1 label="tần số PWM 0"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn</pin1>
-        
-        <pin2 label="tần số PWM 1"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn</pin2>
-        
-        <pin3 label="tần số PWM 2"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn.</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        
-        <pin1 label="chu kỳ nhiệm vụ PWM 0"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin1>
-        
-        <pin2 label="chu kỳ nhiệm vụ PWM 1"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin2>
-        
-        <pin3 label="chu kỳ nhiệm vụ PWM 2"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin3>
-      </setpwmdutycycle>
-    </microbit>
   </actuator>
   <root></root>
   <group>
@@ -1945,11 +1890,5 @@
     <scorebucketfilters label="điểm chính"></scorebucketfilters>
     
     <scorebucketfilters.local label="điểm cá nhân"></scorebucketfilters.local>
-    <microbit>
-      <actions>
-        
-        <gpio label="micro:bit I/O"></gpio>
-      </actions>
-    </microbit>
   </group>
 </Tiles>

@@ -4,7 +4,6 @@
     <keyboard label="鍵盤">允許玩家控制角色。指定各鍵。</keyboard>
     <mouse label="滑鼠">回應滑鼠輸入。</mouse>
     <touch label="觸控">回應觸控輸入。</touch>
-    <microbit label="BBC micro:bit">回應 BBC micro:bit 輸入。</microbit>
     <eyes label="看">當你看到物件時，根據類型或顏色作出反應。如果你使用線性視野篩選器 (LOS)，山丘和牆壁會擋住你的視線。</eyes>
     <ears label="聽">當你聽到聲響時，根據類型或聲音作出反應。可聽到牆後的聲響。</ears>
     <bumpers label="碰到">當你碰到另一個物件時，根據類型、顏色等狀態作出反應。</bumpers>
@@ -159,15 +158,6 @@
     <righttrigger_analog label="右發射鍵">對控制器的右發射鍵作出反應。</righttrigger_analog>
     <strongly label="強大">偵測強大的訊號或數值。</strongly>
     <weakly label="微弱">偵測微弱的訊號或數值。</weakly>
-    <microbit label="BBC micro:bit">
-      <tilt label="斜向輸入">對 BBC micro:bit 的斜向輸入作出反應。</tilt>
-      <leftbutton label="A 按鈕">按下 BBC micro:bit A 按鈕時作出反應。</leftbutton>
-      <rightbutton label="B 按鈕">按下 BBC micro:bit B 按鈕時作出反應。</rightbutton>
-      <pin1 label="pin 0">讀取 BBC micro:bit pin 0 的狀態。</pin1>
-      <pin2 label="pin 1">讀取 BBC micro:bit pin 1 的狀態。</pin2>
-      <pin3 label="pin 2">讀取 BBC micro:bit pin 2 的狀態。</pin3>
-      <shake label="晃動">偵測 micro:bit 何時晃動。</shake>
-    </microbit>
     <mouse>
       <button>
         <left label="左">對滑鼠左鍵作出反應。</left>
@@ -863,9 +853,6 @@
     <watertype label="水的類型">設定水的類型。</watertype>
     <on label="開啟">設定目前狀態為「開啟」。</on>
     <off label="關閉">設定目前狀態為「關閉」。</off>
-    <microbit>
-      <pattern label="模式">在 BBC micro:bit 螢幕上顯示 LED 模式。</pattern>
-    </microbit>
     <frequencyunits>
       <khz label="kHz">數值為 kHz 頻率。</khz>
     </frequencyunits>
@@ -940,25 +927,6 @@
       <ignoreme label="忽略">別擔心是否讓此角色保留於視野中。</ignoreme>
       <firstperson label="第 1 人稱">從這個角色的眼睛向外看。</firstperson>
     </camera>
-    <microbit>
-      <say label="說">在 micro:bit 顯示器上捲動文字。</say>
-      <block label="封鎖">控制所有 micro:bit 光源。</block>
-      <sequential label="儀表">依序開啟 micro:bit 光源。</sequential>
-      <show label="顯示模式">在 micro:bit 顯示器上顯示模式。</show>
-      <setpin1 label="設定 Pin 0">設定 Pin 的數位輸出狀態。</setpin1>
-      <setpin2 label="設定 Pin 1">設定 Pin 的數位輸出狀態。</setpin2>
-      <setpin3 label="設定 Pin 2">設定 Pin 的數位輸出狀態。</setpin3>
-      <setpwmfrequency>
-        <pin1 label="PWM 0 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin1>
-        <pin2 label="PWM 1 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin2>
-        <pin3 label="PWM 2 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin3>
-      </setpwmfrequency>
-      <setpwmdutycycle>
-        <pin1 label="PWM 0 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin1>
-        <pin2 label="PWM 1 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin2>
-        <pin3 label="PWM 2 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin3>
-      </setpwmdutycycle>
-    </microbit>
   </actuator>
   <root />
   <group>
@@ -1039,11 +1007,5 @@
     <scorefilters label="scores"></scorefilters>
     <scorebucketfilters label="world scores" />
     <scorebucketfilters.local label="private scores" />
-    
-    <microbit>
-      <actions>
-        <gpio label="micro:bit I/O"/>
-      </actions>
-    </microbit>
   </group>
 </Tiles>
