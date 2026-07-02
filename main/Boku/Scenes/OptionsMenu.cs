@@ -496,8 +496,6 @@ namespace Boku
 
                 GamePadInput.ClearAllWasPressedState();
 
-                MainMenu.Instance.LiveFeedDirty = true;
-
             }
         }   // end of Deactivate()
 

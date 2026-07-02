@@ -117,10 +117,6 @@
     <webSignOutMessage1>：你要登出嗎？</webSignOutMessage1>
     <newWebSite>嗨！我們有新網站，你可在此分享你的世界。按一下此處去看看吧。</newWebSite>
     <continueToMain>按一下任何一個位置即可移至主選單。</continueToMain>
-    <more>更多！</more>
-    <less>較少</less>
-    <news>新聞</news>
-    <readMoreHere>在此可閱讀更多！</readMoreHere>
     <paused>Kodu 已暫停。復原至全螢幕以繼續。</paused>
   </mainMenu>
 

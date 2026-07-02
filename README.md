@@ -4,7 +4,7 @@ This fork is about stripping down unnecessary code, so that porting to newer tec
 ## TODO
 - [x] Remove BBC micro:bit support
 - [ ] Remove community features
-- [ ] Remove news features
+- [x] Remove news features
 - [ ] Remove multi user prompt
 - [ ] Remove Shader Model 2 support
 

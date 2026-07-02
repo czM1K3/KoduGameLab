@@ -522,7 +522,6 @@
     <Compile Include="Scenes\InGame\TouchEditToolBox.cs" />
     <Compile Include="Scenes\InGame\TouchOver.cs" />
     <Compile Include="Scenes\InGame\UnDoStack.cs" />
-    <Compile Include="Scenes\LiveFeedDisplay.cs" />
     <Compile Include="Scenes\OptionsMenu.cs" />
     <Compile Include="Scenes\PreGame\PreGameDesc.cs" />
     <Compile Include="Scenes\ScrollableTextDisplay.cs" />
@@ -573,9 +572,6 @@
     <Compile Include="SimWorld\OneFace.cs" />
     <Compile Include="SimWorld\TwoFace.cs" />
     <Compile Include="SimWorld\WideFace.cs" />
-    <Compile Include="Twitter\FeedMS.cs" />
-    <Compile Include="Twitter\Hyperlink.cs" />
-    <Compile Include="Twitter\NewsFeeds.cs" />
     <Compile Include="Ui2d\AuthSignInDialog.cs" />
     <Compile Include="Ui2d\AuthSignOutDialog.cs" />
     <Compile Include="Ui2d\AuthStatusDialog.cs" />
@@ -1076,10 +1072,10 @@
     <PublishFile Include="BokuNetInterop.dll">
       <Visible>False</Visible>
       <Group>Ignored</Group>
-      <PublishState>Auto</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

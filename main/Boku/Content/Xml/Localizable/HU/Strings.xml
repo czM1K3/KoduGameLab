@@ -113,10 +113,6 @@
     <webSignOutMessage1>.  Szeretnél kijelentkezni?</webSignOutMessage1>
     <newWebSite>Helló!  Van egy új weboldalunk, ahol megoszthatod a világaidat.  Ha szeretnéd megnézni, kattints ide.</newWebSite>
     <continueToMain>Kattints bárhova máshova, ha szeretnél a Főmenübe lépni.</continueToMain>
-    <more>több!</more>
-    <less>kevesebb</less>
-    <news>HÍREK</news>
-    <readMoreHere>További információk itt!</readMoreHere>
     <paused>Kodu szünteltetve.  Állítsd vissza a teljes szélességre a folytatáshoz.</paused>
   </mainMenu>
 

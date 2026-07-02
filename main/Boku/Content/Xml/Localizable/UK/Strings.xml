@@ -152,10 +152,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
      <webSignOutMessage1>. Бажаєте вийти?</webSignOutMessage1>
      <newWebSite>Гей! У нас є новий веб-сайт, де ви можете ділитися своїми світами. Натисніть тут, щоб перевірити це.</newWebSite>
      <continueToMain>Натисніть будь-де ще, щоб перейти до головного меню.</continueToMain>
-     <more>більше!</more>
-     <less>менше</less>
-     <news>НОВИНИ</news>
-     <readMoreHere>Детальніше читайте тут!</readMoreHere>
      <paused>Kodu призупинено. Відновіть на повну ширину, щоб продовжити.</paused>
    </mainMenu>
 

@@ -153,10 +153,6 @@ At any time, if you want to create a new account you can do so by picking a new 
     <webSignOutMessage1>.  Would you like to sign out?</webSignOutMessage1>
     <newWebSite>Hey!  We have a new web site where you can share your worlds.  Click here to check it out.</newWebSite>
     <continueToMain>Click anywhere else to continue to the Main Menu.</continueToMain>
-    <more>more!</more>
-    <less>less</less>
-    <news>NEWS</news>
-    <readMoreHere>Read more here!</readMoreHere>
     <paused>Kodu paused.  Restore to full width to resume.</paused>
   </mainMenu>
 

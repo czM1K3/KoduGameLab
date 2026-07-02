@@ -106,9 +106,6 @@
     <webSignOutMessage1>.  Chcete se odhlásit?</webSignOutMessage1>
     <newWebSite>Hej!  Máme novou stránku, na které můžete sdílet své světy. Klikněte sem pro její zobrazení.</newWebSite>
     <continueToMain>Klikněte kamkoli pro pokračování do hlavního menu.</continueToMain>
-	<more>více!</more>
-    <less>méně</less>
-    <news>NOVINKY</news>
   </mainMenu>
 
   <programming>

@@ -150,10 +150,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
     <webSignOutMessage1>.  Voulez-vous vous déconnecter?</webSignOutMessage1>
     <newWebSite>Hé ! Nous avons un nouveau site web où vous pouvez partager vos mondes. Cliquez ici pour voir.</newWebSite>
     <continueToMain>Cliquez n'importe où pour continuer vers le Menu Principal.</continueToMain>
-    <more>Plus!</more>
-    <less>moins</less>
-    <news>NOUVEAUTES</news>
-    <readMoreHere>Lire plus ici!</readMoreHere>
     <paused>Kodu en pause. Restaurer en plein écran pour reprendre.</paused>
   </mainMenu>
 

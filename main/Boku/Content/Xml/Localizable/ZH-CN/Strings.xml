@@ -117,10 +117,6 @@
     <webSignOutMessage1>：你要注销吗？</webSignOutMessage1>
     <newWebSite>嗨！我们有新网站，你可在此分享你的世界。单击此处去看看吧。</newWebSite>
     <continueToMain>单击任何一个位置即可移至主选单。</continueToMain>
-    <more>更多！</more>
-    <less>较少</less>
-    <news>新闻</news>
-    <readMoreHere>在此可阅读更多！</readMoreHere>
     <paused>Kodu 已暂停。复原至全屏幕以继续。</paused>
   </mainMenu>
 

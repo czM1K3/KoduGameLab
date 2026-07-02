@@ -117,10 +117,6 @@
     <webSignOutMessage1>.  Vil du logge ut?</webSignOutMessage1>
     <newWebSite>Hei!  Vi har ett nytt nettsted hvor du kan dele dine verdner.  Klikk her for å sjekke det ut.</newWebSite>
     <continueToMain>Klikk hvor som helst for å fortsette til hovedmenyen.</continueToMain>
-    <more>mer!</more>
-    <less>mindre</less>
-    <news>Nyheter</news>
-    <readMoreHere>Les mer her!</readMoreHere>
     <paused>Kodu venter.  Gjennopprett til full bredde for å starte igjen.</paused>
   </mainMenu>
 

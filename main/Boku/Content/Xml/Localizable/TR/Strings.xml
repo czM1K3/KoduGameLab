@@ -115,10 +115,6 @@
     <webSignOutMessage1>. Çıkış yapmak ister misin?</webSignOutMessage1>
     <newWebSite>Hey! Dünyanı paylaşabileceğin yeni bir web sitemiz var. Ziyaret etmek için burayı tıkla.</newWebSite>
     <continueToMain>Ana Menü'ye gitmek için herhangi bir yeri tıkla.</continueToMain>
-    <more>daha fazla!</more>
-    <less>daha az</less>
-    <news>HABERLER</news>
-    <readMoreHere>Daha fazlasını buradan oku!</readMoreHere>
     <paused>Kodu duraklatıldı. Devam etmek için tam genişliğe geri yükle.</paused>
   </mainMenu>
 

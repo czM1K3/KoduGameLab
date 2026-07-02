@@ -110,10 +110,6 @@
     <webSignOutMessage1>.  האם תרצה להתנתק?</webSignOutMessage1>
     <newWebSite>היי! יש לנו אתר חדש בו באפשרותך לשתף את עולמותיך. לחץ כאן כדי לבדוק.</newWebSite>
     <continueToMain>לחץ במקום אחר כלשהו כדי להמשיך לתפריט הראשי.</continueToMain>
-    <more>יותר!</more>
-    <less>פחות</less>
-    <news>חדשות</news>
-    <readMoreHere>קרא עוד כאן!</readMoreHere>
     <paused>קודו הופסק. שחזר לרוחב מלא כדי להמשיך.</paused>
   </mainMenu>
   <programming>

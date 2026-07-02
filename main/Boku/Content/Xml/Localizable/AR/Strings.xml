@@ -110,10 +110,6 @@
     <webSignOutMessage1>.  هل تريد تسجيل الخروج؟</webSignOutMessage1>
     <newWebSite>لدينا موقع يمكنك من خلاله مشاركة عالمك. اضغط هنا لزيارته.</newWebSite>
     <continueToMain>اضغط على أي مكان آخر للاستمرار إلى القائمة الرئيسية.</continueToMain>
-    <more>المزيد!</more>
-    <less>اقل</less>
-    <news>الاخبار</news>
-    <readMoreHere>اقراء المزيد هنا!</readMoreHere>
     <paused>تم ايقاف كودو. ارجع للعرض الكامل للاستمرار.</paused>
   </mainMenu>
   <programming>

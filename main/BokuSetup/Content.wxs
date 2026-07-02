@@ -1373,33 +1373,6 @@
             <Component Id="cmp521E62E44BF0AC9E9771CF337312426B" Directory="dir7DDC78578309E225A873B0B1E1A116AE" Guid="{E18331C4-5997-449F-9587-DFB507076F13}">
                 <File Id="fil821509F74B8F4942B250BF5540BA2A83" KeyPath="yes" Source="SourceDir\Content\Textures\LoadLevel\WhiteTile.xnb" />
             </Component>
-            <Component Id="cmp70712360CF3DA9BB04DA23ACBFC54222" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{A2786B08-ADEB-40C4-AEC2-C541705C7A26}">
-                <File Id="filC142C6F702CD56A02E4FE811A872A9AA" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudBC.xnb" />
-            </Component>
-            <Component Id="cmp5BBF8F94306F7CE298A8360F7A1D7318" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{3D98EF38-12EA-4D6C-85A6-F1AD49287111}">
-                <File Id="fil61B7C24D4CC10D8B5C6BB592BF4F3182" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudBL.xnb" />
-            </Component>
-            <Component Id="cmp2FA8E898B274A6B7ACE26EED0A8FF42F" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{FC25546A-7ACA-4EA7-AB96-01D0123CB9EB}">
-                <File Id="filEF19139F322C4B5A40C25AB485FDE284" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudBR.xnb" />
-            </Component>
-            <Component Id="cmpF9486470BCD019E59A25CB3925DA5F40" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{72D8C742-9E36-43B0-A375-A56C74A15E37}">
-                <File Id="fil2039EE0D4B9A3BE8446DDE5A0849D2B0" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudCenter.xnb" />
-            </Component>
-            <Component Id="cmp3F7DC5DB3CE2921468D912B04C50E918" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{7450CDAF-2FB7-4138-A7BA-301121505417}">
-                <File Id="filCE6F80866B329110774AD1D31BE0C303" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudLC.xnb" />
-            </Component>
-            <Component Id="cmp5487BAC590DAD2FA54428D03FE87B92A" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{1114402A-F5CA-43B6-A186-33D35936C819}">
-                <File Id="filF4A07461298E61681310230546278093" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudRC.xnb" />
-            </Component>
-            <Component Id="cmp68BD94F5AC4AD2A546D004D6C2FEF51F" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{CB5DB064-F4CB-463F-AAA4-67C33FF7C40A}">
-                <File Id="fil56980D51A8DE02C202D0CFDD47F6AAC3" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudTC.xnb" />
-            </Component>
-            <Component Id="cmp04AB44BE93E383B7BD73C27FBDF441F2" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{E5998B2E-86A0-4FCE-8BFA-630F1FC3F39D}">
-                <File Id="fil8FEEC0474EB4DEC898A39AF6E506C66A" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudTL.xnb" />
-            </Component>
-            <Component Id="cmp79BA034038C346DA66C08B053A627F39" Directory="dir9B6CBE2A5A935A50B36F85DF854335EC" Guid="{10406123-EEEA-4EDB-ACFC-83D2758A3166}">
-                <File Id="fil450847262D0C04CF5E401AB25F9F92EA" KeyPath="yes" Source="SourceDir\Content\Textures\MainMenu\cloudTR.xnb" />
-            </Component>
             <Component Id="cmpD38F7B5568AE09A4961EC8B465535CFD" Directory="dirF1147055C67431D5C537E8263672C07D" Guid="{3AEE8890-85F8-44BE-AF3A-04349C7A7C9F}">
                 <File Id="fil192FF3441EB395AE6538033C56DECCA0" KeyPath="yes" Source="SourceDir\Content\Textures\MessageBox\MessageBoxBackground.xnb" />
             </Component>

@@ -151,10 +151,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
     <webSignOutMessage1>.  Te gustaría salir?</webSignOutMessage1>
     <newWebSite>Hey!  Tenemos un nuevo sitio web donde puedes compartir tus mundos.  Presiona aquí para visitarlo.</newWebSite>
     <continueToMain>Presiona en cualquier lugar para continuar al Menú Principal.</continueToMain>
-    <more>más!</more>
-    <less>menos</less>
-    <news>NOTICIAS</news>
-    <readMoreHere>Leer más aquí!</readMoreHere>
     <paused>Kodu detenido.  Restaura el ancho completo para continuar.</paused>
   </mainMenu>
   

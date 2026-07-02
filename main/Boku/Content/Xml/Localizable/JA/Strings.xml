@@ -117,10 +117,6 @@
     <webSignOutMessage1>です。サインアウトしますか？</webSignOutMessage1>
     <newWebSite>こんちわ！新しいウエブサイトが公開されたよ。君のワールドもそこでシェアできるよ。これをクリックしてみてみてね。</newWebSite>
     <continueToMain>他の場所をクリックしてメインメニューに行ってください。</continueToMain>
-    <more>もっと</more>
-    <less>小さく</less>
-    <news>記事</news>
-    <readMoreHere>ここをクリックすると全部読めるよ</readMoreHere>
     <paused>Koduが一時停止しました。最大サイズにすると再開できます。</paused>
   </mainMenu>
 

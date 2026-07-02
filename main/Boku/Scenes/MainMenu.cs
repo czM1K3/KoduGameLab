@@ -56,21 +56,6 @@ namespace Boku
         // If set, then jump directly into this level at startup.
         public static string StartupWorldFilename;
 
-        /// <summary>
-        /// Allows the dirty flag to be set for the LiveFeed.  The reason we need this is that
-        /// when we come back from the OptionsMenu, the RenderTarget used by the live feed may
-        /// have been used and overwritten with other stuff.  So in the Deactivate call for the
-        /// options menu we set this.
-        /// The "real" problem here is that the OptionsMenu isn't a seperate scene.  Instead it
-        /// is just rendered over the top of the MainMenu.  This means that the setting of the 
-        /// dirty flag, which happens in the MainMenu Activate call, doesn't otherwise happen
-        /// when the OptionsMenu exits.
-        /// </summary>
-        public bool LiveFeedDirty
-        {
-            set { shared.liveFeed.Dirty = value; }
-        }
-
         public NewWorldDialog newWorldDialog;
 
         public class Shared : INeedsDeviceReset
@@ -91,7 +76,6 @@ namespace Boku
             public ModularMenu menu = null;
 
             public OptionsMenu optionsMenu = null;
-            public LiveFeedDisplay liveFeed = null;
 
             public bool waitingForStorage = false;  // Used w/ trial mode to not display menu.
 
@@ -104,7 +88,6 @@ namespace Boku
             {
                 // Set up the options menu.
                 optionsMenu = new OptionsMenu();
-                liveFeed = new LiveFeedDisplay();
 
                 // Rover greeter used for JPL builds which are not deprecated.  May
                 //boku = ActorManager.GetActor("RoverGreeter").CreateNewInstance() as BokuGreeter;
@@ -232,7 +215,6 @@ namespace Boku
                 BokuGame.Load(boku, immediate);
                 BokuGame.Load(menu, immediate);
                 BokuGame.Load(optionsMenu, immediate);
-                BokuGame.Load(liveFeed, immediate);
             }   // end of MainMenu Shared LoadContent()
 
             public void InitDeviceResources(GraphicsDevice device)
@@ -248,7 +230,6 @@ namespace Boku
                 BokuGame.Unload(boku);
                 BokuGame.Unload(menu);
                 BokuGame.Unload(optionsMenu);
-                BokuGame.Unload(liveFeed);
             }   // end of MainMenu Shared UnloadContent()
 
             /// <summary>
@@ -260,7 +241,6 @@ namespace Boku
                 BokuGame.DeviceReset(boku, device);
                 BokuGame.DeviceReset(menu, device);
                 BokuGame.DeviceReset(optionsMenu, device);
-                BokuGame.DeviceReset(liveFeed, device);
             }
 
         }   // end of class Shared
@@ -416,20 +396,6 @@ namespace Boku
 
                     StartupWorldFilename = null;
                 }
-
-                // Set news feed state to opposite of options menu.  This allows the 
-                // News Feed to "hide" when the Options Menu is active.
-                if (shared.optionsMenu.Active)
-                {
-                    shared.liveFeed.Deactivate();
-                }
-                else
-                {
-                    shared.liveFeed.Activate();
-                    shared.liveFeed.UpdateFeed();
-                    shared.liveFeed.Update(shared.camera);
-                }
-
             }   // end of Update()
 
             private bool UpdateNonMenuItems()
@@ -463,9 +429,6 @@ namespace Boku
 
             public override void Activate()
             {
-                // Force feed to refresh rendering.
-                shared.liveFeed.Dirty = true;
-
                 // Start showing the current, signed-in creator.
                 AuthUI.ShowStatusDialog();
             }
@@ -505,8 +468,6 @@ namespace Boku
                     --skipFrames;
                     return;
                 }
-
-                shared.liveFeed.FeedSize = shared.liveFeed.ResetScrollBoxSize;
                 InGame.SetRenderTarget(rt);
 
                 // Clear the screen & z-buffer.
@@ -595,12 +556,6 @@ namespace Boku
                     ScreenWarp.FitRtToScreen(rtSize);
 
                     quad.Render(rt, ScreenWarp.RenderPosition, ScreenWarp.RenderSize, @"TexturedNoAlpha");
-                }
-
-                // Render news feed.
-                if (!shared.optionsMenu.Active)
-                {
-                    shared.liveFeed.Render();
                 }
 
                 // Hide overlay if auth UI is active.
