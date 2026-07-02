@@ -1,3 +1,12 @@
+# About this fork
+This fork is about stripping down unnecessary code, so that porting to newer tech would be easier.
+
+## TODO
+- [x] Remove BBC micro:bit support
+- [ ] Remove community features
+- [ ] Remove news features
+- [ ] Remove Shader Model 2 support
+
 # Kodu Game Lab
 Kodu Game Lab is a 3D game development environment that is designed to teach kids basic programming principles.  Kodu allows creators to build the world's terrain, populate it with characters and props, and then program their behaviors and games rules in a bespoke visual programming language.
 
