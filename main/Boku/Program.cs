@@ -484,7 +484,7 @@ namespace Boku
                         KoduService.ServiceApiUrl = CmdLine.GetString("SERVICE_API_URL", "");
                     }
 
-                    if (SiteOptions.CheckForUpdates && !WinStoreHelpers.RunningAsUWP)
+                    if (SiteOptions.CheckForUpdates)
                     {
                         var ignoreVersion = new Version(SiteOptions.IgnoreVersion);
                         if (updateInfo != null && ThisVersion < updateInfo.latestVersion
@@ -562,11 +562,6 @@ namespace Boku
                     //BokuGame.bokuGame.Initialize();
                     //BokuGame.bokuGame.LoadContent();
                     //BokuGame.bokuGame.BeginRun();
-
-                    if (WinStoreHelpers.RunningAsUWP)
-                    {
-                        string applicationDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                    }
 
                     StartupForm.Shutdown();
                     Application.Run(MainForm.Instance);

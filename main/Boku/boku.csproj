@@ -360,7 +360,6 @@
     <Compile Include="Common\Unicode.cs" />
     <Compile Include="Common\WinKeyboard.cs" />
     <Compile Include="Common\FontWrapper.cs" />
-    <Compile Include="Common\WinStoreHelpers.cs" />
     <Compile Include="Common\Xml\XmlActorsList.cs" />
     <Compile Include="Common\Xml\XmlOptionsData.cs" />
     <Compile Include="DebugLog.cs" />
