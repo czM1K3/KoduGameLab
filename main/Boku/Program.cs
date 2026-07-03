@@ -44,22 +44,6 @@ using BokuShared;
 
 namespace Boku
 {
-    //Class that holds version information from service. 
-    public class UpdateInfo
-    {
-        public string releaseNotesUrl = "";
-        public string updateUrl = "";
-        public Version latestVersion;
-
-        //Construct from wire message.
-        public UpdateInfo(Message_Version version)
-        {
-            latestVersion = new Version(version.Major,version.Minor,version.Build,version.Revision);
-            releaseNotesUrl = version.ReleaseNotesUrl;
-            updateUrl = version.UpdateUrl;
-        }
-
-    }
     static partial class Program2
     {
         public static Mutex InstanceMutex;
@@ -74,8 +58,6 @@ namespace Boku
                                                         // 7 -> 8 : Add naming of characters and the ability to sense named characters.
                                                         // 8 -> 9 : Move linked level target from XmlWorldData to ReflexData.
                                                         // 9 -> 10 : Change terrain files from .Raw to .Map.
-        
-        public static UpdateInfo updateInfo=null;
 
         public static CmdLine CmdLine;
 
@@ -467,88 +449,11 @@ namespace Boku
                     // Record this installation's unique ID to instrumentation.
                     Instrumentation.RecordDataItem(Instrumentation.DataItemId.InstallationUniqueId, SiteID.Instance.Value.ToString());
 
-                    StartupForm.Startup();
-                    StartupForm.EnableCancelButton(false);
-                    StartupForm.SetProgressStyle(System.Windows.Forms.ProgressBarStyle.Marquee);
-
-                    // Get the latest version number.
-                    // ====================================================
-
-                    // See if an update is available.  Note, we always get the file even if not checking
-                    // for updates since it also contains the ServiceApiUrl.
-                    FetchLatestVersionFromServer(SiteOptions.Product);
-
                     // We just fetched the latest ServiceApiUrl.  Now override it if needed.
                     if (CmdLine.Exists("SERVICE_API_URL"))
                     {
                         KoduService.ServiceApiUrl = CmdLine.GetString("SERVICE_API_URL", "");
                     }
-
-                    if (SiteOptions.CheckForUpdates)
-                    {
-                        var ignoreVersion = new Version(SiteOptions.IgnoreVersion);
-                        if (updateInfo != null && ThisVersion < updateInfo.latestVersion
-                            && updateInfo.latestVersion != ignoreVersion
-                        )
-                        {
-                            StartupForm.Shutdown();
-
-                            var updateForm = new UpdateForm();
-
-                            //Localized update dialog.
-                            updateForm.Text = Strings.Localize("Update.FormTitle");
-
-                            var text = Strings.Localize("Update.UpdateMessage");
-                            updateForm.MessageLabel.Text = text.Replace("^", "");//Remove link delimiters.
-                            updateForm.MessageLabel.LinkArea = new System.Windows.Forms.LinkArea(text.IndexOf("^"), text.LastIndexOf("^") - text.IndexOf("^") - 1); //Set link area based on ^ delimiters.
-
-                            text = Strings.Localize("Update.ReleaseNotesMessage");
-                            updateForm.RelaseNotesLabel.Text = text.Replace("^", "");//Remove link delimiters.
-                            updateForm.RelaseNotesLabel.LinkArea = new System.Windows.Forms.LinkArea(text.IndexOf("^"), text.LastIndexOf("^") - text.IndexOf("^") - 1);//Set link area based on ^ delimiters.
-
-                            updateForm.CurrentVersionLabel.Text = Strings.Localize("Update.CurrentVersion");
-                            updateForm.NewVersionLabel.Text = Strings.Localize("Update.LatestVersion");
-
-                            updateForm.UpdateButton.Text = Strings.Localize("Update.UpdateButtonText");
-                            updateForm.IgnoreButton.Text = Strings.Localize("Update.IgnoreButtonText");
-                            updateForm.RemindButton.Text = Strings.Localize("Update.RemindButtonText");
-
-                            //Set version info in dialog.
-                            updateForm.CurrentVersion.Text = ThisVersion.ToString();
-                            updateForm.NewVersion.Text = updateInfo.latestVersion.ToString();
-
-                            //Setup links in dialog from UpdateInfo.
-                            updateForm.RelaseNotesLabel.Links[0].LinkData = updateInfo.releaseNotesUrl;
-                            updateForm.RelaseNotesLabel.LinkClicked += (s, e) =>
-                            {
-                                System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
-                            };
-                            updateForm.MessageLabel.Links[0].LinkData = KoduService.KGLUrl;
-                            updateForm.MessageLabel.LinkClicked += (s, e) =>
-                            {
-                                System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
-                            };
-
-                            var dialogResult = updateForm.ShowDialog();
-
-                            if (dialogResult == System.Windows.Forms.DialogResult.Yes)
-                            {
-                                //Show update page and exit.
-                                Process.Start(updateInfo.updateUrl);
-                                Process.GetCurrentProcess().Kill();
-                            }
-
-                            if (dialogResult == System.Windows.Forms.DialogResult.Ignore)
-                            {
-                                //Write ignore version to options.
-                                SiteOptions.IgnoreVersion = updateInfo.latestVersion.ToString();
-                                SiteOptions.Save();
-                            }
-
-                        }
-                    }
-
-                    StartupForm.SetStatusText("Starting up...");
 
                     // ====================================================
 
@@ -562,8 +467,6 @@ namespace Boku
                     //BokuGame.bokuGame.Initialize();
                     //BokuGame.bokuGame.LoadContent();
                     //BokuGame.bokuGame.BeginRun();
-
-                    StartupForm.Shutdown();
                     Application.Run(MainForm.Instance);
 
 
@@ -594,8 +497,6 @@ namespace Boku
                 {
                     BokuGame.bokuGame.IsMouseVisible = true;
                 }
-
-                StartupForm.Shutdown();
                 
                 // Show the crash report dialog box unless we're running the debugger.
                 if (!Debugger.IsAttached)
@@ -668,42 +569,6 @@ namespace Boku
                 }
             }
         }   // end of CopyFiles()
-
-    }   // end of class Program2
-
-    /// This chunk of the Program class manages the task of fetching the latest
-    /// version number from the server to determine whether an update is available.
-    static partial class Program2
-    {
-        static void FetchLatestVersionFromServer(string productName)
-        {
-            try
-            {
-                string url = KoduService.KGLUrl + "/API/LatestVersion.xml";
-
-                KoduService.DownloadData(url, (result) =>
-                {
-                    if (result == null)
-                    {
-                        // Failed.  Nothing to do here.
-                    }
-                    else
-                    {
-                        Message_Version messageVersion = Message_Version.Load(result);
-                        updateInfo = new UpdateInfo(messageVersion);
-                    }
-
-                });
-                
-            }
-            catch (Exception e)
-            {
-                if (e != null)
-                {
-                }
-            }
-
-        }   // end of FetchLatestVersionFromServer()
 
     }   // end of class Program2
 

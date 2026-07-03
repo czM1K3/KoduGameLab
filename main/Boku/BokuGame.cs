@@ -376,21 +376,6 @@ namespace Boku
 
         }   // end of BokuGame c'tor
 
-        public void Window_ClientSizeChanged(object sender, EventArgs e)
-        {
-            Form form = StartupForm.ActiveForm;
-            if (form.WindowState == FormWindowState.Maximized)
-            {
-                // TODO (****) *** Need to do anything here???
-                /*
-                BokuGame.Graphics.ToggleFullScreen();
-                BokuGame.Graphics.PreferredBackBufferWidth = 1600;
-                BokuGame.Graphics.PreferredBackBufferHeight = 1200;
-                BokuGame.Graphics.ApplyChanges();
-                */
-            }
-        }
-
         //
         // Overrides from base game object starting with initialization.
         //
@@ -858,8 +843,6 @@ namespace Boku
         //
         public void Update()
         {
-            System.Windows.Forms.Form form = StartupForm.ActiveForm;
-
             // Strangely enough, we actually see the window change sizes here before
             // we get the SizeChanged event.  So deal with it.
             // If the TutorialManager is active it may be tweaking this so don't touch.

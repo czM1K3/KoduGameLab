@@ -5,6 +5,7 @@ This fork is about stripping down unnecessary code, so that porting to newer tec
 - [x] Remove BBC micro:bit support
 - [x] Remove setup
 - [x] Remove tests
+- [x] Remove updates check
 - [ ] Remove community features
 - [x] Remove news features
 - [ ] Remove multi user prompt

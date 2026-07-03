@@ -547,12 +547,6 @@
     <Compile Include="SimWorld\Terra\ColorMapNeighbors.cs" />
     <Compile Include="SimWorld\Terra\Tile.Renderable.cs" />
     <Compile Include="SimWorld\Terra\Tile.Renderable.FlatTerrainOptimizer_FD.cs" />
-    <Compile Include="StartupForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartupForm.Designer.cs">
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Programming\DeadFilter.cs" />
     <Compile Include="Programming\Help.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -614,12 +608,6 @@
     <Compile Include="UI\Fugly.cs" />
     <Compile Include="UI\notpieselector.cs" />
     <Compile Include="UI\ReflexBlock.cs" />
-    <Compile Include="UpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateForm.Designer.cs">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Web\Community.cs" />
     <Compile Include="Common\LevelBrowsers\CommunityLevelBrowser.cs" />
     <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.cs" />
@@ -1005,17 +993,10 @@
     <EmbeddedResource Include="MainFormEvents.resx">
       <DependentUpon>MainFormEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartupForm.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateForm.resx">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Web\LoginDialog.resx">
       <DependentUpon>LoginDialog.cs</DependentUpon>
