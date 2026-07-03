@@ -32,7 +32,6 @@ using Boku.Input;
 using Boku.SimWorld;
 using Boku.UI;
 using Boku.UI2D;
-using Boku.Web;
 
 using BokuShared.Wire;
 
@@ -145,16 +144,9 @@ namespace Boku
                 // Option to import .Kodu2 files from desktop.
                 menu.AddText(Strings.Localize("mainMenu.import"));
 
-                menu.AddText(Strings.Localize("mainMenu.community"));
                 menu.AddText(Strings.Localize("mainMenu.options"));
                 menu.AddText(Strings.Localize("mainMenu.help"));
                 menu.AddText(Strings.Localize("mainMenu.exit"));
-
-                // And then remove what we don't want.
-                if (!Program2.SiteOptions.CommunityEnabled)
-                {
-                    menu.DeleteText(Strings.Localize("mainMenu.community"));
-                }
 
                 menu.WorldMatrix = Matrix.CreateScale(0.9f, 1.0f, 1.0f);
 
@@ -285,10 +277,6 @@ namespace Boku
 
                 // If not modal, always show status.
                 AuthUI.ShowStatusDialog();
-
-                // Update the dialogs.
-                parent.noCommunityMessage.Update();
-                parent.noSharingMessage.Update();
 
                 // Don't do anything else until the user reads and dismisses the dialogs.
                 if (parent.exitingKodu)
@@ -573,9 +561,6 @@ namespace Boku
                     InGame.inGame.shared.scrollableTextDisplay.Render();
                 }
 
-                MainMenu.Instance.noCommunityMessage.Render();
-                MainMenu.Instance.noSharingMessage.Render();
-
             }   // end of Render()  
             
             public override void Activate()
@@ -606,9 +591,6 @@ namespace Boku
 
         private CommandMap commandMap = new CommandMap("App.TitleMenu");   // Placeholder for stack.
 
-        public  ModularMessageDialog noCommunityMessage = null;
-        private ModularMessageDialog noSharingMessage = null;
-
         private bool exitingKodu = false;   // Flag set when the user chooses to exit Kodu 
                                             // from the above dialogs.  This flags allows us
                                             // to exit more cleanly.  Without it we flash the
@@ -624,14 +606,6 @@ namespace Boku
         public bool OptionsActive
         {
             get { return shared.optionsMenu.Active; }
-        }
-
-        /// <summary>
-        /// Are any of the MainMenu dialogs active?
-        /// </summary>
-        public bool DialogActive
-        {
-            get { return noCommunityMessage.Active || noSharingMessage.Active; }
         }
 
         public Texture2D BackgroundTexture
@@ -677,80 +651,6 @@ namespace Boku
                 shared.menu.Active = true;
             };
             newWorldDialog = new NewWorldDialog(OnSelectWorld, OnCancel);
-
-            // Set up the NoCommunity, NoSharing and PrevCrash dialogs.
-            ModularMessageDialog.ButtonHandler handlerA = delegate(ModularMessageDialog dialog)
-            {
-                // User chose "resume"
-
-                // Deactivate dialog.
-                dialog.Deactivate();
-
-                if (InGame.CurrentWorldId == Guid.Empty)
-                {
-                    if (InGame.UnDoStack.Resume())
-                    {
-                        // Deactivate MainMenu.
-                        Deactivate();
-                    }
-                    else
-                    {
-                        //Debug.Assert(false, "Resume should not be enabled unless there is something to resume from");
-
-                        // We had some error in trying to resume.  So, remove the resume
-                        // option from the menu and soldier on.
-                        shared.menu.DeleteText(Strings.Localize("mainMenu.resume"));
-                        shared.menu.Active = true;
-                        XmlOptionsData.LastAutoSave = -1;
-                    }
-                }
-                else
-                {
-                    // Deactivate MainMenu.
-                    Deactivate();
-
-                    // Just reactivate the existing game.
-                    BokuGame.bokuGame.inGame.Activate();
-                }
-
-            };
-
-            ModularMessageDialog.ButtonHandler handlerB = delegate(ModularMessageDialog dialog)
-            {
-                // User chose "back"
-
-                // Deactivate dialog.
-                dialog.Deactivate();
-
-                // Only needed for corruptStorageMessage but shouldn't hurt for all.
-            };
-
-            ModularMessageDialog.ButtonHandler handlerX = delegate(ModularMessageDialog dialog)
-            {
-                // User chose to quit Kodu
-
-                // Deactivate dialog.
-                dialog.Deactivate();
-
-                // Wave bye, bye.
-
-                BokuGame.bokuGame.Exit();
-
-                exitingKodu = true;
-            };
-
-            noCommunityMessage = new ModularMessageDialog(Strings.Localize("miniHub.noCommunityMessage"),
-                                                            null, null,
-                                                            handlerB, Strings.Localize("textDialog.back"),
-                                                            null, null,
-                                                            null, null
-                                                            );
-            noSharingMessage = new ModularMessageDialog(Strings.Localize("miniHub.noSharingMessage"),
-                                                            null, null,
-                                                            handlerB, Strings.Localize("textDialog.back"),
-                                                            null, null,
-                                                            null, null
-                                                            );
 
         }   // end of MainMenu c'tor
 
@@ -822,66 +722,6 @@ namespace Boku
                 {
                     menu.Active = true;
                 }
-            }
-
-            // COMMUNITY
-            if (cur == Strings.Localize("mainMenu.community") || cur == "GALLERY")
-            {
-                if (KoduService.PingFailed)
-                {
-                    // Give no community dialog.
-                    noCommunityMessage.Activate();
-                    menu.Active = true;
-                }
-                else
-                {
-                    // Open the community UI
-                    Deactivate();
-                    BokuGame.bokuGame.community.Activate();
-                }
-                /*
-                // Check to see if the community server is reachable before switching screens.
-                var args = new
-                {
-                    //startup = startup.ToString(),
-                    clientVersion = Program2.ThisVersion.ToString(),
-                    //lang = Boku.Common.Localization.Localizer.LocalLanguage,
-                    //siteId = SiteID.Instance.Value.ToString()
-                };
-
-                // Ping the services
-                Newtonsoft.Json.Linq.JContainer pingResponse = KoduService.PingNonAsync(args);
-                if (pingResponse == null)
-                {
-                    //failed
-                    noCommunityMessage.Activate();
-                    menu.Active = true;
-                }
-                else
-                {
-                    var msgStr = pingResponse.Value<string>("systemMessage");
-                    //msgStr = "Test Me!";
-                    //If the response contains a system message display it.
-                    if (!string.IsNullOrEmpty(msgStr))
-                    {
-                        //4scoy is this ok?
-                        //Override the noCommunity messagw with 
-                        //returned systemMessage
-                        noCommunityMessage.SetText(msgStr);
-                        noCommunityMessage.Activate();
-                        menu.Active = true;
-    
-                    }
-                    else
-                    {
-
-                        // Open the community UI
-                        Deactivate();
-                        BokuGame.bokuGame.community.Activate();
-                    }
-                }
-                */
-
             }
 
             // OPTIONS
@@ -1053,8 +893,6 @@ namespace Boku
         public void LoadContent(bool immediate)
         {
             BokuGame.Load(shared, immediate);
-            BokuGame.Load(noCommunityMessage, immediate);
-            BokuGame.Load(noSharingMessage, immediate);
             BokuGame.Load(newWorldDialog, immediate);
         }   // end of MainMenu LoadContent()
 
@@ -1065,8 +903,6 @@ namespace Boku
         public void UnloadContent()
         {
             BokuGame.Unload(shared);
-            BokuGame.Unload(noCommunityMessage);
-            BokuGame.Unload(noSharingMessage);
             BokuGame.Unload(newWorldDialog);
         }   // end of MainMenu UnloadContent()
 
@@ -1077,8 +913,6 @@ namespace Boku
         public void DeviceReset(GraphicsDevice device)
         {
             BokuGame.DeviceReset(shared, device);
-            BokuGame.DeviceReset(noCommunityMessage, device);
-            BokuGame.DeviceReset(noSharingMessage, device);
         }
 
 

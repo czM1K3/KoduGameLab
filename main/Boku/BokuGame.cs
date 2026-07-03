@@ -99,7 +99,6 @@ namespace Boku
         public HelpScreens helpScreens;
         public InGame inGame;
         public LoadLevelMenu loadLevelMenu;      // The menu formerly known as BigBin.
-        public LoadLevelMenu community;
         public MiniHub miniHub;
         public ProgressScreen progressScreen;
 
@@ -663,9 +662,6 @@ namespace Boku
                 helpScreens = new HelpScreens();
                 BokuGame.gameListManager.AddObject(helpScreens);
 
-                community = new LoadLevelMenu(LevelBrowserType.Community);
-                BokuGame.gameListManager.AddObject(community);
-
                 loadLevelMenu = new LoadLevelMenu(LevelBrowserType.Local);
                 BokuGame.gameListManager.AddObject(loadLevelMenu);
 
@@ -705,7 +701,6 @@ namespace Boku
             BokuGame.Load(mainMenu);
             BokuGame.Load(videoOutput);
             BokuGame.Load(helpScreens);
-            BokuGame.Load(community);
             BokuGame.Load(loadLevelMenu);
             BokuGame.Load(inGame);
             BokuGame.Load(miniHub);
@@ -741,7 +736,6 @@ namespace Boku
             BokuGame.Unload(mainMenu);
             BokuGame.Unload(videoOutput);
             BokuGame.Unload(helpScreens);
-            BokuGame.Unload(community);
             BokuGame.Unload(loadLevelMenu);
             BokuGame.Unload(inGame);
             BokuGame.Unload(miniHub);
@@ -785,7 +779,6 @@ namespace Boku
             BokuGame.DeviceResetIfLoaded(mainMenu);
             BokuGame.DeviceResetIfLoaded(videoOutput);
             BokuGame.DeviceResetIfLoaded(helpScreens);
-            BokuGame.DeviceResetIfLoaded(community);
             BokuGame.DeviceResetIfLoaded(loadLevelMenu);
             BokuGame.DeviceResetIfLoaded(inGame);
             BokuGame.DeviceResetIfLoaded(miniHub);
@@ -938,9 +931,6 @@ namespace Boku
 
             //update dialog manager
             ModularMessageDialogManager.Instance.Update();
-
-            // Pump web request callbacks.
-            Web.Trans.Request.Update();
 
 #if UPDATE_TIMERS
             updateTimer.Stop();

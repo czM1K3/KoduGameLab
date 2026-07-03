@@ -35,11 +35,6 @@
       <mouseText>Smelltu á HLAÐA HEIMI.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Veldu SAMFÉLAGIÐ og ýttu á &lt;a&gt;.</gamepadText>
-      <mouseText>Smelltu á SAMFÉLAGIÐ.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Veldu VALKOSTIR og ýttu á &lt;a&gt;.</gamepadText>
       <mouseText>Smelltu á VALKOSTIR.</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Ýttu á &lt;b&gt; til að snúa aftur til heimavalmyndar.</gamepadText>
       <mouseText>Ýttu á [esc] til að snúa aftur til heimavalmyndar.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Ýttu á &lt;b&gt; til að snúa aftur til aðalvalmyndar.</gamepadText>
-      <mouseText>
-        Smelltu á grænu örvarnar til að fletta, smelltu á flögu leiks til að velja leikinn.
-        Notaðu [leftarrow][rightarrow] til að fletta, ýttu á [enter] til velja leik.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

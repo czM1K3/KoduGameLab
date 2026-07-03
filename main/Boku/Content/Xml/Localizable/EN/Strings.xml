@@ -133,7 +133,6 @@ At any time, if you want to create a new account you can do so by picking a new 
     <import>IMPORT FROM DESKTOP</import>
     <importWorldsCommitButtonText>Load World(s)</importWorldsCommitButtonText>
     <learning>LEARNING</learning>
-    <community>COMMUNITY</community>
     <share>SHARE</share>
     <options>OPTIONS</options>
     <help>HELP</help>
@@ -202,7 +201,6 @@ At any time, if you want to create a new account you can do so by picking a new 
     <quit>Exit to Main Menu</quit>
 
     <shareSuccessMessage>Your world has been posted.  View it at KoduGameLab.com or by browsing "My Worlds" on the Community screen.</shareSuccessMessage>
-    <noCommunityMessage>The Community site is not available at the moment.  Please try again later.</noCommunityMessage>
     <noSharingMessage>Sharing is not available at the moment.</noSharingMessage>
     <oldBuildMessage>A new build of Kodu is available.  Please upgrade before accessing the Community site.</oldBuildMessage>
     <newBuildMessage>A new build of Kodu is available.  Please exit and update to the current version.</newBuildMessage>
@@ -293,7 +291,6 @@ At any time, if you want to create a new account you can do so by picking a new 
   <loadLevelMenu>
     <localTitle>LOCAL</localTitle>
     <sharingTitle>SHARING</sharingTitle>
-    <communityTitle>COMMUNITY</communityTitle>
 
     <noMatch>No worlds match your search</noMatch>
     <noLevels>No worlds were found</noLevels>
@@ -422,16 +419,6 @@ At any time, if you want to create a new account you can do so by picking a new 
     <removedByHost>Host removed you</removedByHost>
     <disconnected>Disconnected</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>News</newsTab>
-    <page>Community :</page>
-    <pageFormat>Community : Page {0} of {1}</pageFormat>
-    <downloadWorld>Download World</downloadWorld>
-    <downloadSuccessMessage>Selected world has been copied to your Downloads area.</downloadSuccessMessage>
-    <playLevel>Play Now</playLevel>
-    <backToCommunity>Continue Browsing</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Sample</sampleTool>

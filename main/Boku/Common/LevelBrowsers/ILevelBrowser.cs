@@ -11,7 +11,7 @@ namespace Boku.Common
     public enum LevelBrowserType
     {
         Local,
-        Community,
+        //Community,
         //Sharing,
     }
 

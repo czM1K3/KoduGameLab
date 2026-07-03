@@ -93,7 +93,6 @@
     <new>BYD NEWYDD</new>
     <play>LLWYTHO BYD</play>
     <learning>DYSGU</learning>
-    <community>CYMUNED</community>
     <share>RHANNU</share>
     <options>OPSIYNAU</options>
     <help>CYMORTH</help>
@@ -160,7 +159,6 @@
     <quit>Allanfa i'r brif ddewislen</quit>
 
     <shareSuccessMessage>Mae eich byd wedi cael ei gopïo i'r safle Cymunedol</shareSuccessMessage>
-    <noCommunityMessage>Mae'r safle Cymunedol ddim ar gael ar hyn o bryd.  Ceisiwch eto yn nes ymlaen.</noCommunityMessage>
     <noSharingMessage>Dyw rhannu ddim ar gael ar hyn o bryd.</noSharingMessage>
     <oldBuildMessage>Mae adeilad newydd o Kodu ar gael.  Os gwelwch yn dda uwchraddiwch cyn cael mynediad i'r safle Cymuned.</oldBuildMessage>
     <newBuildMessage>Mae adeilad newydd o Kodu ar gael.  Os gwelwch yn dda gadewch ac uwchraddiwch i'r fersiwn bresennol.</newBuildMessage>
@@ -247,7 +245,6 @@
   <loadLevelMenu>
     <localTitle>LLEOL</localTitle>
     <sharingTitle>RHANNU</sharingTitle>
-    <communityTitle>CYMUNED</communityTitle>
 
     <noMatch>Nid yw unrhyw bydoedd yn cyd-fynd efo'ch ymchwil</noMatch>
     <noLevels>Ni darganfwyd unhyw bydoed</noLevels>
@@ -366,16 +363,6 @@
     <removedByHost>Cafodd y gwesteiwr wared arnoch</removedByHost>
     <disconnected>Digyswlltiedig</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Newyddion</newsTab>
-    <page>Cymuned :</page>
-    <pageFormat>Cymuned : Tudalen {0} o {1}</pageFormat>
-    <downloadWorld>Lawrlwytho Byd</downloadWorld>
-    <downloadSuccessMessage>Mae'r byd yma wedi cael ei gopio i eich ardal Lawrlwythiadau</downloadSuccessMessage>
-    <playLevel>Chwarae nawr</playLevel>
-    <backToCommunity>Parhau i bori</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Sampl</sampleTool>

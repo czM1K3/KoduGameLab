@@ -104,15 +104,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Válaszd a KÖZÖSSÉG opciót és nyomd meg az &lt;a&gt; gombot.</gamepadText>
-      <mouseText>Kattints a KÖZÖSSÉG opcióra.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Válaszd a BEÁLLÍTÁSOK opciót, és nyomd meg az &lt;a&gt; gombot.</gamepadText>
       <mouseText>Kattints a BEÁLLÍTÁSOK opcióra.</mouseText>
@@ -209,25 +200,6 @@
         <mode>LoadLevelMenu</mode>
       </curModes>
       <targetMode>HomeMenu</targetMode>
-      <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
-      <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
-      <mouseText>A görgetéshez kattints a zöld nyilakra, a játék kiválasztásához pedig kattints a játék csempére. A görgetéshez használd a [leftarrow][rightarrow] gombokat, a játék kiválasztásához nyomd meg az [enter] gombot.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
     </Crumb>

@@ -103,13 +103,6 @@
       <targetMode>LoadLevelMenu</targetMode>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
-      <targetMode>CommunityMenu</targetMode>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <curModes>
         <mode>MainMenu</mode>
@@ -158,28 +151,6 @@
     <Crumb id="HomeMenu1">
       <curModes>
         <mode>LoadLevelMenu</mode>
-      </curModes>
-      <targetMode>HomeMenu</targetMode>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-    </Crumb>
-
-    <Crumb id="MainMenu4">
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-    </Crumb>
-
-    <Crumb id="HomeMenu2">
-      <curModes>
-        <mode>CommunityMenu</mode>
       </curModes>
       <targetMode>HomeMenu</targetMode>
     </Crumb>

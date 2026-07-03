@@ -26,7 +26,6 @@ using Boku.Common.Sharing;
 using Boku.Common.Xml;
 using Boku.UI2D;
 using Boku.Input;
-using Boku.Web;
 using Boku.Fx;
 using Boku.Programming;
 
@@ -47,7 +46,7 @@ namespace Boku
 
             public int scrollOpCount;
 
-            public bool isUserAdmin = false;            // Does the user have admin privileges?
+            public bool isUserAdmin = false;            // Does the user have admin privileges? // TODO do we need this?
             public bool isMyWorld = false;              // Is the current world one of the user's?
             public bool isBuiltInWorld = false;         // Is the current world one of start worlds?
             public bool isDownload = false;             // Is the current world an unmodified downloaded world?
@@ -97,7 +96,6 @@ namespace Boku
             public ILevelBrowser mainBrowser = null;
             public ILevelBrowser remoteBrowser = null;
             public LocalLevelBrowser localBrowser = null;
-            public CommunityLevelBrowser srvBrowser = null;
 
             public ILevelSetCursor mainCursor = null;
 
@@ -160,14 +158,7 @@ namespace Boku
                 tagPicker.WorldMatrix = Matrix.CreateTranslation(-2.5f, 0.0f, 0.0f);
 
                 levelFilter = new LevelSetFilterByKeywords();
-                if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    levelFilter.ServerSideMatching = true;
-                }
-                else
-                {
-                    levelFilter.ServerSideMatching = false;
-                }
+                levelFilter.ServerSideMatching = false;
 
                 levelFilter.FilterGenres = Genres.All;
                 levelSorter = new LevelSetSorterBasic();
@@ -264,21 +255,6 @@ namespace Boku
                     rightBumperPosition = new Vector2(944, 32);
 
                 }
-                else if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    e = new UIGridModularTextElement(blob, Strings.Localize("loadLevelMenu.showMyWorlds"));
-                    bucketsGrid.Add(e, index++, 0);
-                    e = new UIGridModularTextElement(blob, Strings.Localize("loadLevelMenu.showAll"));
-                    bucketsGrid.Add(e, index++, 0);
-                    bucketsGrid.SelectionIndex = new Point(index - 1, 0);   // Default to "All".
-
-                    Matrix mat = Matrix.CreateTranslation(-1.6f, 3.0f, 0.0f);
-                    bucketsGrid.LocalMatrix = mat;
-
-                    leftBumperPosition = new Vector2(90, 32);
-                    rightBumperPosition = new Vector2(791, 32);
-
-                }
                 else
                 {
                     Debug.Assert(false, "Unrecognized browser type");
@@ -340,21 +316,6 @@ namespace Boku
                     if (i != -1)
                     {
                         sortList.GetItem(i).Check = levelSorter.SortBy == SortBy.Name;
-                        if (sortList.GetItem(i).Check)
-                        {
-                            sortListDisplay = sortList.GetItem(i).LocalizedText;
-                            sortList.CurIndex = i;
-                        }
-                    }
-                }
-
-                // If we're on the community browser, also allow sorting by rating.
-                if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    i = sortList.GetIndex("loadLevelMenu.sortRank");
-                    if (i != -1)
-                    {
-                        sortList.GetItem(i).Check = levelSorter.SortBy == SortBy.Rank;
                         if (sortList.GetItem(i).Check)
                         {
                             sortListDisplay = sortList.GetItem(i).LocalizedText;
@@ -440,71 +401,12 @@ namespace Boku
                             popup.AddItem(Strings.Localize("loadLevelMenu.export"), PopupOnExport);
                         }
 
-                        // Share with community.  No sharing of downloaded files since we expect that they are already uploaded.
-                        // No sharing of built in worlds since everyone already has those also.
-                        // Only allow sharing of worlds the user is the author of.
-                        if (Program2.SiteOptions.CommunityEnabled
-                            && !KoduService.PingFailed
-                            && parent.shared.CurWorld.Creator == Auth.CreatorName
-                            && (parent.shared.CurWorld != null)
-                            && (parent.shared.CurWorld.Genres & Genres.Downloads) == 0
-                            && (parent.shared.CurWorld.Genres & Genres.BuiltInWorlds) == 0)
-                        {
-                            popup.AddItem(Strings.Localize("loadLevelMenu.share"), PopupOnCommunityShare);
-                        }
-
                         if (parent.shared.isDeleteActive)
                         {
                             popup.AddItem(Strings.Localize("loadLevelMenu.editTags"), PopupOnChangeTags);
                             popup.AddItem(Strings.Localize("loadLevelMenu.delete"), PopupOnDelete);
                         }
                     }
-                }
-                else if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    //
-                    // Community browser.
-                    //
-                    if (parent.shared.CurWorld.DownloadState == LevelMetadata.DownloadStates.None)
-                    {
-                        popup.AddItem(Strings.Localize("loadLevelMenu.download"), PopupOnDownload);
-                    }
-                    else
-                    {
-                        popup.AddItem(Strings.Localize("loadLevelMenu.playLevel"), PopupOnPlay);
-                        /*
-                        // Don't bother to show Export.  It's valid but clutters up the UI.
-                        if (IsExportEnabled && 0 == (parent.shared.CurWorld.Genres & Genres.BuiltInWorlds))
-                        {
-                            popup.AddItem(Strings.Localize("loadLevelMenu.export"), PopupOnExport);
-                        }
-                        */
-                    }
-
-                    if (parent.shared.CurWorld != null && parent.shared.CurWorld.DownloadState == LevelMetadata.DownloadStates.Complete)
-                    {
-                        popup.AddItem(Strings.Localize("loadLevelMenu.editTags"), PopupOnChangeTags);
-                    }
-
-                    if (parent.shared.isDeleteActive)
-                    {
-                        popup.AddItem(Strings.Localize("loadLevelMenu.delete"), PopupOnDelete);
-                    }
-
-                    // Always allow abuse reporting.  No longer allow un-reporting.
-                    /*
-                    if (true)
-                    {
-                        if (parent.shared.CurWorld.FlaggedByMe)
-                        {
-                            //popup.AddItem(Strings.Localize("loadLevelMenu.unReportAbuse"), PopupOnReportAbuse);
-                        }
-                        else
-                        {
-                            popup.AddItem(Strings.Localize("loadLevelMenu.reportAbuse"), PopupOnReportAbuse);
-                        }
-                    }
-                    */ 
                 }
                 else
                 {
@@ -843,12 +745,6 @@ namespace Boku
                 {
                     if (playFirst)
                     {
-                        //if it's a community level, try to reload it to make sure we have the metadata for links
-                        if (level.Browser is CommunityLevelBrowser &&
-                            XmlDataHelper.CheckWorldExistsByGenre(level.WorldId, BokuShared.Genres.Downloads))
-                        {
-                            level = XmlDataHelper.LoadMetadataByGenre(level.WorldId, BokuShared.Genres.Downloads);
-                        }
                         //use the first level in the chain
                         level = level.FindFirstLink();
 
@@ -987,15 +883,6 @@ namespace Boku
                     }
                 }
             }
-
-            public void PopupOnCommunityShare()
-            {
-                popup.Active = false;
-
-                // Does share and displays dialogs for error or success.
-                MiniHub.communityShareMenu.Activate(parent.shared.CurWorld);
-
-            }   // end of void PopupOnCommunityShare()
 
 
             /// <summary>
@@ -1162,55 +1049,11 @@ namespace Boku
             {
                 InGame.EndMessage(parent.blockingOpMessage.Render, null);
 
-                // Issue the delete command.
-                if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    // Send command to delete level on Community site.
-                    LevelMetadata info = parent.shared.CurWorld;
-                    if (info != null)
-                    {
-                        // Double check that user is ok to delete.
-                        if (Auth.IsValidCreatorChecksum(info.Checksum, info.SaveTime))
-                        {
-                            // Delete this world.
-                            bool deleted = parent.updateObj.DeleteCurrentWorld();
-
-                        }
-                    }
-                }
-                else
-                {
-                    // Delete locally.
-                    bool deleted = parent.updateObj.DeleteCurrentWorld();
-                }
+                // Delete locally.
+                bool deleted = parent.updateObj.DeleteCurrentWorld();
 
                 // Reactivate the grid.
                 parent.shared.levelGrid.Active = true;
-            }
-
-            internal void ReportAbuseSelectedLevel(ModularMessageDialog dialog)
-            {
-                // Deactivate dialog.
-                if (dialog != null)
-                {
-                    dialog.Deactivate();
-                }
-
-                if (parent.shared.CurWorld.FlaggedByMe)
-                {
-                    // If already flagged, unflag.
-                    // Send the report message.
-                    Community.Async_FlagLevel(parent.shared.CurWorld.WorldId, false, null, null);
-
-                    parent.shared.CurWorld.FlaggedByMe = false;
-                }
-                else
-                {
-                    // Send the report message.
-                    Community.Async_FlagLevel(parent.shared.CurWorld.WorldId, true, null, null);
-
-                    parent.shared.CurWorld.FlaggedByMe = true;
-                }
             }
 
 
@@ -1246,22 +1089,6 @@ namespace Boku
                 tagPicker.Active = true;
                 tagPicker.SetTags((int)parent.shared.CurWorld.Genres);
             }   // end of PopupOnChangeTags()
-
-            public void PopupOnReportAbuse()
-            {
-                popup.Active = false;
-
-                if(parent.shared.CurWorld.FlaggedByMe)
-                {
-                    // Already flagged by me.  Just call the handler to unflag.  No need to confirmation.
-                    ReportAbuseSelectedLevel(null);
-                }
-                else
-                {
-                    parent.ShowReportAbuseDialog();
-                }
-
-            }   // end of PopupOnReportAbuse()
 
             public void PopupOnLike()
             {
@@ -1392,15 +1219,6 @@ namespace Boku
                     }
 
                     list.Deactivate();
-                }
-
-                if (levelFilter.Dirty || levelSorter.Dirty)
-                {
-                    if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                    {
-                        // The community browser can't pivot on the current selection when the query changes.
-                        mainBrowser.Reset();
-                    }
                 }
 
             }   // end of ListOnExit
@@ -1585,35 +1403,6 @@ namespace Boku
                     shared.mainBrowser.Update();
                 }
 
-                // If Sharing is complete, clear the state.
-                if (KoduService.ShareRequestState == KoduService.RequestState.Complete)
-                {
-                    // Success.
-                    MiniHub.communityShareMenu.ShowShareSuccessDialog();
-
-                    // Clear state for next share.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
-                // If Sharing and we don't have internet, show error.
-                if (KoduService.ShareRequestState == KoduService.RequestState.NoInternet)
-                {
-                    MiniHub.communityShareMenu.ShowNoCommunityDialog();
-
-                    // Clear state so we can try again.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
-                // If Sharing caused an error, show the dialog.
-                if (KoduService.ShareRequestState == KoduService.RequestState.Error)
-                {
-                    // Launch error dialog.
-                    MiniHub.communityShareMenu.ShowShareErrorDialog("Share failed.");    // TODO (scoy) Localize this string!
-
-                    // Clear state so we can try again.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
                 // Don't update level grid if modal dialog is showing.
                 if (ModularMessageDialogManager.Instance.IsDialogActive())
                     return;
@@ -1739,8 +1528,6 @@ namespace Boku
 
                     // Get user name.
                     shared.userName = Auth.CreatorName;
-                    shared.isUserAdmin = Boku.Web.Community.UserLevel == UserLevel.DomainAdmin ||
-                                        Boku.Web.Community.UserLevel == UserLevel.GlobalAdmin;
 
                     if (info != null)
                     {
@@ -1751,22 +1538,7 @@ namespace Boku
                         // Users may delete their own worlds or worlds they've downloaded.  
                         shared.isDeleteActive =
                             //(info.Creator == shared.userName && shared.isMyWorld) ||
-                            shared.isMyWorld ||
-                            // Only allow deleting of downloads from LoadLevelMenu, not Community.
-                            (shared.isDownload && parent.CurrentBrowserType != LevelBrowserType.Community);
-
-                        // If in Community page, users may also delete their own worlds.
-                        if (parent.CurrentBrowserType == LevelBrowserType.Community)
-                        {
-                            // Matching id?  Guest not allowed.
-                            // Note that we're using LastSaveTime here instead of LastWriteTime.  That's because the community sends
-                            // LastWriteTime as LastSaveTime and sends Modifed as LastWriteTime.  This makes the sorting work since
-                            // we want the Community to sort on Modified but we will need the real LastWriteTime for checksum calculation.
-                            if (info.Creator != Auth.DefaultCreatorName && Auth.IsValidCreatorChecksum(info.Checksum, info.SaveTime))
-                            {
-                                shared.isDeleteActive = true;
-                            }
-                        }
+                            shared.isMyWorld;
                     }
 
                     // The level info comes in asynchronously.  So check 
@@ -2523,37 +2295,6 @@ namespace Boku
                 shared.StartFetchingThumbnails(shared.mainCursor);
             }   // end of DeleteCallback()
 
-            public void GetWorldDataCallback(AsyncResult result)
-            {
-                LevelMetadata level = (LevelMetadata)result.Param;
-
-                if (result.Success)
-                {
-                    AsyncResult_GetWorldData data = result as AsyncResult_GetWorldData;
-                    if (data != null)
-                    {
-                        if (XmlDataHelper.WriteWorldPacketToDisk(data.World))
-                        {
-                            level.DownloadState = LevelMetadata.DownloadStates.Complete;
-                        }
-                        else
-                        {
-                            level.DownloadState = LevelMetadata.DownloadStates.Failed;
-                        }
-                    }
-                    else
-                    {
-                        level.DownloadState = LevelMetadata.DownloadStates.Failed;
-                    }
-                }
-                else
-                {
-                    level.DownloadState = LevelMetadata.DownloadStates.Failed;
-                    // TODO (****) Give an error.
-                }
-            }   // end of GetWorldDataCallback()
-
-
             public override void Activate()
             {
                 shared.levelGrid.LoadContent(true);
@@ -2589,7 +2330,6 @@ namespace Boku
             public Texture2D commentTexture = null;
             public Texture2D downloadsTexture = null;
             public Texture2D localBackground = null;
-            public Texture2D communityBackground = null;
             public Texture2D auxMenuShadow = null;
             public Texture2D leftBumper = null;
             public Texture2D rightBumper = null;
@@ -2654,16 +2394,8 @@ namespace Boku
                 // Copy the background to the rt.
                 string title = null;
                 Texture2D bkg = null;
-                if (parent.CurrentBrowserType == LevelBrowserType.Community)
-                {
-                    title = Strings.Localize("loadLevelMenu.communityTitle");
-                    bkg = communityBackground;
-                }
-                else
-                {
-                    title = Strings.Localize("loadLevelMenu.localTitle");
-                    bkg = localBackground;
-                }
+                title = Strings.Localize("loadLevelMenu.localTitle");
+                bkg = localBackground;
 
                 quad.Render(bkg, Vector2.Zero, rtSize, "TexturedNoAlpha");
 
@@ -2747,82 +2479,6 @@ namespace Boku
                     pos.Y += FontLarge().LineSpacing;
 
                     batch.End();
-
-                    // Display #likes, #comments, #downloads and socl and KoduGameLab buttons.
-                    // Only if on Community page.
-                    if (parent.OriginalBrowserType == LevelBrowserType.Community)
-                    {
-                        Vector2 buttonPos = pos;
-
-                        string numString = "";
-                        Vector2 strSize;
-                        Vector2 iconSize;
-#if !HIDE_LIKES
-                        // Likes.
-                        numString = info.NumLikes.ToString();
-                        strSize = FontSmall().MeasureString(numString);
-                        iconSize = new Vector2(26, 26);
-                        buttonSize = new Vector2(32, 32);
-                        buttonSize.X += strSize.X;
-                        quad.Render(blueTile, buttonPos, buttonSize, "TexturedRegularAlpha");
-                        shared.likesBox.Set(buttonPos, buttonPos + buttonSize);
-                        // Don't render number if 0.
-                        if (info.NumLikes == 0)
-                        {
-                            quad.Render(smileyTexture, buttonPos + new Vector2(15, 3), iconSize, "TexturedRegularAlpha");
-                        }
-                        else
-                        {
-                            quad.Render(smileyTexture, buttonPos + new Vector2(3, 3), iconSize, "TexturedRegularAlpha");
-                            blob.RawText = numString;
-                            blob.RenderWithButtons(buttonPos + new Vector2(22, 3), Color.White);
-                        }
-                        buttonPos.X += buttonSize.X + 8.0f;
-
-                        // Comments.
-                        numString = "   " + info.NumComments.ToString();
-                        strSize = FontSmall().MeasureString(numString);
-                        iconSize = new Vector2(24, 24);
-                        buttonSize = new Vector2(32, 32);
-                        buttonSize.X += strSize.X;
-                        quad.Render(blueTile, buttonPos, buttonSize, "TexturedRegularAlpha");
-                        shared.commentsBox.Set(buttonPos, buttonPos + buttonSize);
-                        // Don't render number if 0.
-                        if (info.NumComments == 0)
-                        {
-                            quad.Render(commentTexture, buttonPos + new Vector2(17, 5), iconSize, "TexturedRegularAlpha");
-                        }
-                        else
-                        {
-                            quad.Render(commentTexture, buttonPos + new Vector2(4, 5), iconSize, "TexturedRegularAlpha");
-                            blob.RawText = numString;
-                            blob.RenderWithButtons(buttonPos + new Vector2(22, 3), Color.White);
-                        }
-                        buttonPos.X += buttonSize.X + 8.0f;
-#endif
-                        // Downloads.
-                        numString = "   " + info.Downloads.ToString();
-                        strSize = FontSmall().MeasureString(numString);
-                        iconSize = new Vector2(30, 30); // Larger than normal since the image is smaller.
-                        buttonSize = new Vector2(32, 32);
-                        buttonSize.X += strSize.X;
-                        quad.Render(blueTile, buttonPos, buttonSize, "TexturedRegularAlpha");
-                        shared.downloadsBox.Set(buttonPos, buttonPos + buttonSize);
-                        // Don't render number if 0.
-                        if (info.Downloads == 0)
-                        {
-                            quad.Render(downloadsTexture, buttonPos + new Vector2(14, 4), iconSize, "TexturedRegularAlpha");
-                        }
-                        else
-                        {
-                            quad.Render(downloadsTexture, buttonPos + new Vector2(4, 4), iconSize, "TexturedRegularAlpha");
-                            blob.RawText = numString;
-                            blob.RenderWithButtons(buttonPos + new Vector2(22, 3), Color.White);
-                        }
-                        buttonPos.X += buttonSize.X + 8.0f;
-
-                        pos.Y += FontLarge().LineSpacing;
-                    }
 
                     // Tags.
                     int bits = (int)info.Genres;
@@ -3123,8 +2779,6 @@ namespace Boku
                 // Slip the help overlay under any message dialogs.
                 HelpOverlay.Render();
 
-                MiniHub.communityShareMenu.Render();
-
                 InGame.RenderMessages();
 
             }   // end of LoadLevelMenu RenderObj Render()
@@ -3223,7 +2877,6 @@ namespace Boku
             public void LoadContent(bool immediate)
             {
                 LoadTexture(ref localBackground, @"Textures\LoadLevel\LocalBackground");
-                LoadTexture(ref communityBackground, @"Textures\LoadLevel\CommunityBackground");
 
                 LoadTexture(ref whiteTile, @"Textures\LoadLevel\WhiteTile");
                 LoadTexture(ref blackTile, @"Textures\GridElements\BlackTextTile");
@@ -3255,7 +2908,6 @@ namespace Boku
             public void UnloadContent()
             {
                 BokuGame.Release(ref localBackground);
-                BokuGame.Release(ref communityBackground);
 
                 BokuGame.Release(ref whiteTile);
                 BokuGame.Release(ref blackTile);
@@ -3451,22 +3103,6 @@ namespace Boku
 
         }   // end of LoadLevelMenu c'tor
 
-        /// <summary>
-        /// Sends a "like" to Socl by the current user for the current level.
-        /// </summary>
-        public void LikeLevel(bool liked)
-        {
-            var packet = new PostLikePacket();
-            packet.Liked = liked;
-            packet.PartitionKey = shared.CurWorld.PartitionKey;
-            packet.RowKey = shared.CurWorld.RowKey;
-            packet.UserId = 0;
-            if (0 == Web.Community.Async_PostLike(packet, Callback_PostLikeByWorldId, null))
-            {
-                // TODO: Handle Error
-            }
-        }   // end of LikeLevel()
-
         public void Callback_PostLikeByWorldId(AsyncResult result)
         {
             // If successful, locally increment the number of likes
@@ -3478,21 +3114,6 @@ namespace Boku
                 shared.CurWorld.LikedByThisUser = true;
             }
         }   // end of Callback_PutWorldData()
-
-        /// <summary>
-        /// Sends a "like" to the KoduDB by the current user for the current level.
-        /// </summary>
-        public void LikeLevelByWorldId(bool liked)
-        {
-            var packet = new PostLikeByWorldIdPacket();
-            packet.Liked = liked;
-            packet.UserId = 0;
-            packet.WorldId = shared.CurWorld.WorldId;
-            if (0 == Web.Community.Async_PostLikeByWorldId(packet, Callback_PostLikeByWorldId, null))
-            {
-                // TODO: Handle Error
-            }
-        }   // end of LikeLevelByWorldId()
 
         //helper functions to display dialogs
         public void ShowLevelExportedDialog(string exportedFilename)
@@ -3524,15 +3145,6 @@ namespace Boku
             string labelA = Strings.Localize("textDialog.delete");
             string labelB = Strings.Localize("textDialog.cancel");
             ModularMessageDialogManager.Instance.AddDialog(text, shared.DeleteSelectedLevel, labelA,
-                                                                 ReturnToLevelGrid, labelB);
-        }
-
-        public void ShowReportAbuseDialog()
-        {
-            string text = Strings.Localize("textDialog.reportAbusePrompt");
-            string labelA = Strings.Localize("textDialog.ok");
-            string labelB = Strings.Localize("textDialog.cancel");
-            ModularMessageDialogManager.Instance.AddDialog(text, shared.ReportAbuseSelectedLevel, labelA,
                                                                  ReturnToLevelGrid, labelB);
         }
 
@@ -3748,12 +3360,7 @@ namespace Boku
                 CommandStack.Push(commandMap);
                 HelpOverlay.Push("LoadLevelMenu");
 
-                if (OriginalBrowserType == LevelBrowserType.Community)
-                {
-                    shared.mainBrowser = shared.remoteBrowser = shared.srvBrowser = new CommunityLevelBrowser();
-                    UiOpenInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.CommunityUI);
-                }
-                else if (OriginalBrowserType == LevelBrowserType.Local)
+                if (OriginalBrowserType == LevelBrowserType.Local)
                 {
                     // If we tried to import a level but it's from a newer version
                     // tell the user that a new version is available.
@@ -4080,11 +3687,6 @@ namespace Boku
                 {
                     shared.localBrowser.Shutdown();
                     shared.localBrowser = null;
-                }
-                if (shared.srvBrowser != null)
-                {
-                    shared.srvBrowser.Shutdown();
-                    shared.srvBrowser = null;
                 }
 
                 Instrumentation.StopTimer(UiOpenInstrument);

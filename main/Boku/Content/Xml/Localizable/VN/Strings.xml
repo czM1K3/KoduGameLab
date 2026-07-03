@@ -234,8 +234,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
     
     <learning>HỌC</learning>
     
-    <community>CỘNG ĐỒNG</community>
-    
     <share>CHIA SẺ</share>
     
     <options>TÙY CHỌN</options>
@@ -355,8 +353,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
 
     
     <shareSuccessMessage>Trò chơi của bạn đã được đăng. Xem nó tại KoduGameLab.com hoặc bằng cách duyệt "Thế giới của tôi" trên màn hình Cộng đồng.</shareSuccessMessage>
-    
-    <noCommunityMessage>Trang web Cộng đồng không truy cập được tại thời điểm này. Vui lòng thử lại sau.</noCommunityMessage>
     
     <noSharingMessage>Chia sẻ không hoạt động tại thời điểm này.</noSharingMessage>
     
@@ -514,8 +510,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
     
     <sharingTitle>ĐANG CHIA SẺ</sharingTitle>
     
-    <communityTitle>CỘNG ĐỒNG</communityTitle>
-
     
     <noMatch>Không có thế giới phù hợp với tìm kiếm của bạn</noMatch>
     
@@ -745,23 +739,6 @@ Bất cứ lúc nào, nếu bạn muốn tạo một tài khoản mới, bạn c
     
     <disconnected>Ngắt kết nối</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    
-    <newsTab>Thông tin</newsTab>
-    
-    <page>Cộng đồng :</page>
-    
-    <pageFormat>Cộng đồng : Trang {0} của {1}</pageFormat>
-    
-    <downloadWorld>Tải thế giới</downloadWorld>
-    
-    <downloadSuccessMessage>Thế giới đã chọn đã được sao chép vào khu vực Tải xuống của bạn.</downloadSuccessMessage>
-    
-    <playLevel>Bắt đầu chơi</playLevel>
-    
-    <backToCommunity>Tiếp tục duyệt</backToCommunity>
-  </community>
 
   <tools>
     

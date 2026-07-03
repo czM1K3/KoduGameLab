@@ -82,7 +82,6 @@
     <new>NOVO MUNDO</new>
     <play>CARREGAR MUNDO</play>
     <learning>APRENDENDO</learning>
-    <community>COMUNIDADE</community>
     <share>PARTILHAR</share>
     <options>OPÇÕES</options>
     <help>AJUDA</help>
@@ -149,7 +148,6 @@
     <quit>Sair para Menu principal</quit>
 
     <shareSuccessMessage>O teu mundo foi copiado para o site da comunidade. Obrigado por partilhares.</shareSuccessMessage>
-    <noCommunityMessage>O site da Comunidade não está disponível por agora. Por favor, tenta mais tarde.</noCommunityMessage>
     <noSharingMessage>Neste momento não é possível partilhar.</noSharingMessage>
     <oldBuildMessage>Está disponível um build novo do Kodu. Atualiza-o, por favor, antes de acessares o site Comunidade.</oldBuildMessage>
     <newBuildMessage>Está disponível um build novo do Kodu. Por favor, sai e atualiza-o para a versão mais recente.</newBuildMessage>
@@ -236,7 +234,6 @@
   <loadLevelMenu>
     <localTitle>LOCAL</localTitle>
     <sharingTitle>PARTILHANDO</sharingTitle>
-    <communityTitle>COMUNIDADE</communityTitle>
 
     <noMatch>Nenhum mundo corresponde à tua procura</noMatch>
     <noLevels>Não foram encontrados mundos</noLevels>
@@ -327,16 +324,6 @@
     <removedByHost>O Anfitrião removeu-te</removedByHost>
     <disconnected>Desconetado</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Notícias</newsTab>
-    <page>Comunidade :</page>
-    <pageFormat>Comunidade : Página {0} de {1}</pageFormat>
-    <downloadWorld>Descarregar mundo</downloadWorld>
-    <downloadSuccessMessage>O mundo selecionado foi copiado para a tua área de descargas.</downloadSuccessMessage>
-    <playLevel>Jogar Agora</playLevel>
-    <backToCommunity>Continuar navegação</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Amostra</sampleTool>

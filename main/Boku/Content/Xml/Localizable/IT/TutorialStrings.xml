@@ -35,11 +35,6 @@
       <mouseText>Clicca su CARICA MONDO.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Scegli COMMUNITY e premi &lt;a&gt;.</gamepadText>
-      <mouseText>Clicca su COMMUNITY.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Scegli OPZIONI e premi &lt;a&gt;.</gamepadText>
       <mouseText>Clicca su OPZIONI.</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Premi &lt;b&gt; per tornare al menu 'Casa'.</gamepadText>
       <mouseText>Premi [esc] per tornare al menu 'Casa'.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Premi &lt;b&gt; per tornare al menu principale.</gamepadText>
-      <mouseText>
-        Clicca sulla freccia verde per scorrere, clicca sul tassello per scegliere un gioco.
-        Usa [leftarrow][rightarrow] per scrorrere, premi [enter] per scegliere un gioco.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

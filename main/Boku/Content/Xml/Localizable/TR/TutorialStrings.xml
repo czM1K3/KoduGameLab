@@ -35,11 +35,6 @@
       <mouseText>DÜNYA YÜKLE'ye tıkla.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>TOPLULUK'u seç ve şuna bas &lt;a&gt;.</gamepadText>
-      <mouseText>TOPLULUK'a bas.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>SEÇENEKLER'i seç ve şuna bas : &lt;a&gt;.</gamepadText>
       <mouseText>SEÇENEKLER'e tıkla.</mouseText>
@@ -101,15 +96,6 @@ Kaydırmak için [leftarrow][rightarrow] komutlarını kullan, oyun seçmek içi
     <Crumb id="HomeMenu1">
       <gamepadText>Ana menüye dönmek için şuna bas: &lt;b&gt;.</gamepadText>
       <mouseText>Ana menüye dönmek için [esc] tuşuna bas.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Press &lt;b&gt; to return to the Main Menu.</gamepadText>
-      <mouseText>
-        Kaydırmak için yeşil okları tıkla, oyun seçmek için oyun karosuna tıkla.
-Kaydırmak için [leftarrow][rightarrow] komutlarını kullan, oyun seçmek için [enter] tuşuna bas.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

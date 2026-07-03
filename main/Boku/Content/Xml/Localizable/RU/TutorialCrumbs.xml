@@ -96,15 +96,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Выберите ДРУЗЬЯ и нажмите &lt;a&gt;.</gamepadText>
-      <mouseText>Щелкните на ДРУЗЬЯ.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Выберите ПАРАМЕТРЫ  и нажмите &lt;a&gt;.</gamepadText>
       <mouseText>Щелкните на ПАРАМЕТРЫ.</mouseText>
@@ -206,28 +197,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Нажмите &lt;b&gt; для возврата в Главное меню.</gamepadText>
       <mouseText>Нажмите [esc] для возврата в Главное меню.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Нажмите &lt;b&gt; для возврата в Основное меню.</gamepadText>
-      <mouseText>
-        Click on green arrows to scroll, click on game tile to choose game.
-        Use [leftarrow][rightarrow] to scroll, press [enter] to choose game.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Нажмите &lt;b&gt; для возврата в Основное меню.</gamepadText>
-      <mouseText>Нажмите [esc] для возврата в Основное меню.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

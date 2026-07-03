@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>选取 [社群]，然后按 &lt;a&gt;。</gamepadText>
-      <mouseText>点选 [社群]。</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>选取 [选项]，然后按 &lt;a&gt;。</gamepadText>
       <mouseText>点选 [选项]。</mouseText>
@@ -208,28 +199,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>按下 &lt;b&gt; 以回到首页菜单。</gamepadText>
       <mouseText>按下 [esc] 以回到首页菜单。</mouseText>
-    </Crumb>
-
-	<!--  From CommunityMenu  -->
-	<Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>按下 &lt;b&gt; 以回到主选单。</gamepadText>
-      <mouseText>
-		按下绿色箭头以卷动，按下游戏方块以选择游戏。
-		使用 [leftarrow][rightarrow] 以卷动，按下 [enter] 以选择游戏。
-	  </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>按下 &lt;b&gt; 以回到主选单。</gamepadText>
-      <mouseText>按下 [esc] 以回到主选单。</mouseText>
     </Crumb>
 
 	<!--  ToolMenu from any tool to every other. Gamepad only.  -->

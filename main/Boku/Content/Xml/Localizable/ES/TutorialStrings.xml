@@ -44,12 +44,6 @@
       <touchText>Toca CARGAR MUNDO.</touchText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Selecciona COMUNIDAD y presiona &lt;a&gt;.</gamepadText>
-      <mouseText>Has clic en COMUNIDAD.</mouseText>
-      <touchText>Toca COMUNIDAD.</touchText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Selecciona OPCIONES y presiona &lt;a&gt;.</gamepadText>
       <mouseText>Has clic en OPCIONES.</mouseText>
@@ -121,18 +115,6 @@
       <gamepadText>Presiona &lt;b&gt; para regresar al Menú Inicio.</gamepadText>
       <mouseText>Presiona [esc] para regresar al Menú Inicio.</mouseText>
       <touchText>Presiona [esc] para regresar al Menú Inicio.</touchText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Presiona &lt;b&gt; para regresar al Menú Principal.</gamepadText>
-      <mouseText>
-        Has clic en las flechas verdes para deslizar, clic en el mosaico del juego para escoger el juego.
-        Usa [leftarrow][rightarrow] para deslizar, presiona [enter] para escoger el juego.
-      </mouseText>
-      <touchText>
-        Toca las flechas verdes o arrastra para deslizar, toca el mosaico del juego para escoger el juego.
-      </touchText>
     </Crumb>
 
     <Crumb id="MainMenu4">

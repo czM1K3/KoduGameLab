@@ -208,13 +208,6 @@ namespace Boku.Common.HintSystem
                 return;
             }
 
-            // If the MainMenu is showing a dialog it's probably a 
-            // storage issue so don't show toast.
-            if (MainMenu.Instance.DialogActive)
-            {
-                return;
-            }
-
             // If input is showing a dialog, something got unplugged so
             // don't show toast.
             if (GamePadInput.DialogActive)

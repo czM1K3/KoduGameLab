@@ -134,7 +134,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
     <import>IMPORTER DE L'ORDINATEUR</import>
     <importWorldsCommitButtonText>Charger un Monde</importWorldsCommitButtonText>
     <learning>APPRENDRE</learning>
-    <community>COMMUNAUTÉ</community>
     <share>PARTAGER</share>
     <options>OPTIONS</options>
     <help>AIDE</help>
@@ -197,7 +196,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
     <options>Options</options>
     <quit>Retour au menu principal</quit>
     <shareSuccessMessage>Votre monde a été copié sur le site de la Communauté.  Merci de partager votre monde.</shareSuccessMessage>
-    <noCommunityMessage>Le site de la Communauté n'est pas disponible pour le moment.  Veuillez réessayer ultérieurement.</noCommunityMessage>
     <noSharingMessage>La fonctionnalité de partage n'est pas disponible pour le moment.</noSharingMessage>
     <oldBuildMessage>Une nouvelle version de Kodu est disponible.  Veuillez mettre à jour avant d'accéder au site de la Communauté.</oldBuildMessage>
     <newBuildMessage>Une nouvelle version de Kodu est disponible.  Veuillez quitter et mettre à jour vers la version actuelle.</newBuildMessage>
@@ -285,7 +283,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
   <loadLevelMenu>
     <localTitle>LOCAL</localTitle>
     <sharingTitle>PARTAGE</sharingTitle>
-    <communityTitle>COMMUNAUTÉ</communityTitle>
     <noMatch>Aucun monde correspondant à votre recherche.</noMatch>
     <noLevels>Aucun monde n'a été trouvé.</noLevels>
     <searching>Recherche...</searching>
@@ -440,16 +437,6 @@ A tout moment, si vous désirez créer un compte, vous pouvez le faire en ajouta
     <removedByHost>L'hôte vous a déconnecté</removedByHost>
     <disconnected>Déconnecté</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Actualités</newsTab>
-    <page>Communauté :</page>
-    <pageFormat>Communauté: Page {0} sur {1}</pageFormat>
-    <downloadWorld>Télécharger le monde</downloadWorld>
-    <downloadSuccessMessage>Le monde sélectionné a été copié dans votre espace de téléchargement.</downloadSuccessMessage>
-    <playLevel>Jouer maintenant</playLevel>
-    <backToCommunity>Continuer la navigation</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Exemple</sampleTool>

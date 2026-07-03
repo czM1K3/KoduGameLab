@@ -33,11 +33,6 @@
       <mouseText>Clicar em CARREGAR MUNDO.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Selecionar COMUNIDADE e premir &lt;a&gt;.</gamepadText>
-      <mouseText>Clicar e COMUNIDADE.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Selecionar OPÇÕES e premir &lt;a&gt;.</gamepadText>
       <mouseText>Clicar em OPÇÕES.</mouseText>
@@ -99,15 +94,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>premir &lt;b&gt; para voltar ao Menu Principal.</gamepadText>
       <mouseText>premir [esc] para voltar ao Menu Principal.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>premir &lt;b&gt; para voltar ao Menu Principal.</gamepadText>
-      <mouseText>
-         Clicar nas setas verdes para rolar a lista, clicar no título do jogo pata escolher o jogo.
-        Usar [leftarrow][rightarrow] para rolar a lista, premir [enter] para escolher o jogo.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

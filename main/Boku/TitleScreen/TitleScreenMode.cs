@@ -26,7 +26,6 @@ using Boku.Common.Sharing;
 using Boku.Common.Xml;
 using Boku.Fx;
 using Boku.UI2D;
-using Boku.Web;
 
 using BokuShared;
 
@@ -66,47 +65,6 @@ namespace Boku
 
                 if (done && !parent.logonDialog.Active)
                 {
-                    // Ping the community to see if it's alive and let it know we've run a session.
-                    //CommunityServices.Ping(startup: true);
-                    var args = new
-                    {
-                        //startup = startup.ToString(),
-                        clientVersion = Program2.ThisVersion.ToString(),
-                        lang = Boku.Common.Localization.Localizer.LocalLanguage,
-                        //siteId = SiteID.Instance.Value.ToString()
-                    };
-                    var instrumentationTimer = Instrumentation.StartTimer(Instrumentation.TimerId.PingTime);
-                    try
-                    {
-                        KoduService.Ping(args, (responseObject) =>
-                        {
-                            Instrumentation.StopTimer(instrumentationTimer);
-                            if (responseObject == null)
-                            {
-                                // Ping failed.
-                                KoduService.PingFailed = true;
-                            }
-                            else
-                            {
-                                responseObject = (Newtonsoft.Json.Linq.JContainer)JsonConvert.DeserializeObject((string)responseObject) as Newtonsoft.Json.Linq.JContainer;
-
-                                var container = (Newtonsoft.Json.Linq.JContainer)responseObject;
-                                var msgStr = container.Value<string>("systemMessage");
-
-                                if (!string.IsNullOrEmpty(msgStr))
-                                {
-                                    System.Windows.Forms.MessageBox.Show(msgStr, "Kodu Server Message", System.Windows.Forms.MessageBoxButtons.OK);
-                                }
-                            }
-                        });
-                    }
-                    catch
-                    {
-                        // Not sure why Ping failed, but set system so it won't keep trying the same thing.
-                        KoduService.PingFailed = true;
-                    }
-
-                    // Switch to MainMenu.
                     parent.DismissAndShowMain(null, null);
                 }
 

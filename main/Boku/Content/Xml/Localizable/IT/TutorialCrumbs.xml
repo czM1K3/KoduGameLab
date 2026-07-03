@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Scegli COMMUNITY e premi &lt;a&gt;.</gamepadText>
-      <mouseText>Clicca su COMMUNITY.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Scegli OPZIONI e premi &lt;a&gt;.</gamepadText>
       <mouseText>Clicca su OPZIONI.</mouseText>
@@ -208,28 +199,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Premi &lt;b&gt; per tornare al menu 'Casa'.</gamepadText>
       <mouseText>Premi [esc] per tornare al menu 'Casa'.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Premi &lt;b&gt; per tornare al menu principale.</gamepadText>
-      <mouseText>
-        Clicca sulla freccia verde per scorrere, clicca sul tassello per scegliere un gioco.
-        Usa [leftarrow][rightarrow] per scrorrere, premi [enter] per scegliere un gioco.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Premi &lt;b&gt; per tornare al menu principale.</gamepadText>
-      <mouseText>Premi [esc] per tornare al menu principale.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

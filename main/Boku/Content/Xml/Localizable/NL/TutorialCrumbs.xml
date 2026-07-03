@@ -96,15 +96,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Selecteer Gemeenschap en druk op &lt;a&gt;.</gamepadText>
-      <mouseText>Klik op Gemeenschap.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Selecteer Opties en druk op &lt;a&gt;.</gamepadText>
       <mouseText>Klik op Opties.</mouseText>
@@ -203,25 +194,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Druk op &lt;b&gt; om naar het Startmenu te gaan.</gamepadText>
       <mouseText>Druk op [esc] om naar het Startmenu te gaan.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Druk op &lt;b&gt; om naar het Hoofdmenu te gaan.</gamepadText>
-      <mouseText>Klik op de groene pijlen om te schuiven, klik op de speltegel om een spel te kiezen. Gebruik [Pijl-links][Pijl-rechts] om te schuiven, druk op [enter] om een spel te kiezen.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Druk op &lt;b&gt; om naar het Hoofdmenu te gaan.</gamepadText>
-      <mouseText>Druk op [esc] om naar het Hoofdmenu te gaan.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

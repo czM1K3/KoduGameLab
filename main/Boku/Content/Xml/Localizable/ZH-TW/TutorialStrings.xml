@@ -35,11 +35,6 @@
       <mouseText>點選 [載入世界]。</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>選取 [社群]，然後按 &lt;a&gt;。</gamepadText>
-      <mouseText>點選 [社群]。</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>選取 [選項]，然後按 &lt;a&gt;。</gamepadText>
       <mouseText>點選 [選項]。</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>按下 &lt;b&gt; 以回到首頁功能表。</gamepadText>
       <mouseText>按下 [esc] 以回到首頁功能表。</mouseText>
-    </Crumb>
-	
-	<!--  From CommunityMenu  -->
-	<Crumb id="Unknown1">
-      <gamepadText>按下 &lt;b&gt; 以回到主選單。</gamepadText>
-      <mouseText>
-		按下綠色箭頭以捲動，按下遊戲方塊以選擇遊戲。
-		使用 [leftarrow][rightarrow] 以捲動，按下 [enter] 以選擇遊戲。
-	  </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

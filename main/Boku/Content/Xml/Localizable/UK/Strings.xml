@@ -132,7 +132,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
      <import>ІМПОРТ З КОМП'ЮТЕРА</import>
      <importWorldsCommitButtonText>Завантажити світ(и)</importWorldsCommitButtonText>
      <learning>НАВЧАННЯ</learning>
-    <community>СПІЛЬНОТА</community>
      <share>ПОДІЛИТИСЯ</share>
     <options>НАЛАШТУВАННЯ</options>
      <help>ДОВІДКА</help>
@@ -200,7 +199,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
      <quit>Перейти в Головне меню</quit>
 
      <shareSuccessMessage>Ваш світ був скопійований на сайт спільноти. Дякую за те, що поділилися з нами!</shareSuccessMessage>
-     <noCommunityMessage>Сайт спільноти на даний момент недоступний. Будь ласка, спробуйте пізніше.</noCommunityMessage>
      <noSharingMessage>Поділитися з друзями - це не працює. </noSharingMessage>
      <signedInMessage>Обмін буде опубліковано на KoduGameLab.com. Ви ввійшли як: </signedInMessage>
      <signedOutMessage>Поширення буде опубліковано на KoduGameLab.com. Ви не ввійшли. Увійти?</signedOutMessage>
@@ -288,7 +286,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
    <loadLevelMenu>
      <localTitle>ЛОКАЛЬНО</localTitle>
      <sharingTitle>СПІЛЬНО ВИКОРИСТОВУВАТИ</sharingTitle>
-     <communityTitle>СПІЛЬНОТА</communityTitle>
 
      <noMatch>Немає жодного світу, що підходить під критерії пошуку</noMatch>
      <noLevels>Не знайдено жодного світу</noLevels>
@@ -418,16 +415,6 @@ PIN-код має складатися з 4 цифр. Це діє як ваш о
      <removedByHost>Хост видалив вас</removedByHost>
     <disconnected>Відключено</disconnected>
    </networkSessionEndReason>
-
-   <community>
-     <newsTab>Новини</newsTab>
-     <page>Спільнота</page>
-     <pageFormat>Спільнота: Сторінка {0} з {1}</pageFormat>
-     <downloadWorld>Завантажити світ</downloadWorld>
-     <downloadSuccessMessage>Вибраний світ було скопійовано в область завантаження</downloadSuccessMessage>
-     <playLevel>Грати зараз</playLevel>
-     <backToCommunity>Продовжити перегляд</backToCommunity>
-   </community>
 
    <tools>
      <sampleTool>Приклад</sampleTool>

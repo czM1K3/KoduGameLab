@@ -38,7 +38,6 @@ using Boku.Common;
 using Boku.Common.Localization;
 using Boku.Common.Sharing;
 using Boku.Common.Xml;
-using Boku.Web;
 
 using BokuShared;
 
@@ -114,7 +113,6 @@ namespace Boku
                         "  /ANALYTICS \t- run analytics on game being loaded\r\n" +
                         "  /LOCALIZATION <language> \t- report localization information that is missing in the specified language.\r\n" +
                         "  /PIESIZE <int> \t- pie menu maximum size.\r\n" +
-                        "  /COMMUNITY <URL>\r\n" +
                         "  /SERVICE_API_URL <URL>\r\n" +
                         "");
 
@@ -269,17 +267,10 @@ namespace Boku
                         //oa.beginAnalysis(MainMenu.StartupWorldFilename.ToString());
                     }
 
-                    // Override path to community.
-                    if (CmdLine.Exists("COMMUNITY"))
-                    {
-                        Boku.Web.Trans.CommunityRequest.CommunityUrl = CmdLine.GetString("COMMUNITY", @"https://kodu.cloudapp.net/Community2.asmx");
-                    }
-
                 }
 
                 {
                     // DebugLog.NewRun();
-                    //Community2.GetWorlds(10, 22);
 
                     // Initialize Localization Resources.
                     Unicode.Init(); // Needed for loading localizations.
@@ -484,8 +475,6 @@ namespace Boku
                     }
                     */
 
-                    FlushInstrumentation();
-
                     // ====================================================
                 }
 #if GLOBAL_CATCH
@@ -521,16 +510,7 @@ namespace Boku
                         ex.StackTrace;
                     ErrorForm errorForm = new ErrorForm();
                     errorForm.textBoxError.Text = errorReport;
-                    if (System.Windows.Forms.DialogResult.OK == errorForm.ShowDialog())
-                    {
-                        string addInfo =
-                            ex.GetType().Name + "\r\n" +
-                            "Kodu: " + ThisVersion.ToString() + "\r\n" +
-                            gfxString + "\r\n" +
-                            "WLID: " + errorForm.textBoxLiveId.Text + "\r\n\r\n" + 
-                            errorForm.textBoxAddInfo.Text;
-                        SendErrorReport(ex.Message, ex.StackTrace, addInfo);
-                    }
+                    errorForm.ShowDialog();
 
                     Process.GetCurrentProcess().Kill();
                 }
@@ -571,74 +551,5 @@ namespace Boku
         }   // end of CopyFiles()
 
     }   // end of class Program2
-
-
-    /// This chunk of the Program class manages the task of sending crash reports and instrumentation.
-    static partial class Program2
-    {
-        static bool instrumentationFlushed = false;
-        static void InstrumentationFlushed(object param)
-        {
-            instrumentationFlushed = true;
-        }
-
-        static void FlushInstrumentation()
-        {
-            try
-            {
-                if (SiteOptions.Instrumentation)
-                {
-                    int timeSpent = 0;
-                    if (Common.Instrumentation.Flush(InstrumentationFlushed))
-                    {
-                        // Give it 30 seconds to complete.
-                        while (!instrumentationFlushed && timeSpent < 30 * 1000)
-                        {
-                            // Pump web request callbacks.
-                            Web.Trans.Request.Update();
-                            System.Threading.Thread.Sleep(10);
-                            timeSpent += 10;
-                        }
-                    }
-                }
-            }
-            catch { }
-        }
-
-#if GLOBAL_CATCH
-        static bool errorReportSent = false;
-
-        static void ErrorReportSent(object param)
-        {
-            errorReportSent = true;
-        }
-
-        static void SendErrorReport(string errorMessage, string stackTrace, string addInfo)
-        {
-            try
-            {
-                Web.Trans.ReportError trans = new Web.Trans.ReportError(
-                    errorMessage,
-                    stackTrace,
-                    addInfo,
-                    ErrorReportSent,
-                    null);
-
-                if (trans.Send())
-                {
-                    int timeSpent = 0;
-                    while (!errorReportSent && timeSpent < 30 * 1000)
-                    {
-                        // Pump web request callbacks.
-                        Web.Trans.Request.Update();
-                        System.Threading.Thread.Sleep(10);
-                        timeSpent += 10;
-                    }
-                }
-            }
-            catch { }
-        }
-#endif
-    }
 
 }   // end of namespace Boku

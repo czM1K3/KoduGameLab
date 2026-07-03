@@ -97,7 +97,6 @@
     <import>從桌面匯入</import>
     <importWorldsCommitButtonText>載入世界</importWorldsCommitButtonText>
     <learning>學習</learning>
-    <community>社群</community>
     <share>分享</share>
     <options>選項</options>
     <help>說明</help>
@@ -166,7 +165,6 @@
     <quit>退出主選單</quit>
 
     <shareSuccessMessage>已與 KoduGameLab 和 Socl 分享你的世界。移至網站或「社群」下的「我的世界」，查看你已分享的世界。</shareSuccessMessage>
-    <noCommunityMessage>目前無法使用社群網站。請稍後再試一次。</noCommunityMessage>
     <noSharingMessage>目前無法使用分享功能。</noSharingMessage>
     <oldBuildMessage>已有可用的新版本 Kodu。請在存取社群網站前升級。</oldBuildMessage>
     <newBuildMessage>已有可用的新版本 Kodu。請退出及升級目前的版本。</newBuildMessage>
@@ -256,7 +254,6 @@
   <loadLevelMenu>
     <localTitle>本機</localTitle>
     <sharingTitle>分享</sharingTitle>
-    <communityTitle>社群</communityTitle>
 
     <noMatch>沒有符合搜尋條件的世界</noMatch>
     <noLevels>找不到世界</noLevels>
@@ -385,16 +382,6 @@
     <removedByHost>主機已移除你</removedByHost>
     <disconnected>連線已中斷</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>新消息</newsTab>
-    <page>社群：</page>
-    <pageFormat>社群：第 {0} 頁，共 {1} 頁</pageFormat>
-    <downloadWorld>下載世界</downloadWorld>
-    <downloadSuccessMessage>已複製選取的世界到你的下載區域。</downloadSuccessMessage>
-    <playLevel>馬上玩</playLevel>
-    <backToCommunity>繼續瀏覽</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>範例</sampleTool>

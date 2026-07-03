@@ -35,11 +35,6 @@
       <mouseText>Spausk ĮKELTI PASAULĮ.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Pasirink BENDRUOMENĖ ir spausk &lt;a&gt;.</gamepadText>
-      <mouseText>Spausk BENDRUOMENĖ.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Pasirink NUSTATYMAI ir spausk &lt;a&gt;.</gamepadText>
       <mouseText>Spausk NUSTATYMAI.</mouseText>
@@ -100,14 +95,6 @@ Spausk [leftarrow][rightarrow] slinkti, [enter] - pasirinkti žaidimą.
     <Crumb id="HomeMenu1">
       <gamepadText>Spausk &lt;b&gt; ir grįši į Pagrindinį Meniu.</gamepadText>
       <mouseText>Spausk [esc] ir grįši į Pagrindinį Meniu.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Spausk &lt;b&gt; ir grįši į Pagrindinį Meniu.</gamepadText>
-      <mouseText>Spausk žalias rodykles - slinkti, žaidimo pavadinimą - pasirinkti.
-Spausk [leftarrow][rightarrow] slinkti, [enter] - pasirinkti žaidimą.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

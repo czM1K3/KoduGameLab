@@ -70,7 +70,6 @@
 		<resume>ΣΥΝΕΧΕΙΑ</resume>
 		<play>O ΚΟΣΜΟΣ ΤΟΥ KODU</play>
 		<learning>ΕΚΠΑΙΔΕΥΣΗ</learning>
-		<community>ΚΟΙΝΟΤΗΤΑ</community>
 		<share>ΜΟΙΡΑΣΟΥ</share>
 		<options>ΕΠΙΛΟΓΕΣ</options>
 		<help>ΒΟΗΘΕΙΑ</help>
@@ -122,7 +121,6 @@
 		<options>Επιλογές</options>
 		<quit>Έξοδος στο Κύριο Μενού</quit>
 		<shareSuccessMessage>Ο κόσμος σας έχει αντιγραφεί στην περιοχή της Κοινότητας. Σας ευχαριστούμε για το διαμοιρασμό.</shareSuccessMessage>
-		<noCommunityMessage>Η ιστοσελίδα της Κοινότητας δεν είναι διαθέσιμη αυτή τη στιγμή. Δοκιμάστε αργότερα.</noCommunityMessage>
 		<noSharingMessage>Ο διαμοιρασμός δεν είναι διαθέσιμος αυτή τη στιγμή.</noSharingMessage>
 		<oldBuildMessage>Μια νέα έκδοση του Kodu είναι διαθέσιμη. Παρακαλείσθε να αναβαθμίσετε πριν από την πρόσβαση στην ιστοσελίδα της Κοινότητας.</oldBuildMessage>
 		<newBuildMessage>Μια νέα έκδοση του Kodu είναι διαθέσιμη. Παρακαλώ πραγματοποιήστε έξοδο και ενημέρωση στην τρέχουσα έκδοση.</newBuildMessage>
@@ -195,7 +193,6 @@
 	<loadLevelMenu>
 		<localTitle>ΤΟΠΙΚΑ</localTitle>
 		<sharingTitle>ΔΙΑΜΟΙΡΑΣΜΟΣ</sharingTitle>
-		<communityTitle>ΚΟΙΝΟΤΗΤΑ</communityTitle>
 		<noMatch>Δεν αντιστοιχούν κόσμοι στην αναζήτησή σας</noMatch>
 		<noLevels>Δε βρέθηκαν κόσμοι</noLevels>
 		<searching>Αναζήτηση ...</searching>
@@ -274,15 +271,6 @@
 		<removedByHost>Ο οικοδεσπότης σας αφαίρεσε</removedByHost>
 		<disconnected>Αποσυνδέθηκε</disconnected>
 	</networkSessionEndReason>
-	<community>
-		<newsTab>Ειδήσεις</newsTab>
-		<page>Κοινότητα:</page>
-		<pageFormat>Κοινότητα: Σελίδα {0} από {1}</pageFormat>
-		<downloadWorld>Λήψη Κόσμου</downloadWorld>
-		<downloadSuccessMessage>Ο επιλεγμένος κόσμος έχει αντιγραφεί στην περιοχή λήψης σου.</downloadSuccessMessage>
-		<playLevel>Παίξε Τώρα</playLevel>
-		<backToCommunity>Συνέχισε την περιήγηση</backToCommunity>
-	</community>
 	<tools>
 		<sampleTool>Δείγμα</sampleTool>
 		<paintMaterialTool>Αλλαγή Υλικού</paintMaterialTool>

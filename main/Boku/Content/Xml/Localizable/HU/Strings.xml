@@ -97,7 +97,6 @@
     <import>IMPORTÁLÁS AZ ASZTALRÓL</import>
     <importWorldsCommitButtonText>Világ(ok) betöltése</importWorldsCommitButtonText>
     <learning>TANULÁS</learning>
-    <community>KÖZÖSSÉG</community>
     <share>MEGOSZTÁS</share>
     <options>BEÁLLÍTÁSOK</options>
     <help>SÚGÓ</help>
@@ -161,7 +160,6 @@
     <quit>Kilépés a Főmenüből</quit>
 
     <shareSuccessMessage>A világodat megosztottad a KoduGameLab és Socl. oldalakkal.   Lépj ezekre a weboldalakra, vagy a Közösség opciónál a „Világaim” lehetőségre a megosztott világok megtekintéséhez.</shareSuccessMessage>
-    <noCommunityMessage>A Közösség oldal jelenleg nem elérhető.  Kérjük, próbáld meg később.</noCommunityMessage>
     <noSharingMessage>A megosztás jelenleg nem elérhető.</noSharingMessage>
     <oldBuildMessage>A Kodu új verziója elérhető.  Kérjük, végezd el a frissítést, mielőtt a Közösség oldalra lépnél.</oldBuildMessage>
     <newBuildMessage>A Kodu új verziója elérhető.  Kérjük, lépj ki és frissíts a jelenlegi verzióra.</newBuildMessage>
@@ -250,7 +248,6 @@
   <loadLevelMenu>
     <localTitle>HELYI</localTitle>
     <sharingTitle>MEGOSZTÁS</sharingTitle>
-    <communityTitle>KÖZÖSSÉG</communityTitle>
 
     <noMatch>Egy világ sem felel meg a keresésednek</noMatch>
     <noLevels>Nincs világ találat</noLevels>
@@ -376,16 +373,6 @@
     <removedByHost>Az állomás eltávolított téged</removedByHost>
     <disconnected>Leválasztva</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Hírek</newsTab>
-    <page>Közösség:</page>
-    <pageFormat>Közösség:  {0}/{1} oldal</pageFormat>
-    <downloadWorld>Világ letöltése</downloadWorld>
-    <downloadSuccessMessage>A kiválasztott világ a Letöltésekbe másolásra került.</downloadSuccessMessage>
-    <playLevel>Játssz most</playLevel>
-    <backToCommunity>Böngészés folytatása</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Példa</sampleTool>

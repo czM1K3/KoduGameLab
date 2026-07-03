@@ -76,7 +76,6 @@
     <new>NEUE WELT</new>
     <play>WELT LADEN</play>
     <learning>LERNEN</learning>
-    <community>GEMEINSCHAFT</community>
     <share>TEILEN</share>
     <options>OPTIONEN</options>
     <help>HILFE</help>
@@ -134,7 +133,6 @@
     <quit>Zurück zum Hauptmenü</quit>
 
     <shareSuccessMessage>Deine Welt wurde auf die Gemeinschafts-Seite kopiert. Danke für das Hochladen.</shareSuccessMessage>
-    <noCommunityMessage>Die Gemeinschafts-Seite ist momentan nicht erreichbar.  Bitte versuch es später noch einmal.</noCommunityMessage>
     <noSharingMessage>Hochladen ist momentan nicht möglich.</noSharingMessage>
     <oldBuildMessage>Eine neue Version von Kodu ist verfügbar. Bitte installiere sie bevor du die Gemeinschafts-Seite aufrufst.</oldBuildMessage>
     <newBuildMessage>Eine neue Version von Kodu ist verfügbar. Bitte beende und spiele die aktuelle Version ein.</newBuildMessage>
@@ -217,7 +215,6 @@
   <loadLevelMenu>
     <localTitle>LOKAL</localTitle>
     <sharingTitle>GETEILT</sharingTitle>
-    <communityTitle>GEMEINSCHAFT</communityTitle>
 
     <noMatch>Keine Welt entspricht Deiner Suche</noMatch>
     <noLevels>Keine Welten gefunden</noLevels>
@@ -305,16 +302,6 @@
     <removedByHost>Der Gastgeber hat dich abgekoppelt</removedByHost>
     <disconnected>Verbindung beendet</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Nachrichten</newsTab>
-    <page>Gemeinschaft :</page>
-    <pageFormat>Gemeinschaft : Seite {0} von {1}</pageFormat>
-    <downloadWorld>Welt herunterladen</downloadWorld>
-    <downloadSuccessMessage>Die ausgewählte Welt wurde heruntergeladen.</downloadSuccessMessage>
-    <playLevel>Jetzt spielen</playLevel>
-    <backToCommunity>Weiter umsehen</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Muster</sampleTool>

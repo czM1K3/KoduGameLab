@@ -40,7 +40,6 @@ namespace Boku.Common.TutorialSystem
             OptionsMenu,
             HelpScreens,
             LoadLevelMenu,
-            CommunityMenu,
 
             HomeMenu,
 
@@ -173,11 +172,6 @@ namespace Boku.Common.TutorialSystem
             {
                 curGameMode = GameMode.LoadLevelMenu;
                 return;
-            }
-
-            if (BokuGame.bokuGame.community.Active)
-            {
-                curGameMode = GameMode.CommunityMenu;
             }
 
             if (InGame.inGame.Editor.Active)

@@ -29,7 +29,6 @@ using BokuShared;
 using Boku.Common.Gesture;
 using Boku.Common.Localization;
 using Boku.Common.Sharing;
-using Boku.Web;
 
 namespace Boku
 {

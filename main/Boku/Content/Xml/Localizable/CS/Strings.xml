@@ -86,7 +86,6 @@
 	<new>NOVÝ SVĚT</new>
     <play>NAČÍST SVĚT</play>
     <learning>VÝUKA</learning>
-    <community>KOMUNITA</community>
     <share>SDÍLET</share>
     <options>NASTAVENÍ</options>
     <help>NÁPOVĚDA</help>
@@ -153,7 +152,6 @@
     <quit>Návrat do hlavního menu</quit>
 
     <shareSuccessMessage>Váš svět byl nahrán na stránku komunity. Díky za sdílení.</shareSuccessMessage>
-    <noCommunityMessage>Stránka komunity není momentálně dostupná. Prosím, zkuste to později.</noCommunityMessage>
     <noSharingMessage>Sdílení není momentálně dostupné.</noSharingMessage>
     <oldBuildMessage>Je dostupná nová verze Kodu. Prosím, aktualizujte svou verzi před vstupem na stránku komunity.</oldBuildMessage>
     <newBuildMessage>Je dostupná nová verze Kodu. Prosím, aktualizujte svou verzi.</newBuildMessage>
@@ -239,7 +237,6 @@
   <loadLevelMenu>
     <localTitle>MÍSTNÍ</localTitle>
     <sharingTitle>SDÍLENÍ</sharingTitle>
-    <communityTitle>KOMUNITA</communityTitle>
 
     <noMatch>Žádný svět neodpovídá výběru.</noMatch>
     <noLevels>Nebyly nalezeny žádné světy.</noLevels>
@@ -358,16 +355,6 @@
     <removedByHost>Host vás vyhodil</removedByHost>
     <disconnected>Odpojeno</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Novinky</newsTab>
-    <page>Komunita :</page>
-    <pageFormat>Komunita : Strana {0} z {1}</pageFormat>
-    <downloadWorld>Stáhnout svět</downloadWorld>
-    <downloadSuccessMessage>Vybraný svět byl nakopírován mezi stažené.</downloadSuccessMessage>
-    <playLevel>Spustit</playLevel>
-    <backToCommunity>Pokračovat v procházení.</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Ukázka</sampleTool>

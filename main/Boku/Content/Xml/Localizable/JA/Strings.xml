@@ -97,7 +97,6 @@
     <import>ファイルから読みこみ</import>
     <importWorldsCommitButtonText>ワールドを読みこむ</importWorldsCommitButtonText>
     <learning>LEARNING</learning>
-    <community>コミュニティ</community>
     <share>シェアする</share>
     <options>オプション</options>
     <help>ヘルプ</help>
@@ -165,7 +164,6 @@
     <quit>終了してメインメニューに行く</quit>
 
     <shareSuccessMessage>君のワールドは、KoduGameLab と Socl　にシェアされたよ。その２つのウェブサイトにいくか、コミュニティのメニューのマイワールドに行けば、シェアされたワールドが見られるからね。</shareSuccessMessage>
-    <noCommunityMessage>コミュニティサイトは現在使用できません。またあとで試してください。</noCommunityMessage>
     <noSharingMessage>シェア機能は現在使えません。</noSharingMessage>
     <oldBuildMessage>新しいバージョンのKoduがあります。コミュニティサイトにアクセスする前にアップグレードを完了してください。</oldBuildMessage>
     <newBuildMessage>新しいバージョンのKoduがありるよ。終了してさいしんばんにアップグレードしてください。</newBuildMessage>
@@ -254,7 +252,6 @@
   <loadLevelMenu>
     <localTitle>このPCにある</localTitle>
     <sharingTitle>SHARING</sharingTitle>
-    <communityTitle>コミュニティ</communityTitle>
 
     <noMatch>検索条件にマッチしたワールドがありません</noMatch>
     <noLevels>ワールドが見つかりませんでした</noLevels>
@@ -379,17 +376,7 @@
     <hostEndedSession>Host ended session</hostEndedSession>
     <removedByHost>Host removed you</removedByHost>
     <disconnected>Disconnected</disconnected>
-  </networkSessionEndReason>
-
-  <community>
-    <newsTab>News</newsTab>
-    <page>Community :</page>
-    <pageFormat>Community : Page {0} of {1}</pageFormat>
-    <downloadWorld>Download World</downloadWorld>
-    <downloadSuccessMessage>Selected world has been copied to your Downloads area.</downloadSuccessMessage>
-    <playLevel>Play Now</playLevel>
-    <backToCommunity>Continue Browsing</backToCommunity>
-  </community>
+  </networkSessionEndReason>\
 
   <tools>
     <sampleTool>Sample</sampleTool>

@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Hautatu ELKARTEA eta sakatu &lt;a&gt;.</gamepadText>
-      <mouseText>Sakatu ELKARTEA.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Hautatu AUKERAK eta sakatu &lt;a&gt;.</gamepadText>
       <mouseText>Sakatu AUKERAK.</mouseText>
@@ -206,28 +197,6 @@
         <mode>LoadLevelMenu</mode>
       </curModes>
       <targetMode>HomeMenu</targetMode>
-      <gamepadText>Sakatu &lt;b&gt; Menu Nagusira itzultzeko.</gamepadText>
-      <mouseText>Sakatu [esc] Menu Nagusira itzultzeko.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Sakatu &lt;b&gt; Menu Nagusira itzultzeko.</gamepadText>
-      <mouseText>
-        Sakatu green arrows to scroll, Sakatu jokoaren izenburua jokoa hautatzeko.
-        Erabili [leftarrow][rightarrow] desplazatzeko, Sakatu [enter] jokoa hautatzeko.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
       <gamepadText>Sakatu &lt;b&gt; Menu Nagusira itzultzeko.</gamepadText>
       <mouseText>Sakatu [esc] Menu Nagusira itzultzeko.</mouseText>
     </Crumb>

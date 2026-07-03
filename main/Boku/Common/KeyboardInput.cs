@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework.Input;
 
 
 using Boku.Input;
-using Boku.Web;
 
 namespace Boku.Common
 {

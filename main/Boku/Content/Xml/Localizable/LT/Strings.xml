@@ -94,7 +94,6 @@
     <new>NAUJAS PASAULIS</new>
     <play>ĮKELTI PASAULĮ</play>
     <learning>MOKYMAI</learning>
-    <community>BENDRUOMENĖ</community>
     <share>DALINTIS</share>
     <options>NUSTATYMAI</options>
     <help>PAGALBA</help>
@@ -161,7 +160,6 @@
     <quit>Eiti į pagrindinį meniu</quit>
 
     <shareSuccessMessage>Jūsų pasaulis nukopijuotas į Bendruomenės svetainę. Ačiū, kad dalinatės.</shareSuccessMessage>
-    <noCommunityMessage>Šiuo metu Bendruomenės svetainė nepasiekiama. Prašome pabandyti vėliau.</noCommunityMessage>
     <noSharingMessage>Šiuo metu dalintis negalima.</noSharingMessage>
     <oldBuildMessage>Jūsų Kodu programa nėra naujausia. Prašome atnaujinti savo Kodu prieš kreipiantis į Bendruomenės svetainę.</oldBuildMessage>
     <newBuildMessage>Jūsų Kodu programa nėra naujausia. Prašome uždaryti programą ir atnaujinti savo Kodu.</newBuildMessage>
@@ -248,7 +246,6 @@
   <loadLevelMenu>
     <localTitle>VIETINIS</localTitle>
     <sharingTitle>DALINAMASI</sharingTitle>
-    <communityTitle>BENDRUOMENĖ</communityTitle>
 
     <noMatch>Nėra tokių pasaulių, kokių ieškai</noMatch>
     <noLevels>Pasaulių nerasta</noLevels>
@@ -367,16 +364,6 @@
     <removedByHost>Gavėjas tave atjungė</removedByHost>
     <disconnected>Atsijungė</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Naujienos</newsTab>
-    <page>Bendruomenė :</page>
-    <pageFormat>Bendruomenė : Puslapis {0} iš {1}</pageFormat>
-    <downloadWorld>Atsisiųsti pasaulį</downloadWorld>
-    <downloadSuccessMessage>Pasirinktas pasaulis buvo atsiųstas į jūsų siuntinių sritį.</downloadSuccessMessage>
-    <playLevel>Žaisti dabar</playLevel>
-    <backToCommunity>Tęsti naršymą</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Pavyzdys</sampleTool>

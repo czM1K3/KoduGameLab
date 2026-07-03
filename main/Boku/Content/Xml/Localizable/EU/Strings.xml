@@ -97,7 +97,6 @@
     <import>Mahaigainetik Inportatu</import>
     <importWorldsCommitButtonText>Mundua(k) Kargatu</importWorldsCommitButtonText>
     <learning>Ikasketa</learning>
-    <community>ELKARTEA</community>
     <share>Parrekatu</share>
     <options>EZARPENAK</options>
     <help>LAGUNTZA</help>
@@ -165,7 +164,6 @@
     <quit>Irten Menu Nagusira</quit>
 
     <shareSuccessMessage>Zure mundua "KoduGameLab and Socl"-rekin partekatu egin da. Webgune horietara joan edo, Komunitatearen azpian "Nire Munduak" esaten duen lekura, zure partekatutako mundua ikusteko.</shareSuccessMessage>
-    <noCommunityMessage>Komunitatearen lekua ez dago eskuragarri momentu honetan.  Mesedez saiatu ezazu geroago.</noCommunityMessage>
     <noSharingMessage>Partekatzea ez dago eskuragarri momentu honetan.</noSharingMessage>
     <oldBuildMessage>Kodu-ren bertsio berri bat duzu eskuragarri.  Mesedez, eguneratu "Komunitatea" lekura joan baino lehen.</oldBuildMessage>
     <newBuildMessage>Kodu-ren bertsio berri bat duzu eskuragarri.  Mesedez, irten eta eguneratu bertsio berrira.</newBuildMessage>
@@ -254,7 +252,6 @@
   <loadLevelMenu>
     <localTitle>BARNEKOA</localTitle>
     <sharingTitle>PARTEKATZEA</sharingTitle>
-    <communityTitle>ELKARTEA</communityTitle>
 
     <noMatch>Ez dago mundurik bilaketa horrekin bat egiten duena</noMatch>
     <noLevels>Ez da mundurik aurkitu</noLevels>
@@ -382,16 +379,6 @@
     <removedByHost>Gorenekoak zu bora zaitu</removedByHost>
     <disconnected>Konekxiorik gabe</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Berriak:</newsTab>
-    <page>Komunitatea :</page>
-    <pageFormat>Komunitatea :  {0}.horria {1}etik</pageFormat>
-    <downloadWorld>Deskargatu mundua</downloadWorld>
-    <downloadSuccessMessage>Aukeratu zure Deskargen karpetara mugitu den artxiboa.</downloadSuccessMessage>
-    <playLevel>Jolastu orain</playLevel>
-    <backToCommunity>Jarraitu bilatzen</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Adibidea</sampleTool>

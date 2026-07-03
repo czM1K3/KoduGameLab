@@ -82,14 +82,6 @@
 			<curModes>
 				<mode>MainMenu</mode>
 			</curModes>
-			<targetMode>CommunityMenu</targetMode>
-			<gamepadText>Επίλεξε ΚΟΙΝΟΤΗΤΑ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
-			<mouseText>Κάνε κλικ στο ΚΟΙΝΟΤΗΤΑ.</mouseText>
-		</Crumb>
-		<Crumb>
-			<curModes>
-				<mode>MainMenu</mode>
-			</curModes>
 			<targetMode>OptionsMenu</targetMode>
 			<gamepadText>Επίλεξε ΕΠΙΛΟΓΕΣ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
 			<mouseText>Κάνε κλικ στο ΕΠΙΛΟΓΕΣ.</mouseText>
@@ -179,24 +171,6 @@
 			<targetMode>HomeMenu</targetMode>
 			<gamepadText>Πάτησε &lt;b&gt;για να επιστρέψεις στο Αρχικό Mενού.</gamepadText>
 			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Αρχικό Mενού.</mouseText>
-		</Crumb>
-		<!--  From CommunityMenu  -->
-		<Crumb>
-			<curModes>
-				<mode>CommunityMenu</mode>
-			</curModes>
-			<targetMode>Unknown</targetMode>
-			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
-			<mouseText>Κάνε κλικ στο πράσινο βέλος για να μετακινηθείς, κάνε κλικ στο παιχνίδι για να το επιλέξεις.
- Χρησιμοποίησε  [leftarrow][rightarrow] για να μετακινηθείς, πάτησε  [Enter] για να επιλέξεις το παιχνίδι.</mouseText>
-		</Crumb>
-		<Crumb>
-			<curModes>
-				<mode>CommunityMenu</mode>
-			</curModes>
-			<targetMode>MainMenu</targetMode>
-			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
-			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
 		</Crumb>
 		<!--  ToolMenu from any tool to every other. Gamepad only.  -->
 		<Crumb>

@@ -97,7 +97,6 @@
     <import>MASA ÜSTÜNDEN İTHAL ET</import>
     <importWorldsCommitButtonText>Dünya(lar) Yükle</importWorldsCommitButtonText>
     <learning>ÖĞRENME</learning>
-    <community>TOPLULUK</community>
     <share>PAYLAŞ</share>
     <options>SEÇENEKLER</options>
     <help>YARDIM</help>
@@ -163,7 +162,6 @@
     <quit>Ana Menüye Dön</quit>
 
     <shareSuccessMessage>Dünyan KoduGameLab ve Socl'da paylaşıldı. Bu websitelerine ya da Topluluk altındaki "Benim Dünyalarım" kısmına gidip paylaştığın dünyaları görebilirsin.</shareSuccessMessage>
-    <noCommunityMessage>Topluluk sitesi şu anda kullanılabilir değil.  Lütfen daha sonra yeniden dene.</noCommunityMessage>
     <noSharingMessage>Paylaşım şu anda kullanılamaz.</noSharingMessage>
     <oldBuildMessage>Kodu'nun yeni bir versiyonu çıktı.Topluluk sitesine giriş yapmadan önce Kodu'yu yükselt.</oldBuildMessage>
     <newBuildMessage>Kodu'nun yeni bir versiyonu mevcuttur. Lütfen çıkış yapıp yeni versiyona yükselt.</newBuildMessage>
@@ -250,7 +248,6 @@
   <loadLevelMenu>
     <localTitle>YEREL</localTitle>
     <sharingTitle>PAYLAŞIYOR</sharingTitle>
-    <communityTitle>TOPLULUK</communityTitle>
 
     <noMatch>Aramanda eşleşen bir dünya yok</noMatch>
     <noLevels>Hiç dünya bulunmadı</noLevels>
@@ -371,16 +368,6 @@ Linkleri diğer seviyelere bağlamak istiyor musun?
     <removedByHost>Karşı taraf seni uzaklaştırdı</removedByHost>
     <disconnected>Bağlantı kesildi</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Haberler</newsTab>
-    <page>Topluluk:</page>
-    <pageFormat>Topluluk: Sayfa {0} / {1}</pageFormat>
-    <downloadWorld>Dünyayı İndir</downloadWorld>
-    <downloadSuccessMessage>Seçili dünya İndirilenler alanına kopyalandı.</downloadSuccessMessage>
-    <playLevel>Şimdi Oyna</playLevel>
-    <backToCommunity>Taramaya Devam Et</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Örnek</sampleTool>

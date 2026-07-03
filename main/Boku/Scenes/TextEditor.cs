@@ -24,7 +24,6 @@ using Boku.UI2D;
 using Boku.Input;
 using Boku.Programming;
 using Boku.SimWorld;
-using Boku.Web;
 using Boku.Fx;
 
 using Boku.Audio;

@@ -29,7 +29,6 @@ using Boku.UI2D;
 using Boku.Input;
 using Boku.Scenes;
 using Boku.SimWorld;
-using Boku.Web;
 
 using BokuShared;
 using BokuShared.Wire;
@@ -48,8 +47,6 @@ namespace Boku
 
         public NewWorldDialog newWorldDialog;
 
-        public static CommunityShareMenu communityShareMenu = new CommunityShareMenu();
-        
         protected class Shared : INeedsDeviceReset
         {
             public Camera camera = new PerspectiveUICamera();
@@ -99,7 +96,6 @@ namespace Boku
                 menu.AddText(Strings.Localize("miniHub.reset"));
                 menu.AddText(Strings.Localize("miniHub.edit"));
                 menu.AddText(Strings.Localize("miniHub.save"));
-                menu.AddText(Strings.Localize("miniHub.publish"));
                 menu.AddText(Strings.Localize("miniHub.load"));
                 menu.AddText(Strings.Localize("miniHub.emptyLevel"));
                 menu.AddText(Strings.Localize("miniHub.print"));
@@ -166,15 +162,11 @@ namespace Boku
 
                 parent.saveChangesMessage.Update();
                 parent.saveChangesWithDiscardMessage.Update();
-                parent.shareSuccessMessage.Update();
-                parent.noCommunityMessage.Update();
 
                 // If any of the dialogs are active, we don't want to look for input.
                 if (parent.saveLevelDialog.Active
                     || parent.saveChangesMessage.Active
                     || parent.saveChangesWithDiscardMessage.Active
-                    || parent.shareSuccessMessage.Active
-                    || parent.noCommunityMessage.Active
                     )
                 {
                     return;
@@ -190,39 +182,6 @@ namespace Boku
                 // Ensure the help overlay is up to date.
                 HelpOverlay.RefreshTexture();
 
-                //
-                // If Sharing to the Community, we need to respond to results.
-                //
-
-                // If Sharing is complete, clear the state.
-                if (KoduService.ShareRequestState == KoduService.RequestState.Complete)
-                {
-                    // Success.
-                    MiniHub.communityShareMenu.ShowShareSuccessDialog();
-
-                    // Clear state for next share.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
-                // If Sharing and we don't have internet, show error.
-                if (KoduService.ShareRequestState == KoduService.RequestState.NoInternet)
-                {
-                    MiniHub.communityShareMenu.ShowNoCommunityDialog();
-
-                    // Clear state so we can try again.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
-                // If Sharing caused an error, show the dialog.
-                if (KoduService.ShareRequestState == KoduService.RequestState.Error)
-                {
-                    // Launch error dialog.
-                    MiniHub.communityShareMenu.ShowShareErrorDialog("Share failed.");    // TODO (scoy) Localize this string!
-
-                    // Clear state so we can try again.
-                    KoduService.ShareRequestState = KoduService.RequestState.None;
-                }
-
 
             }   // end of MiniHub UpdateObj Update()
 
@@ -234,18 +193,8 @@ namespace Boku
                 }
             }
 
-
-            private void Callback_PutWorldData(AsyncResult result)
-            {
-                if (result.Success)
-                    parent.shareSuccessMessage.Activate();
-                else
-                    parent.noCommunityMessage.Activate();
-            }
-
             public override void Activate()
             {
-                parent.noCommunityMessage.Deactivate();
                 // Do this here so that it happens after the previous object
                 // has had a chance to deactivate.
                 HelpOverlay.Push("MiniHub");
@@ -349,10 +298,6 @@ namespace Boku
                         // Messages will only render if active.
                         parent.saveChangesMessage.Render();
                         parent.saveChangesWithDiscardMessage.Render();
-                        parent.shareSuccessMessage.Render();
-                        parent.noCommunityMessage.Render();
-
-                        MiniHub.communityShareMenu.Render();
 
                         HelpOverlay.Render();
                     }
@@ -390,8 +335,6 @@ namespace Boku
         private SaveLevelDialog saveLevelDialog = new SaveLevelDialog();
         private ModularMessageDialog saveChangesMessage = null;
         private ModularMessageDialog saveChangesWithDiscardMessage = null;
-        private ModularMessageDialog shareSuccessMessage = null;
-        private ModularMessageDialog noCommunityMessage = null;
 
         protected int selectionIndex = -1;
 
@@ -488,52 +431,6 @@ namespace Boku
             }
 
             //
-            // Set up ShareSuccessDialog
-            //
-            {
-                ModularMessageDialog.ButtonHandler handlerB = delegate(ModularMessageDialog dialog)
-                {
-                    // User chose "back"
-
-                    // Deactivate dialog.
-                    dialog.Deactivate();
-
-                    // Make sure grid is still active.
-                    shared.menu.Active = true;
-                };
-                shareSuccessMessage = new ModularMessageDialog(
-                    Strings.Localize("miniHub.shareSuccessMessage"),
-                    null, null,
-                    handlerB, Strings.Localize("textDialog.back"),
-                    null, null,
-                    null, null
-                    );
-            }
-
-            //
-            // Set up NoCommunityDialog
-            //
-            {
-                ModularMessageDialog.ButtonHandler handlerB = delegate(ModularMessageDialog dialog)
-                {
-                    // User chose "back"
-
-                    // Deactivate dialog.
-                    dialog.Deactivate();
-
-                    // Make sure grid is still active.
-                    shared.menu.Active = true;
-                };
-                noCommunityMessage = new ModularMessageDialog(
-                    Strings.Localize("miniHub.noCommunityMessage"),
-                    null, null,
-                    handlerB, Strings.Localize("textDialog.back"),
-                    null, null,
-                    null, null
-                    );
-            }
-
-            //
             //  Set up NewWorld dialog.
             //
             NewWorldDialog.OnAction OnSelectWorld = delegate(string level)
@@ -623,19 +520,6 @@ namespace Boku
             // dialog has already been activated then just set this to false.
             bool needToSaveLevel = (InGame.IsLevelDirty || InGame.AutoSaved) && !saveChangesActivated;
 
-            // Does the current world belong to the user.  Required to share to community.
-            // Test the genre flag and also special case look at empty world.
-            bool isMyWorld = false;
-            if (InGame.XmlWorldData != null)
-            {
-                bool genreTest = ((int)InGame.XmlWorldData.genres & (int)Genres.MyWorlds) != 0;
-                bool newWorldTest = MiniHub.Instance.newWorldDialog.IsNewWorld(InGame.XmlWorldData.id.ToString());
-                if (genreTest && !newWorldTest)
-                {
-                    isMyWorld = true;
-                }
-            }
-
             // Normally there would be a switch here but if we compare strings 
             // we proof ourselves against changes in the order of the elements.
             if (menu.CurString == Strings.Localize("miniHub.reset"))
@@ -668,22 +552,6 @@ namespace Boku
             {
                 // Save
                 saveLevelDialog.Activate();
-            }
-            else if (menu.CurString == Strings.Localize("miniHub.publish"))
-            {
-                // Offer to save first.  Need to save if world has changed or is world doesn't belong to user.
-                if (needToSaveLevel || !isMyWorld)
-                {
-                    saveChangesActivated = true;
-                    saveChangesMessage.Activate();
-                }
-                else
-                {
-                    var level = LevelMetadata.CreateFromXml(InGame.XmlWorldData);
-
-                    // Does share and displays dialogs for error or success.
-                    MiniHub.communityShareMenu.Activate(level);
-                }
             }
             else if (menu.CurString == Strings.Localize("miniHub.load"))
             {
@@ -874,8 +742,6 @@ namespace Boku
         public void LoadContent(bool immediate)
         {
             BokuGame.Load(shared, immediate);
-            BokuGame.Load(shareSuccessMessage, immediate);
-            BokuGame.Load(noCommunityMessage, immediate);
             BokuGame.Load(saveChangesMessage, immediate);
             BokuGame.Load(saveChangesWithDiscardMessage, immediate);
             BokuGame.Load(saveLevelDialog, immediate);
@@ -892,8 +758,6 @@ namespace Boku
         public void UnloadContent()
         {
             BokuGame.Unload(shared);
-            BokuGame.Unload(shareSuccessMessage);
-            BokuGame.Unload(noCommunityMessage);
             BokuGame.Unload(saveChangesMessage);
             BokuGame.Unload(saveChangesWithDiscardMessage);
             BokuGame.Unload(saveLevelDialog);
@@ -909,8 +773,6 @@ namespace Boku
         public void DeviceReset(GraphicsDevice device)
         {
             BokuGame.DeviceReset(shared, device);
-            BokuGame.DeviceReset(shareSuccessMessage, device);
-            BokuGame.DeviceReset(noCommunityMessage, device);
             BokuGame.DeviceReset(saveChangesMessage, device);
             BokuGame.DeviceReset(saveChangesWithDiscardMessage, device);
             BokuGame.DeviceReset(saveLevelDialog, device);

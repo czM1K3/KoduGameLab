@@ -33,11 +33,6 @@
       <mouseText>Щелкните на ЗАГРУЗИТЬ МИР.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Выберите ДРУЗЬЯ и нажмите &lt;a&gt;.</gamepadText>
-      <mouseText>Щелкните на ДРУЗЬЯ.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Выберите ПАРАМЕТРЫ  и нажмите &lt;a&gt;.</gamepadText>
       <mouseText>Щелкните на ПАРАМЕТРЫ.</mouseText>
@@ -99,15 +94,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Нажмите &lt;b&gt; для возврата в Главное меню.</gamepadText>
       <mouseText>Нажмите [esc] для возврата в Главное меню.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Нажмите &lt;b&gt; для возврата в Основное меню.</gamepadText>
-      <mouseText>
-        Click on green arrows to scroll, click on game tile to choose game.
-        Use [leftarrow][rightarrow] to scroll, press [enter] to choose game.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

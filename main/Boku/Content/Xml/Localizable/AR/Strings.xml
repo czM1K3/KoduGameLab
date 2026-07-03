@@ -92,7 +92,6 @@
     <import>استورد من سطح المكتب</import>
     <importWorldsCommitButtonText>افتح عالما (عوالم)</importWorldsCommitButtonText>
     <learning>التعلم</learning>
-    <community>المجتمع</community>
     <share>مشاركة</share>
     <options>إعدادات</options>
     <help>مساعدة</help>
@@ -154,7 +153,6 @@
     <options>إعدادات</options>
     <quit>خروج إلى القائمة الرئيسية</quit>
     <shareSuccessMessage>تم نسخ عالمك إلى موقع المجتمع. شكرا لك على المشاركة. قم بزيارة تلك المواقع او "عالمي" في موقع المشاركة لرؤية عالمك.</shareSuccessMessage>
-    <noCommunityMessage>موقع المشاركة غير متوفر حاليا. نأمل المحاولة لاحقا.</noCommunityMessage>
     <noSharingMessage>المشاركة غير متاحة حاليا.</noSharingMessage>
     <oldBuildMessage>يتوفر نسخة جديدة من كودو.  فصلا قم بالترقية قبل زيارة موقع المجتمع.</oldBuildMessage>
     <newBuildMessage>يتوفر نسخة جديدة من كودو.  أغلق كودو ثم قم بالترقية للنسخة الجديدة.</newBuildMessage>
@@ -233,7 +231,6 @@
   <loadLevelMenu>
     <localTitle>محلي</localTitle>
     <sharingTitle>مشاركة</sharingTitle>
-    <communityTitle>المجتمع</communityTitle>
     <noMatch>لا يوجد عالم يطابق بحثك</noMatch>
     <noLevels>لم يعثر على عوالم</noLevels>
     <searching>البحث جار...</searching>
@@ -349,15 +346,6 @@
     <removedByHost>قام المضيف بإستبعادك</removedByHost>
     <disconnected>غير متصل</disconnected>
   </networkSessionEndReason>
-  <community>
-    <newsTab>أخبار</newsTab>
-    <page>المجتمع :</page>
-    <pageFormat>المجتمع : صفحة {0} من {1}</pageFormat>
-    <downloadWorld>تحميل العالم</downloadWorld>
-    <downloadSuccessMessage>تم إضافة العالم المحدد إلى تحميلاتك.</downloadSuccessMessage>
-    <playLevel>تشغيل الآن</playLevel>
-    <backToCommunity>واصل التصفح</backToCommunity>
-  </community>
   <tools>
     <sampleTool>نموذج</sampleTool>
     <paintMaterialTool>تغيير المادة</paintMaterialTool>

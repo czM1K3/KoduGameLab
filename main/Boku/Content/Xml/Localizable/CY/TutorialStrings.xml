@@ -35,11 +35,6 @@
       <mouseText>Cliciwch ar LLWYTHO BYD.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Dewiswch CYMUNED a gwasgwch &lt;a&gt;.</gamepadText>
-      <mouseText>Gwasgwch ar CYMUNED.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Dewiswch OPSIYNAU  a gwasgwch &lt;a&gt;.</gamepadText>
       <mouseText>Gwasgwch ar OPSIYNAU.</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Ddewislen Cartref.</gamepadText>
       <mouseText>Gwasgwch [esc] i fynd yn ol i’r Ddewislen Cartref.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
-      <mouseText>
-        Cliciwch ar yr arwyddion gwyrdd i sgrolio, cliciwch ar deitl y gem.
-        Defnyddiwch [leftarrow][rightarrow] i sgrolio, gwasgwch [enter] i ddewis gem.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

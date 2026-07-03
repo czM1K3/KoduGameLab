@@ -75,7 +75,6 @@
     <resume>WZNÓW</resume>
     <play>WCZYTAJ GRĘ</play>
     <learning>NAUKA</learning>
-    <community>SPOŁECZNOŚĆ</community>
     <share>UDZIAŁ</share>
     <options>OPCJE</options>
     <help>POMOC</help>
@@ -133,7 +132,6 @@ Zrestartuj KODU.</storageFailed>
     <quit>Wyjście do menu głównego</quit>
     
     <shareSuccessMessage>Twój świat został skopiowany do serwisu społecznościowego. Dziękujemy za udział w społeczności.</shareSuccessMessage>
-    <noCommunityMessage>Serwis społecznościowy nie jest dostępny obecnie. Prosimy spróbować ponownie później.</noCommunityMessage>
     <noSharingMessage>Współdzielenie aktualnie nie jest dostępne.</noSharingMessage>
     <oldBuildMessage>Nowa wersja Kodu jest dostępna. Prosimy o aktualizację przed dostępem do serwisu społecznościowego.</oldBuildMessage>
     <newBuildMessage>Nowa wersja Kodu jest dostępna. Prosimy wyjść z programu zaktualizować go do nowej wersji.</newBuildMessage> 
@@ -214,7 +212,6 @@ Zrestartuj KODU.</storageFailed>
   <loadLevelMenu>
     <localTitle>LOKALNE</localTitle>
     <sharingTitle>WSPÓŁDZIELONE</sharingTitle>
-    <communityTitle>SPOŁECZNOŚĆ</communityTitle>
     <noMatch>Brak światów pasujących do filtra</noMatch>
     <noLevels>Nie odnaleziono świata</noLevels>
     <searching>Szukam...</searching>
@@ -291,16 +288,6 @@ Zrestartuj KODU.</storageFailed>
     <removedByHost>Gospodarz usunął Cię</removedByHost>
     <disconnected>Rozłączony</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Nowości</newsTab>
-    <page>Społecznosć :</page>
-    <pageFormat>Społeczność : Strona {0} z {1}</pageFormat>
-    <downloadWorld>Pobierz świat</downloadWorld>
-    <downloadSuccessMessage>Wybrany świat został skopiowany do obszaru pobrań.</downloadSuccessMessage>
-    <playLevel>Zagraj teraz</playLevel>
-    <backToCommunity>Kontynuuj przeglądanie</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Przykład</sampleTool>

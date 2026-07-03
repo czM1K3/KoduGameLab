@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Pasirink BENDRUOMENĖ ir spausk &lt;a&gt;.</gamepadText>
-      <mouseText>Spausk BENDRUOMENĖ.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Pasirink NUSTATYMAI ir spausk &lt;a&gt;.</gamepadText>
       <mouseText>Spausk NUSTATYMAI.</mouseText>
@@ -205,27 +196,6 @@ Spausk [leftarrow][rightarrow] slinkti, [enter] - pasirinkti žaidimą.
         <mode>LoadLevelMenu</mode>
       </curModes>
       <targetMode>HomeMenu</targetMode>
-      <gamepadText>Spausk &lt;b&gt; ir grįši į Pagrindinį Meniu.</gamepadText>
-      <mouseText>Spausk [esc] ir grįši į Pagrindinį Meniu.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Spausk &lt;b&gt; ir grįši į Pagrindinį Meniu.</gamepadText>
-      <mouseText>Spausk žalias rodykles - slinkti, žaidimo pavadinimą - pasirinkti.
-Spausk [leftarrow][rightarrow] slinkti, [enter] - pasirinkti žaidimą.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
       <gamepadText>Spausk &lt;b&gt; ir grįši į Pagrindinį Meniu.</gamepadText>
       <mouseText>Spausk [esc] ir grįši į Pagrindinį Meniu.</mouseText>
     </Crumb>

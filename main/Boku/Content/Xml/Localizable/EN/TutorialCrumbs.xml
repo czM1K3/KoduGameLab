@@ -104,15 +104,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Select COMMUNITY and press &lt;a&gt;.</gamepadText>
-      <mouseText>Click on COMMUNITY.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Select OPTIONS and press &lt;a&gt;.</gamepadText>
       <mouseText>Click on OPTIONS.</mouseText>
@@ -214,28 +205,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Press &lt;b&gt; to return to the Home Menu.</gamepadText>
       <mouseText>Press [esc] to return to the Home Menu.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Press &lt;b&gt; to return to the Main Menu.</gamepadText>
-      <mouseText>
-        Click on green arrows to scroll, click on game tile to choose game.
-        Use [leftarrow][rightarrow] to scroll, press [enter] to choose game.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Press &lt;b&gt; to return to the Main Menu.</gamepadText>
-      <mouseText>Press [esc] to return to the Main Menu.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

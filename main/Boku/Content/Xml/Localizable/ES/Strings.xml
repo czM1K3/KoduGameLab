@@ -131,7 +131,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
     <import>IMPORTAR DESDE ESCRITORIO</import>
     <importWorldsCommitButtonText>Cargar Mundo(s)</importWorldsCommitButtonText>
     <learning>APRENDIZAJE</learning>
-    <community>COMUNIDAD</community>
     <share>COMPARTIR</share>
     <options>OPCIONES</options>
     <help>AYUDA</help>
@@ -200,7 +199,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
     <quit>Salir a menú principal</quit>
 	
     <shareSuccessMessage>Tu mundo ha sido publicado. Míralo en KoduGameLab.com o navegando "Mis Mundos" en la pantalla de Comunidad</shareSuccessMessage>
-    <noCommunityMessage>El sitio de la Comunidad no está disponible en este momento. Por favor re-intenta de nuevo más tarde.</noCommunityMessage>
     <noSharingMessage>Compartir no está disponible en este momento.</noSharingMessage>
     <oldBuildMessage>Una nueva versión de Kodu está disponible. Por favor actualízala antes de acceder el sitio de la Comunidad.</oldBuildMessage>
     <newBuildMessage>Una nueva versión de Kodu está disponible. Por favor sal de la aplicación y actualízala a la versión vigente.</newBuildMessage>
@@ -291,7 +289,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
   <loadLevelMenu>
     <localTitle>LOCAL</localTitle>
     <sharingTitle>COMPARTIR</sharingTitle>
-    <communityTitle>COMUNIDAD</communityTitle>
 	
     <noMatch>No hay mundos que coincidan con tu búsqueda</noMatch>
     <noLevels>No se encontraron mundos</noLevels>
@@ -420,16 +417,6 @@ En cualquier momento, si lo deseas, puedes crear una cuenta escogiendo un nuevo 
     <removedByHost>El anfitrión te removió</removedByHost>
     <disconnected>Desconectado</disconnected>
   </networkSessionEndReason>
-  
-  <community>
-    <newsTab>Noticias</newsTab>
-    <page>Comunidad :</page>
-    <pageFormat>Comunidad : Página {0} de {1}</pageFormat>
-    <downloadWorld>Descargar Mundo</downloadWorld>
-    <downloadSuccessMessage>El mundo seleccionado ha sido copiado a tu área de Descargas.</downloadSuccessMessage>
-    <playLevel>Jugar Ahora</playLevel>
-    <backToCommunity>Continuar Navegando</backToCommunity>
-  </community>
   
   <tools>
     <sampleTool>Ejemplo</sampleTool>

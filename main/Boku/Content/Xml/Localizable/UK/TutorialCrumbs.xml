@@ -96,15 +96,6 @@
        <curModes>
          <mode>MainMenu</mode>
        </curModes>
-       <targetMode>CommunityMenu</targetMode>
-       <gamepadText>Виберіть ДРУЗІ та натисніть &lt;a&gt;.</gamepadText>
-       <mouseText>Клацніть ДРУЗІ.</mouseText>
-     </Crumb>
-
-     <Crumb>
-       <curModes>
-         <mode>MainMenu</mode>
-       </curModes>
        <targetMode>OptionsMenu</targetMode>
        <gamepadText>Виберіть ПАРАМЕТРИ і натисніть &lt;a&gt;.</gamepadText>
        <mouseText>Клацніть на ПАРАМЕТРИ.</mouseText>
@@ -206,28 +197,6 @@
        <targetMode>HomeMenu</targetMode>
        <gamepadText>Натисніть &lt;b&gt; для повернення до Головного меню.</gamepadText>
        <mouseText>Натисніть [esc], щоб повернутися до Головного меню.</mouseText>
-     </Crumb>
-
-     <!-- From CommunityMenu -->
-     <Crumb>
-       <curModes>
-         <mode>CommunityMenu</mode>
-       </curModes>
-       <targetMode>Unknown</targetMode>
-       <gamepadText>Натисніть &lt;b&gt; для повернення до Основного меню.</gamepadText>
-       <mouseText>
-         Натисніть на зелені стрілки для прокручування, натисніть на плитку гри, щоб вибрати гру.
-         Використовуйте [leftarrow][rightarrow] для прокручування, натисніть [enter], щоб вибрати гру.
-       </mouseText>
-     </Crumb>
-
-     <Crumb>
-       <curModes>
-         <mode>CommunityMenu</mode>
-       </curModes>
-       <targetMode>MainMenu</targetMode>
-       <gamepadText>Натисніть &lt;b&gt; для повернення до Основного меню.</gamepadText>
-       <mouseText>Натисніть [esc], щоб повернутися до Основного меню.</mouseText>
      </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

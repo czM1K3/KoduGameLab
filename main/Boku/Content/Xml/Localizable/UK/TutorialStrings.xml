@@ -33,11 +33,6 @@
 <mouseText>Клацніть на ЗАВАНТАЖИТИ СВІТ.</mouseText>
 </Crumb>
 
-<Crumb id="CommunityMenu0">
-<gamepadText>Виберіть ДРУЗІ та натисніть &lt;a&gt;.</gamepadText>
-<mouseText>Клацніть ДРУЗІ.</mouseText>
-</Crumb>
-
 <Crumb id="OptionsMenu0">
 <gamepadText>Виберіть ПАРАМЕТРИ і натисніть &lt;a&gt;.</gamepadText>
 <mouseText>Клацніть на ПАРАМЕТРИ.</mouseText>
@@ -99,15 +94,6 @@
 <Crumb id="HomeMenu1">
 <gamepadText>Натисніть &lt;b&gt; для повернення до Головного меню.</gamepadText>
 <mouseText>Натисніть [esc], щоб повернутися до Головного меню.</mouseText>
-</Crumb>
-
-<!-- From CommunityMenu -->
-<Crumb id="Unknown1">
-<gamepadText>Натисніть &lt;b&gt; для повернення до Основного меню.</gamepadText>
-<mouseText>
-Натисніть на зелені стрілки для прокручування, натисніть на плитку гри, щоб вибрати гру.
-Використовуйте [leftarrow][rightarrow] для прокручування, натисніть [enter], щоб вибрати гру.
-</mouseText>
 </Crumb>
 
 <Crumb id="MainMenu4">

@@ -44,12 +44,6 @@
       <touchText>Tap on LOAD WORLD.</touchText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Select COMMUNITY and press &lt;a&gt;.</gamepadText>
-      <mouseText>Click on COMMUNITY.</mouseText>
-      <touchText>Tap on COMMUNITY.</touchText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Select OPTIONS and press &lt;a&gt;.</gamepadText>
       <mouseText>Click on OPTIONS.</mouseText>
@@ -121,18 +115,6 @@
       <gamepadText>Press &lt;b&gt; to return to the Home Menu.</gamepadText>
       <mouseText>Press [esc] to return to the Home Menu.</mouseText>
       <touchText>Press [esc] to return to the Home Menu.</touchText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Press &lt;b&gt; to return to the Main Menu.</gamepadText>
-      <mouseText>
-        Click on green arrows to scroll, click on game tile to choose game.
-        Use [leftarrow][rightarrow] to scroll, press [enter] to choose game.
-      </mouseText>
-      <touchText>
-        Tap on green arrows or drag to scroll, tap on game tile to choose game.
-      </touchText>
     </Crumb>
 
     <Crumb id="MainMenu4">

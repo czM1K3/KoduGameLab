@@ -98,7 +98,6 @@
     <import>LES INN FRA SKRIVEBORD</import>
     <importWorldsCommitButtonText>Last verdner</importWorldsCommitButtonText>
     <learning>TRENING</learning>
-    <community>NETTSAMFUNN</community>
     <share>DEL</share>
     <options>ALTERNATIVER</options>
     <help>HJELP</help>
@@ -166,7 +165,6 @@
     <quit>Tilbake til hovedmeny</quit>
 
     <shareSuccessMessage>Din verden er delt på KoduGameLab and Socl.   Gå til disse sidene og se "My Worlds" under Community for å se dine verdner.</shareSuccessMessage>
-    <noCommunityMessage>Nettsafunnet er ikke tilgjengelig for tiden. Prøv igjen senere.</noCommunityMessage>
     <noSharingMessage>Deleing er ikke tilgjengelig for øyeblikket.</noSharingMessage>
     <oldBuildMessage>En ny versjon av Kodu er tilgjengelig.  Du må oppgradere før du kan koble det til våre nettsamfunn.</oldBuildMessage>
     <newBuildMessage>En ny versjon av Kodu er tilgjengelig.  Lukk Kodu og installer den nye versjonen.</newBuildMessage>
@@ -256,7 +254,6 @@
   <loadLevelMenu>
     <localTitle>LOKAL</localTitle>
     <sharingTitle>DELING</sharingTitle>
-    <communityTitle>NETTSAMFUNN</communityTitle>
 
     <noMatch>Du fant ingen verdner med ditt søk</noMatch>
     <noLevels>Ingen verdner funnet</noLevels>
@@ -385,16 +382,6 @@
     <removedByHost>Serveren kastet deg ut</removedByHost>
     <disconnected>Koblet fra</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Nyheter</newsTab>
-    <page>Nettsamfunn :</page>
-    <pageFormat>Nettsamfunn : Side {0} av {1}</pageFormat>
-    <downloadWorld>Last ned verden</downloadWorld>
-    <downloadSuccessMessage>Valgt verden er blitt lastet ned til ditt nedlastingsområde.</downloadSuccessMessage>
-    <playLevel>Spill nå</playLevel>
-    <backToCommunity>Fortsett å bla</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Eksempel</sampleTool>

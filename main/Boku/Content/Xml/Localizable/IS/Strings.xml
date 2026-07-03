@@ -94,7 +94,6 @@
     <new>NÝR HEIMUR</new>
     <play>HLAÐA HEIMI</play>
     <learning>LÆRA</learning>
-    <community>SAMFÉLAGIÐ</community>
     <share>DEILA</share>
     <options>VALKOSTIR</options>
     <help>HJÁLP</help>
@@ -161,7 +160,6 @@
     <quit>Til baka í aðalvalmynd</quit>
 
     <shareSuccessMessage>Heimurinn þinn hefur verið afritaður yfir á Community svæðið.  Takk fyrir að deila.</shareSuccessMessage>
-    <noCommunityMessage>Community svæðið er ekki tiltækt eins og er. Vinsamlegast reyndu aftur seinna.</noCommunityMessage>
     <noSharingMessage>Það er ekki hægt að deila þessa stundina.</noSharingMessage>
     <oldBuildMessage>Það er komin ný útgáfa af Kodu.  Vinsamlegast uppfærðu í hana áður en þú tengist Community svæðinu.</oldBuildMessage>
     <newBuildMessage>Það er komin ný útgáfa af Kodu.  Vinsamlegast lokaðu forritinu og uppfærðu í nýju útgáfuna.</newBuildMessage>
@@ -248,7 +246,6 @@
   <loadLevelMenu>
     <localTitle>HJÁ MÉR</localTitle>
     <sharingTitle>Í DEILINGU</sharingTitle>
-    <communityTitle>HJÁ SAMFÉLAGINU</communityTitle>
 
     <noMatch>Engir heimar uppfylla valið</noMatch>
     <noLevels>Engir heimar fundust</noLevels>
@@ -367,16 +364,6 @@
     <removedByHost>Gestgjafi fjarlægði þig</removedByHost>
     <disconnected>Aftengt</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Fréttir</newsTab>
-    <page>Samfélagið :</page>
-    <pageFormat>Samfélagið : Blað {0} af {1}</pageFormat>
-    <downloadWorld>Hala niður heimi</downloadWorld>
-    <downloadSuccessMessage>Valinn heimur hefur verið afritaður á niðurhalssvæðið þitt.</downloadSuccessMessage>
-    <playLevel>Spila núna</playLevel>
-    <backToCommunity>Halda áfram að skoða</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Sýnishorn</sampleTool>

@@ -33,11 +33,6 @@
       <mouseText>Klik op Wereld laden.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Selecteer Gemeenschap en druk op &lt;a&gt;.</gamepadText>
-      <mouseText>Klik op Gemeenschap.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Selecteer Opties en druk op &lt;a&gt;.</gamepadText>
       <mouseText>Klik op Opties.</mouseText>
@@ -96,12 +91,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Druk op &lt;b&gt; om naar het Startmenu te gaan.</gamepadText>
       <mouseText>Druk op [esc] om naar het Startmenu te gaan.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Druk op &lt;b&gt; om naar het Hoofdmenu te gaan.</gamepadText>
-      <mouseText>Klik op de groene pijlen om te schuiven, klik op de speltegel om een spel te kiezen. Gebruik [Pijl-links][Pijl-rechts] om te schuiven, druk op [enter] om een spel te kiezen.</mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

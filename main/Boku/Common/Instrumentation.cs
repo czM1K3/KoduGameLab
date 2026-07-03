@@ -727,21 +727,6 @@ namespace Boku.Common
             public SendOrPostCallback callback;
         }
 
-        static void Flush_Callback(object param)
-        {
-            Boku.Web.Trans.Instrumentation.Result result = (Boku.Web.Trans.Instrumentation.Result)param;
-
-            FlushState state = (FlushState)result.userState;
-
-            if (!result.success)
-            {
-                // Write instruments to disk for retry later?
-            }
-
-            if (state.callback != null)
-                state.callback(null);
-        }
-
         #endregion
     }
 }

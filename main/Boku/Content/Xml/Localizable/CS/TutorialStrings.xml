@@ -35,11 +35,6 @@
       <mouseText>Klikněte na NAČÍST SVĚT.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Vyberte KOMUNITA a stiskněte &lt;a&gt;.</gamepadText>
-      <mouseText>Klikněte na KOMUNITA.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Vyberte MOŽNOSTI a stiskněte &lt;a&gt;.</gamepadText>
       <mouseText>Klikněte na MOŽNOSTI.</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Stiskněte &lt;b&gt; pro návrat do menu.</gamepadText>
       <mouseText>Stiskněte [esc] pro návrat do menu.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Stiskněte &lt;b&gt; pro návrat do menu.</gamepadText>
-      <mouseText>
-        Klikněte zelené šipky pro rolování, klikněte na název hry pro výběr hry.
-        Použijte [levá šipka][pravá šipka] pro rolování, stiskněte [enter] pro výběr hry.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

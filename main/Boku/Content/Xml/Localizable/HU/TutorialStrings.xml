@@ -33,11 +33,6 @@
       <mouseText>Kattints a VILÁG BETÖLTÉSE opcióra.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Válaszd a KÖZÖSSÉG opciót és nyomd meg az &lt;a&gt; gombot.</gamepadText>
-      <mouseText>Kattints a KÖZÖSSÉG opcióra.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Válaszd a BEÁLLÍTÁSOK opciót, és nyomd meg az &lt;a&gt; gombot.</gamepadText>
       <mouseText>Kattints a BEÁLLÍTÁSOK opcióra.</mouseText>
@@ -98,7 +93,6 @@
       <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
     </Crumb>
     
-    <!--  From CommunityMenu  -->
     <Crumb id="MainMenu5">
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>A görgetéshez kattints a zöld nyilakra, a játék kiválasztásához pedig kattints a játék csempére. A görgetéshez használd a [leftarrow][rightarrow] gombokat, a játék kiválasztásához nyomd meg az [enter] gombot.</mouseText>

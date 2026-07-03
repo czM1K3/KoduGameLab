@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Vyberte KOMUNITA a stiskněte &lt;a&gt;.</gamepadText>
-      <mouseText>Klikněte na KOMUNITA.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Vyberte MOŽNOSTI a stiskněte &lt;a&gt;.</gamepadText>
       <mouseText>Klikněte na MOŽNOSTI.</mouseText>
@@ -206,28 +197,6 @@
         <mode>LoadLevelMenu</mode>
       </curModes>
       <targetMode>HomeMenu</targetMode>
-      <gamepadText>Stiskněte &lt;b&gt; pro návrat do menu.</gamepadText>
-      <mouseText>Stiskněte [esc] pro návrat do menu.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Stiskněte &lt;b&gt; pro návrat do menu.</gamepadText>
-      <mouseText>
-        Klikněte zelené šipky pro rolování, klikněte na název hry pro výběr hry.
-        Použijte [levá šipka][pravá šipka] pro rolování, stiskněte [enter] pro výběr hry.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
       <gamepadText>Stiskněte &lt;b&gt; pro návrat do menu.</gamepadText>
       <mouseText>Stiskněte [esc] pro návrat do menu.</mouseText>
     </Crumb>

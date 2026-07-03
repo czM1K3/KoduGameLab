@@ -61,15 +61,6 @@
       <touchText>Chạm vào MỞ TRÒ CHƠI TRONG MÁY</touchText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      
-      <gamepadText>Chọn CỘNG ĐỒNG và bấm &lt;a&gt;.</gamepadText>
-      
-      <mouseText>Bấm vào CỘNG ĐỒNG</mouseText>
-      
-      <touchText>Chạm vào CỘNG ĐỒNG</touchText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       
       <gamepadText>Chọn CÀI ĐẶT và bấm &lt;a&gt;.</gamepadText>

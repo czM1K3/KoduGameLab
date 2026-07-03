@@ -35,11 +35,6 @@
       <mouseText>'월드 불러오기'를 클릭하세요.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>'커뮤니티'를 선택한 후 &lt;a&gt;를 누르세요.</gamepadText>
-      <mouseText>'커뮤니티'를 클릭하세요.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>'옵션설정'을 선택한 후 &lt;a&gt;를 누르세요.</gamepadText>
       <mouseText>'옵션설정'을 클릭하세요.</mouseText>
@@ -101,15 +96,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>&lt;b&gt;를 눌러 홈 메뉴로 돌아가세요.</gamepadText>
       <mouseText>&lt;esc&gt;를 눌러 홈 메뉴로 돌아가세요.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>&lt;b&gt;를 눌러 메인 메뉴로 돌아가세요.</gamepadText>
-      <mouseText>
-        녹색 화살표를 클릭하여 스크롤 한 후, 게임 타일(패)을 클릭하여 게임을 선택하세요.
-        [leftarrow] 및 [rightarrow]를 사용하여 스크롤 한 후, [enter]를 눌러 게임을 선택하세요.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

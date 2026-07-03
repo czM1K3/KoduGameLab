@@ -527,7 +527,6 @@
     <Compile Include="Scenes\TagPicker.cs" />
     <Compile Include="Scenes\TextDisplay.cs" />
     <Compile Include="Scenes\TextEditor.cs" />
-    <Compile Include="Scenes\CommunityShareMenu.cs" />
     <Compile Include="Scenes\TextLineDialog.cs" />
     <Compile Include="Scenes\TextLineEditor.cs" />
     <Compile Include="Scenes\VideoOutput.cs" />
@@ -608,8 +607,6 @@
     <Compile Include="UI\Fugly.cs" />
     <Compile Include="UI\notpieselector.cs" />
     <Compile Include="UI\ReflexBlock.cs" />
-    <Compile Include="Web\Community.cs" />
-    <Compile Include="Common\LevelBrowsers\CommunityLevelBrowser.cs" />
     <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.cs" />
     <Compile Include="Common\ParticleSystem\SharedEmitterManager.cs" />
     <Compile Include="SiteOptions.cs" />
@@ -908,34 +905,6 @@
     <Compile Include="UI\UiCursor.cs" />
     <Compile Include="UI\uiselector.cs" />
     <Compile Include="UI\UIShim.cs" />
-    <Compile Include="Web\Community2.cs" />
-    <Compile Include="Web\LoginDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Web\LoginDialog.Designer.cs">
-      <DependentUpon>LoginDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Web\Trans\DelWorldData2.cs" />
-    <Compile Include="Web\Trans\GetSearchWorldPage.cs" />
-    <Compile Include="Web\Trans\DelWorldData.cs" />
-    <Compile Include="Web\Trans\FlagLevel.cs" />
-    <Compile Include="Web\Trans\GetKoduWebUser.cs" />
-    <Compile Include="Web\Trans\GetThumbnail.cs" />
-    <Compile Include="Web\Trans\GetWorldData.cs" />
-    <Compile Include="Web\Trans\GetWorldPage.cs" />
-    <Compile Include="Web\Trans\Hello.cs" />
-    <Compile Include="Web\Trans\Instrumentation.cs" />
-    <Compile Include="Web\Trans\Ping.cs" />
-    <Compile Include="Web\Trans\PostComment.cs" />
-    <Compile Include="Web\Trans\PostLikeByWorldId.cs" />
-    <Compile Include="Web\Trans\PostLike.cs" />
-    <Compile Include="Web\Trans\PutWorldData.cs" />
-    <Compile Include="Web\Trans\ReportError.cs" />
-    <Compile Include="Web\Trans\CommunityRequest.cs" />
-    <Compile Include="Web\Trans\Request.cs" />
-    <Compile Include="Web\Trans\VerifyUser.cs" />
-    <Compile Include="Web\Trans\UserLogin.cs" />
-    <Compile Include="Web\Trans\VoteOnLevel.cs" />
     <Compile Include="Analyses\WriteToFile.cs" />
     <Compile Include="XNAControl.cs">
       <SubType>Component</SubType>
@@ -997,10 +966,6 @@
       <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Web\LoginDialog.resx">
-      <DependentUpon>LoginDialog.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XNAControl.resx">
       <DependentUpon>XNAControl.cs</DependentUpon>

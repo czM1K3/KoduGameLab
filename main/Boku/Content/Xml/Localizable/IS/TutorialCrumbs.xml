@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Veldu SAMFÉLAGIÐ og ýttu á &lt;a&gt;.</gamepadText>
-      <mouseText>Smelltu á SAMFÉLAGIÐ.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Veldu VALKOSTIR og ýttu á &lt;a&gt;.</gamepadText>
       <mouseText>Smelltu á VALKOSTIR.</mouseText>
@@ -208,28 +199,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Ýttu á &lt;b&gt; til að snúa aftur til heimavalmyndar.</gamepadText>
       <mouseText>Ýttu á [esc] til að snúa aftur til heimavalmyndar.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Ýttu á &lt;b&gt; til að snúa aftur til aðalvalmyndar.</gamepadText>
-      <mouseText>
-        Smelltu á grænu örvarnar til að fletta, smelltu á flögu leiks til að velja leikinn.
-        Notaðu [leftarrow][rightarrow] til að fletta, ýttu á [enter] til velja leik.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Ýttu á &lt;b&gt; til að snúa aftur til aðalvalmyndar.</gamepadText>
-      <mouseText>Ýttu á [esc] til að snúa aftur til aðalvalmyndar.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->

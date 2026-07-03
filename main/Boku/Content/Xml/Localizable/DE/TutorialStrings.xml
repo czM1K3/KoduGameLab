@@ -33,11 +33,6 @@
       <mouseText>Klicke auf LADE WELT.</mouseText>
     </Crumb>
 
-    <Crumb id="CommunityMenu0">
-      <gamepadText>Wähle GEMEINSCHAFT und drücke &lt;a&gt;.</gamepadText>
-      <mouseText>Klicke auf GEMEINSCHAFT.</mouseText>
-    </Crumb>
-
     <Crumb id="OptionsMenu0">
       <gamepadText>Wähle OPTIONEN und drücke &lt;a&gt;.</gamepadText>
       <mouseText>Klicke auf OPTIONEN.</mouseText>
@@ -99,15 +94,6 @@
     <Crumb id="HomeMenu1">
       <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
       <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb id="Unknown1">
-      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
-      <mouseText>
-        Klicke zum blättern auf die grünen Pfeile, klicke auf den Titel um ein Spiel auszuwählen.
-        Nutze [leftarrow][rightarrow] zum Blättern, drücke [enter] um ein Spiel auszuwählen.
-      </mouseText>
     </Crumb>
 
     <Crumb id="MainMenu4">

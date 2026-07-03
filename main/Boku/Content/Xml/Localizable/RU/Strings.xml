@@ -75,7 +75,6 @@
     <resume>ВОЗОБНОВИТЬ</resume>
     <play>ЗАГРУЗИТЬ МИР</play>
     <learning>ОБУЧЕНИЕ</learning>
-    <community>ДРУЗЬЯ</community>
     <share>ПОДЕЛИТЬСЯ</share>
     <options>ПАРАМЕТРЫ</options>
     <help>ПОМОЩЬ</help>
@@ -135,7 +134,6 @@
     <quit>Выйти в основное меню</quit>
 
     <shareSuccessMessage>Ваш мир был скопирован на сайт сообщества. Спасибо за то, что поделились с нами!</shareSuccessMessage>
-    <noCommunityMessage>Сайт сообщества в данный момент недоступен. Пожалуйста, попробуйте позднее.</noCommunityMessage>
     <noSharingMessage>Поделиться с друзьями - в данный момент это не работает. </noSharingMessage>
     <oldBuildMessage>Новая версия Kodu доступна. Пожалуйста, обновите ее прежде чем идти на сайт сообщества. </oldBuildMessage>
     <newBuildMessage>Новая версия Kodu доступна. Пожалуйста, выйдите и обновите вашу версию. </newBuildMessage>
@@ -218,7 +216,6 @@
   <loadLevelMenu>
     <localTitle>ЛОКАЛЬНО</localTitle>
     <sharingTitle>СОВМЕСТНО ИСПОЛЬЗОВАТЬ</sharingTitle>
-    <communityTitle>СООБЩЕСТВО</communityTitle>
 
     <noMatch>Нет ни одного мира, подходящего под критерии поиска</noMatch>
     <noLevels>Не найдено ни одного мира</noLevels>
@@ -309,16 +306,6 @@
     <removedByHost>Хост удалил вас</removedByHost>
     <disconnected>Отключено</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Новости</newsTab>
-    <page>Сообщество</page>
-    <pageFormat>Сообщество: Страница {0} из {1}</pageFormat>
-    <downloadWorld>Загрузить мир</downloadWorld>
-    <downloadSuccessMessage>Выбранный мир был скопирован в область загрузки</downloadSuccessMessage>
-    <playLevel>Играть сейчас</playLevel>
-    <backToCommunity>Продолжить просмотр</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Пример</sampleTool>

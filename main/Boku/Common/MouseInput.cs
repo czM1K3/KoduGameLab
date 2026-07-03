@@ -30,7 +30,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 using Boku.Common.Xml;
 
-using Boku.Web;
 
 namespace Boku.Common
 {

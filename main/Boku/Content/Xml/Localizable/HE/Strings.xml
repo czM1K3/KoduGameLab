@@ -92,7 +92,6 @@
     <import>ייבא משולחן העבודה</import>
     <importWorldsCommitButtonText>טען עולם</importWorldsCommitButtonText>
     <learning>לימוד</learning>
-    <community>קהילה</community>
     <share>שתף</share>
     <options>אפשרויות</options>
     <help>עזרה</help>
@@ -151,7 +150,6 @@
     <options>אפשרויות</options>
     <quit>צא לתפריט הראשי</quit>
     <shareSuccessMessage>עולמכם הועתק לאתרים KoduGameLab וגם Socl. לכו אל אתרים אלו או אל "העולמות שלי" תחת קהילה כדי לראות את העולם המשותף שלך.</shareSuccessMessage>
-    <noCommunityMessage>אתר הקהילה אינו זמין כעת. נסה שוב מאוחר יותר.</noCommunityMessage>
     <noSharingMessage>שיתוף אינו זמין כרגע.</noSharingMessage>
     <oldBuildMessage>גרסה חדשה של קודו קיימת. נא לשדרג לפני גישה לאתר הקהילה.</oldBuildMessage>
     <newBuildMessage>גרסה חדשה של קודו קיימת. נא לצאת ולשדרג לגרסה העדכנית.</newBuildMessage>
@@ -226,7 +224,6 @@
   <loadLevelMenu>
     <localTitle>מקומי</localTitle>
     <sharingTitle>שיתוף</sharingTitle>
-    <communityTitle>קהילה</communityTitle>
     <noMatch>אין עולמות מתאימים לחיפוש שלך</noMatch>
     <noLevels>לא נמצאו עולמות</noLevels>
     <searching>מחפש...</searching>
@@ -332,15 +329,6 @@
     <removedByHost>המארח הסיר אותך</removedByHost>
     <disconnected>מנותק</disconnected>
   </networkSessionEndReason>
-  <community>
-    <newsTab>חדשות</newsTab>
-    <page>קהילה:</page>
-    <pageFormat>קהילה : עמוד {0} מתוך {1}</pageFormat>
-    <downloadWorld>הורד עולם</downloadWorld>
-    <downloadSuccessMessage>העולם הנבחר הועתק לאזור ההורדות שלך.</downloadSuccessMessage>
-    <playLevel>נגן עכשיו</playLevel>
-    <backToCommunity>המשך לדפדף</backToCommunity>
-  </community>
   <tools>
     <sampleTool>דוגמה</sampleTool>
     <paintMaterialTool>שנה חומר</paintMaterialTool>

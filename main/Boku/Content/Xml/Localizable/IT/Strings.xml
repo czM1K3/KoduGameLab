@@ -94,7 +94,6 @@
     <new>NUOVO MONDO</new>
     <play>CARICA MONDO</play>
     <learning>IMPARA</learning>
-    <community>COMMUNITY</community>
     <share>CONDIVIDI</share>
     <options>OPZIONI</options>
     <help>AIUTO</help>
@@ -161,7 +160,6 @@
     <quit>Esci al menu principale</quit>
 
     <shareSuccessMessage>Il tuo mondo è stato copiato nel sito della Community.  Grazie per aver condiviso.</shareSuccessMessage>
-    <noCommunityMessage>Il sito della Community non è disponibile al momento.  Per favore, riprova più tardi.</noCommunityMessage>
     <noSharingMessage>La condivisione non è disponibile al momento.</noSharingMessage>
     <oldBuildMessage>E' disponibile una nuova versione di Kodu.  Per favore, aggiorna prima di accedere al sito della Community.</oldBuildMessage>
     <newBuildMessage>E' disponibile una nuova versione di Kodu.  Per favore, esci ed esegui l'aggiornamento.</newBuildMessage>
@@ -248,7 +246,6 @@
   <loadLevelMenu>
     <localTitle>LOCALE</localTitle>
     <sharingTitle>CONDIVISIONE</sharingTitle>
-    <communityTitle>COMMUNITY</communityTitle>
 
     <noMatch>Nessun mondo soddisfa la tua richiesta</noMatch>
     <noLevels>Nessun mondo presente</noLevels>
@@ -367,16 +364,6 @@
     <removedByHost>L'Host ti ha rimosso</removedByHost>
     <disconnected>Disconnesso</disconnected>
   </networkSessionEndReason>
-
-  <community>
-    <newsTab>Novità</newsTab>
-    <page>Community :</page>
-    <pageFormat>Community : Pagina {0} di {1}</pageFormat>
-    <downloadWorld>Download Mondo</downloadWorld>
-    <downloadSuccessMessage>Il Mondo selezionato è stato copiato nella tua area dei Downloads.</downloadSuccessMessage>
-    <playLevel>Gioca Subito</playLevel>
-    <backToCommunity>Continua a Sfogliare</backToCommunity>
-  </community>
 
   <tools>
     <sampleTool>Esempio</sampleTool>

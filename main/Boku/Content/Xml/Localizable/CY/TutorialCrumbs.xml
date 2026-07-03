@@ -98,15 +98,6 @@
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
-      <targetMode>CommunityMenu</targetMode>
-      <gamepadText>Dewiswch CYMUNED a gwasgwch &lt;a&gt;.</gamepadText>
-      <mouseText>Gwasgwch ar CYMUNED.</mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>MainMenu</mode>
-      </curModes>
       <targetMode>OptionsMenu</targetMode>
       <gamepadText>Dewiswch OPSIYNAU  a gwasgwch &lt;a&gt;.</gamepadText>
       <mouseText>Gwasgwch ar OPSIYNAU.</mouseText>
@@ -208,28 +199,6 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Ddewislen Cartref.</gamepadText>
       <mouseText>Gwasgwch [esc] i fynd yn ol i’r Ddewislen Cartref.</mouseText>
-    </Crumb>
-
-    <!--  From CommunityMenu  -->
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>Unknown</targetMode>
-      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
-      <mouseText>
-        Cliciwch ar yr arwyddion gwyrdd i sgrolio, cliciwch ar deitl y gem.
-        Defnyddiwch [leftarrow][rightarrow] i sgrolio, gwasgwch [enter] i ddewis gem.
-      </mouseText>
-    </Crumb>
-
-    <Crumb>
-      <curModes>
-        <mode>CommunityMenu</mode>
-      </curModes>
-      <targetMode>MainMenu</targetMode>
-      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
-      <mouseText>Gwasgwch [esc] i fynd yn ol i’r Prif Ddewislen.</mouseText>
     </Crumb>
 
     <!--  ToolMenu from any tool to every other. Gamepad only.  -->
