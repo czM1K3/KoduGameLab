@@ -16,8 +16,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
-using Newtonsoft.Json;
-
 using Boku.Base;
 using Boku.Input;
 using Boku.Common;

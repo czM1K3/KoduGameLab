@@ -35,8 +35,6 @@ namespace Boku.Common.Localization
         public const string DefaultLanguageDir = LanguageDir + @"\" + DefaultLanguage;
         const string LocalesFileName = @"Locales.xml";
         const string LocalesFilePath = LanguageDir + @"\" + LocalesFileName;
-        static readonly string LocalesUrl = KoduService.KGLUrl + "/API/Languages.xml";          // URL to locales file with current languages and update times.
-        static readonly string LocalizationsUrl = KoduService.KGLUrl + "/API/Localizations";    // URL root to individual language folders.
         const int Timeout = 5000;
 
         #endregion
@@ -140,7 +138,6 @@ namespace Boku.Common.Localization
         public static void Init()
         {
             LocalesDebugPrint("LocalizationResourceManager.Init()");
-            GetLocalesFromServer();
         }
 
 #if LOCALES_DEBUG
@@ -171,70 +168,7 @@ namespace Boku.Common.Localization
         }
 #endif
 
-
-        #region Retreive Locales From Server
-
-        /// <summary>
-        /// Attempts to read Locales.xml from the remote server
-        /// </summary>
-        static void GetLocalesFromServer()
-        {
-            LocalesDebugPrint("\nEntering GetLocalesFromServer()");
-            try
-            {
-                KoduService.DownloadDataAsync(LocalesUrl, (responseMessage) =>
-                {
-                    if (responseMessage == null)
-                    {
-                        // Failed.  Nothing to do here.
-                        LocalesDebugPrint("    Failed to download Languages.Xml.");
-                    }
-                    else
-                    {
-                        LocalesDebugPrint("    Succeeded to download Languages.Xml.");
-
-                        bool persist = true;
-                        // If disk version is newer than online version, don't persist.  This
-                        // should only happen when a user is adding a new language.  In this 
-                        // case we want them to be able to modify their local copy.
-                        DateTime lastModTime = Storage4.GetLastWriteTimeUtc(LocalesFilePath, StorageSource.UserSpace);
-                        if (lastModTime > responseMessage.Content.Headers.LastModified)
-                        {
-                            persist = false;
-                        }
-
-                        LocalesDebugPrint("    persist : " + persist.ToString());
-
-                        if (persist)
-                        {
-                            LocalesDebugPrint("    Populating from XML stream.");
-                            responseMessage.Content.ReadAsStreamAsync().ContinueWith(streamTask =>
-                            {
-                                Stream result = streamTask.Result;
-                                PopulatesLocalesFromXmlStream(result, persist);
-                            });
-                        }
-                        else
-                        {
-                            LocalesDebugPrint("    Getting from file.");
-                            GetLocalesFromFile();
-                        }
-
-                    }
-
-                });
-            }
-            catch (Exception e)
-            {
-                // Keep the compiler quiet when LOCALES_DEBUG not defined.
-                if (e != null)
-                {
-                    // DebugLog.WriteException(e, "GetLocalesFromServer()");
-                }
-                LocalesDebugPrint("Exception thrown in GetLocalesFromServer()\n" + e.ToString());
-            }
-        }   // end of GetLocalesFromServer()
-
+        
         /// <summary>
         /// Attempts to load Locales from the local file without throwing
         /// </summary>
@@ -258,53 +192,6 @@ namespace Boku.Common.Localization
                 }
             }   // end of lock.
         }
-
-
-        /// <summary>
-        /// Attempts to get the locale for a specific resource from the remote server.
-        /// </summary>
-        static void GetLocaleFromServer(Resource resource, Locale languageLocale)
-        {
-            // DebugLog.WriteLine("GetLocaleFromServer()");
-            try
-            {
-                string url = string.Format("{0}/{1}/{2}", LocalizationsUrl, languageLocale.Directory, resource.Name);
-
-                KoduService.DownloadData(url, (result) =>
-                {
-                    if (result == null)
-                    {
-                        // Failed.  Nothing to do here.
-                    }
-                    else
-                    {
-                        using (var streamReader = new StreamReader(result))
-                        {
-                            string resourceXml = streamReader.ReadToEnd();
-                            if (string.IsNullOrEmpty(resourceXml))
-                                return;
-                            resource.Update(languageLocale.Directory, resourceXml);
-                        }
-                    }
-
-                });
-            }
-            catch (Exception e)
-            {
-                // Keep the compiler quiet when LOCALES_DEBUG not defined.
-                if (e != null)
-                {
-                    // DebugLog.WriteException(e, "GetLocaleFromServer()");
-                }
-                LocalesDebugPrint("Exception thrown in GetLocaleFromServer()\n" + e.ToString());
-            }
-            finally
-            {
-                DecrementPendingResourceUpdates(languageLocale);
-            }
-        }   // end of GetLocaleFromServer()
-
-        #endregion
 
         #region Retrieve Locales From Local File
 
@@ -534,14 +421,7 @@ namespace Boku.Common.Localization
             var serverLastUpdated = languageLocale.LastUpdated;
             var localResourceLastUpdated = resource.LastUpdated(languageLocale.Directory);
 
-            if (serverLastUpdated == null || (localResourceLastUpdated != null && serverLastUpdated < localResourceLastUpdated))
-            {
-                DecrementPendingResourceUpdates(languageLocale);
-            }
-            else
-            {
-                GetLocaleFromServer(resource, languageLocale);
-            }
+            DecrementPendingResourceUpdates(languageLocale);
         }
 
         static void DecrementPendingResourceUpdates(Locale languageLocale)

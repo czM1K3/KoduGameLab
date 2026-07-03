@@ -9,7 +9,8 @@ This fork is about stripping down unnecessary code, so that porting to newer tec
 - [x] Remove community features
 - [x] Remove news features
 - [x] Remove telemetry
-- [ ] Remove multi user prompt
+- [x] Remove all networking
+- [ ] Remove multi user
 - [ ] Remove Shader Model 2 support
 
 # Kodu Game Lab

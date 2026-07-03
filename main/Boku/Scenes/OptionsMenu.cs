@@ -839,7 +839,7 @@ namespace Boku
             {
                 UIGridModularButtonElement.UIButtonElementEvent onA = delegate()
                 {
-                    Process.Start(KoduService.KGLUrl + @"/EULA#code_of_conduct");
+                    Process.Start("https://www.kodugamelab.com/EULA#code_of_conduct");
                 };
 
                 showCodeOfConduct = new UIGridModularButtonElement(blob, Strings.Localize("optionsParams.viewCodeOfConduct"), Strings.Localize("optionsParams.viewButtonLabel"), onA, null, null);
@@ -849,7 +849,7 @@ namespace Boku
             {
                 UIGridModularButtonElement.UIButtonElementEvent onA = delegate()
                 {
-                    Process.Start(KoduService.KGLUrl + @"/privacy");
+                    Process.Start("https://www.kodugamelab.com/privacy");
                 };
 
                 showPrivacyStatement = new UIGridModularButtonElement(blob, Strings.Localize("optionsParams.viewPrivacyStatement"), Strings.Localize("optionsParams.viewButtonLabel"), onA, null, null);
@@ -859,7 +859,7 @@ namespace Boku
             {
                 UIGridModularButtonElement.UIButtonElementEvent onA = delegate()
                 {
-                    Process.Start(KoduService.KGLUrl + @"/EULA#eula");
+                    Process.Start("https://www.kodugamelab.com/EULA#eula");
                 };
 
                 showEULA = new UIGridModularButtonElement(blob, Strings.Localize("optionsParams.viewEULA"), Strings.Localize("optionsParams.viewButtonLabel"), onA, null, null);

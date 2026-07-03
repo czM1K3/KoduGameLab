@@ -48,7 +48,7 @@ namespace Boku
         {
             get
             {
-                return   KoduService.KGLUrl + "?ref=client";
+                return "https://www.kodugamelab.com?ref=client";
             }
         }
 
