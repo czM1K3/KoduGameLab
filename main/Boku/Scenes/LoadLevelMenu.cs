@@ -1434,7 +1434,6 @@ namespace Boku
                         && shared.levelFilter.SearchString != shared.textLineEditor.GetText())
                     {
                         var text = shared.textLineEditor.GetText();
-                        Instrumentation.RecordEvent(Instrumentation.EventId.SearchLevels, text);
                         shared.levelFilter.SearchString = text;// shared.textLineEditor.GetText();
                         shared.mainBrowser.Reset();
                     }
@@ -1619,8 +1618,6 @@ namespace Boku
                     {
                         if (!canceled && shared.levelFilter.SearchString != newText)
                         {
-                            Instrumentation.RecordEvent(Instrumentation.EventId.SearchLevels, newText);
-
                             shared.levelFilter.SearchString = newText;
                             shared.mainBrowser.Reset();
                         }
@@ -2025,7 +2022,6 @@ namespace Boku
                         {
                             if (!canceled && shared.levelFilter.SearchString != newText)
                             {
-                                Instrumentation.RecordEvent(Instrumentation.EventId.SearchLevels, newText);
                                 shared.levelFilter.SearchString = newText;
                                 shared.mainBrowser.Reset();
                             }
@@ -2944,9 +2940,6 @@ namespace Boku
         protected RenderObj renderObj = null;
         protected UpdateObj updateObj = null;
 
-        // Instrumentation
-        object UiOpenInstrument;
-
         public enum ReturnTo
         {
             MainMenu,
@@ -3371,7 +3364,6 @@ namespace Boku
 
                     shared.remoteBrowser = null;
                     shared.mainBrowser = shared.localBrowser = new LocalLevelBrowser();
-                    UiOpenInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.LocalStorageUI);
                 }
                 else
                 {
@@ -3441,7 +3433,6 @@ namespace Boku
                 }
 
                 shared.mainBrowser = new LocalLevelBrowser();
-                UiOpenInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.LocalStorageUI);
 
                 Guid desiredSelection = Guid.Empty;
 
@@ -3688,8 +3679,6 @@ namespace Boku
                     shared.localBrowser.Shutdown();
                     shared.localBrowser = null;
                 }
-
-                Instrumentation.StopTimer(UiOpenInstrument);
 
                 pendingState = States.Inactive;
                 BokuGame.objectListDirty = true;

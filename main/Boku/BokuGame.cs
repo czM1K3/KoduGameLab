@@ -56,10 +56,6 @@ namespace Boku
     /// </summary>
     partial class BokuGame
     {
-        // instrumentation
-        static object sessionTimerInstrument;
-
-
         public static int ThreadId;
         public static bool Running = true;
 
@@ -390,9 +386,6 @@ namespace Boku
             ContentLoader.DefaultImmediate = false;
             ContentLoader.OnLoadComplete += StartupLoadComplete;
 
-            // Instrument the length of this Boku session.
-            sessionTimerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.BokuSession);
-
             //start instrumentation clock
             Time.startActiveInstrumentationClock();
 
@@ -404,16 +397,6 @@ namespace Boku
 
             // Set the window title bar text to display program name and version
             MainForm.Instance.Text = Strings.Localize("shareHub.appName") + " (" + Program2.ThisVersion.ToString() + ", " + Program2.SiteOptions.Product + ")";
-
-            // Instrument the Boku version number.
-            Instrumentation.RecordDataItem(Instrumentation.DataItemId.BokuVersion, Program2.ThisVersion.ToString());
-
-            // Instrument the OS version string.
-            Instrumentation.RecordDataItem(Instrumentation.DataItemId.OperatingSystem, Environment.OSVersion.VersionString);
-
-            // Instrument the graphics device information.
-            string gfxString = GraphicsAdapter.DefaultAdapter.Description;
-            Instrumentation.RecordDataItem(Instrumentation.DataItemId.GraphicsAdapter, gfxString);
 
             BokuGame.gameAudio = new Audio.Audio(BokuSettings.Settings.Audio);
 
@@ -429,15 +412,6 @@ namespace Boku
 
             ScreenSize = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
             ScreenPosition = Vector2.Zero;
-
-            Instrumentation.RecordDataItem(Instrumentation.DataItemId.ScreenResolution, screenSize.ToString());
-
-            // Instrument BokuSettings
-            MemoryStream stream = new MemoryStream();
-            BokuSettings.Save(stream);
-            stream.Position = 0;
-            string settingsStr = Encoding.ASCII.GetString(stream.ToArray());
-            Instrumentation.RecordDataItem(Instrumentation.DataItemId.SettingsXml, settingsStr);
 
             // Call LoadContent()
 
@@ -1128,14 +1102,6 @@ namespace Boku
 
                 BokuGame.Running = false;
                 Time.ActiveGameClock = false;
-                if (InGame.XmlWorldData != null && InGame.XmlWorldData.id != null)
-                {
-                    Instrumentation.RecordEvent(Instrumentation.EventId.FinalLevel, InGame.XmlWorldData.id.ToString());
-                }
-                Instrumentation.StopTimer(sessionTimerInstrument);
-
-                //Clean up the instrumentation by stopping all remaining timers
-                Instrumentation.StopAllTimers();
 
 #if LOG_CONTENT_LOADS
             {

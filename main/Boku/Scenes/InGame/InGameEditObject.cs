@@ -893,8 +893,6 @@ namespace Boku
                             rotation += MathHelper.TwoPi;
                         GameActor clone = parent.CloneInPlace(actor, position, rotation);
 
-                        Instrumentation.IncrementCounter(Instrumentation.CounterId.PasteItem);
-
                         if (clone != null)
                         {
                             parent.DistortionPulse(clone, true);
@@ -919,8 +917,6 @@ namespace Boku
                 if (actor != null)
                 {
                     GameActor clone = parent.CloneInPlace(actor, actor.Movement.Position, actor.Movement.RotationZ);
-
-                    Instrumentation.IncrementCounter(Instrumentation.CounterId.CloneItem);
 
                     if (clone != null)
                     {
@@ -1161,8 +1157,6 @@ namespace Boku
                 get { return parent.cursor3D.Position; }
             }
 
-            private object timerInstrument = null;
-
             public override void Activate()
             {
                 base.Activate();
@@ -1179,8 +1173,6 @@ namespace Boku
                 parent.cursor3D.DiffuseColor = new Vector4(1, 1, 1, 1);
                 RemoveFocusEffects();
                 shared.editWayPoint.Clear();
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameEditObject);
 
             }   // end of EditObjectUpdateObj Activate()
 
@@ -1203,8 +1195,6 @@ namespace Boku
                 {
                     HelpOverlay.Pop();
                 }
-
-                Instrumentation.StopTimer(timerInstrument);
 
             }   // end of EditObjectUpdateObj Deactivate()
 

@@ -85,8 +85,6 @@ namespace Boku.Common
                 string fullPath = BokuGame.Settings.MediaPath + BokuGame.DownloadsPath + xmlWorldData.Filename;
                 xmlWorldData.Save(fullPath, XnaStorageHelper.Instance);
 
-                Instrumentation.RecordEvent(Instrumentation.EventId.LevelDownloaded, xmlWorldData.name);
-
                 return true;
             }
             catch

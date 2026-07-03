@@ -304,7 +304,6 @@
     <Compile Include="Common\Localization\LocalizationResourceManager.cs" />
     <Compile Include="Common\Localization\Localizer.cs" />
     <Compile Include="Common\MetaButton.cs" />
-    <Compile Include="Common\Instrumentation.cs" />
     <Compile Include="Common\KeyboardInput.cs" />
     <Compile Include="Common\LevelBrowsers\AsyncThumbnail.cs" />
     <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.Thumbnail.cs" />

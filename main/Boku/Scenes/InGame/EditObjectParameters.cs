@@ -742,7 +742,7 @@ namespace Boku
             }
             else if (setupType == ControlSetup.AddToGridEditObject && controlType == Control.Creatable)
             {
-                creatable.OnCheck = delegate() { actor.Creatable = true; InGame.IsLevelDirty = true; Instrumentation.IncrementCounter(Instrumentation.CounterId.DefinedCreatable); };
+                creatable.OnCheck = delegate() { actor.Creatable = true; InGame.IsLevelDirty = true; };
                 creatable.OnClear = delegate() { actor.Creatable = false; InGame.IsLevelDirty = true; };
                 grid.Add(creatable, 0, (int)Control.Creatable);
             }

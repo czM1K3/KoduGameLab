@@ -338,7 +338,7 @@ namespace Boku.Common.Xml
                 if (Instance.checkForUpdatesWasSet)
                     return Instance.checkForUpdates;
                 else
-                    return Program2.InstallerOptCheckForUpdates;
+                    return false;
             }
             set
             {
@@ -366,7 +366,7 @@ namespace Boku.Common.Xml
                 if (Instance.sendInstrumentationWasSet)
                     return Instance.sendInstrumentation;
                 else
-                    return Program2.InstallerOptSendInstrumentation;
+                    return false;
             }
             set
             {

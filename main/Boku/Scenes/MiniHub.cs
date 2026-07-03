@@ -685,7 +685,6 @@ namespace Boku
 
             return result;
         }
-        private object timerInstrument = null;
 
         override public void Activate()
         {
@@ -703,8 +702,6 @@ namespace Boku
                 HelpOverlay.ToolIcon = null;
 
                 InGame.inGame.RenderWorldAsThumbnail = true;
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.MiniHubTime);
 
                 Foley.PlayMenuLoop();
 
@@ -728,8 +725,6 @@ namespace Boku
                 BokuGame.objectListDirty = true;
 
                 InGame.inGame.RenderWorldAsThumbnail = false;
-
-                Instrumentation.StopTimer(timerInstrument);
 
                 Foley.StopMenuLoop();
 

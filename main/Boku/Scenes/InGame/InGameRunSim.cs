@@ -962,8 +962,6 @@ namespace Boku
             }   // end of SetUpCameraFollowMode()
 
 
-            private object timerInstrument = null;
-
             // Just a safeguard against being activated/deactivated multiple times.
             private bool active = false;
             public bool Active
@@ -992,8 +990,6 @@ namespace Boku
                     // it might help to know this was here.  If it's now 2019 or later you can 
                     // probably feel free to remove this.  :-)
                     //parent.RemoveCreatablesFromScene();
-
-                    timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameRunSim);
                     
                     // Be sure all Auth UI is hidden.
                     AuthUI.HideAllDialogs();
@@ -1037,8 +1033,6 @@ namespace Boku
 
                     CommandStack.Pop(commandMap);
                     HelpOverlay.Pop();
-
-                    Instrumentation.StopTimer(timerInstrument);
 
                     base.Deactivate();
 

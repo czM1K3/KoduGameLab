@@ -1154,8 +1154,6 @@ namespace Boku
 
                 parent.Deactivate();
 
-                Instrumentation.RecordEvent(Instrumentation.EventId.LevelSaved, InGame.XmlWorldData.id.ToString());
-
                 parent.button = SaveLevelDialogButtons.Save;
                 parent.OnButtonPressed(parent);
 
@@ -2193,8 +2191,6 @@ namespace Boku
 
         }   // end of SetUpOverwriteWarning()
 
-        private object timerInstrument = null;
-
         public override void Activate()
         {
             if (state != States.Active)
@@ -2233,8 +2229,6 @@ namespace Boku
                 HelpOverlay.Push(@"SaveLevel");
 
                 updateObj.Activate();
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.SaveLevelDialog);
             }
         }   // end of Activate
 
@@ -2294,8 +2288,6 @@ namespace Boku
                 HelpOverlay.Pop();
 
                 updateObj.Deactivate();
-
-                Instrumentation.StopTimer(timerInstrument);
             }
         }
 

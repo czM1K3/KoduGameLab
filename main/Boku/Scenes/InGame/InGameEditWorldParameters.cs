@@ -103,8 +103,6 @@ namespace Boku
 
             }   // end of EditWorldParametersUpdateObj Update()
 
-            private object timerInstrument = null;
-
             public override void Activate()
             {
                 if (!active)
@@ -114,8 +112,6 @@ namespace Boku
                     HelpOverlay.Push("EditWorldParameters");
                     parent.cursor3D.Deactivate();
                     shared.editWorldParameters.Activate();
-
-                    timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameEditWorldParameters);
                 }
             }   // end of EditWorldParametersUpdateObj Activate()
 
@@ -142,8 +138,6 @@ namespace Boku
                     {
                         parent.CurrentUpdateMode = UpdateMode.ToolMenu;
                     }
-
-                    Instrumentation.StopTimer(timerInstrument);
 
                     base.Deactivate();
                 }

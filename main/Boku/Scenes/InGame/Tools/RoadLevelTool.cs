@@ -149,10 +149,8 @@ namespace Boku.Scenes.InGame.Tools
 
         }
 
-        private object timerInstrument = null;
         public override void OnActivate()
         {
-            timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameSmoothLevelTool);
             base.OnActivate();
 
             Boku.InGame.inGame.Cursor3D.Hidden = true;
@@ -171,7 +169,6 @@ namespace Boku.Scenes.InGame.Tools
         public override void OnDeactivate()
         {
             base.OnDeactivate();
-            Instrumentation.StopTimer(timerInstrument);
         }   // end of RoadLevelTool OnDeactivate()
 
         #endregion Internal

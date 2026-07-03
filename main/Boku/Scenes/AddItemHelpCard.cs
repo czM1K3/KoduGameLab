@@ -357,8 +357,6 @@ namespace Boku
                             }
                         }
                     }
-
-                    Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItemHelpCardInsertExample);
                 }
 
                 parent.Deactivate();
@@ -820,8 +818,6 @@ namespace Boku
             Activate(null, null, null);
         }
 
-        private object timerInstrument = null;
-
         /// <summary>
         /// Shortcut to get a description from a typeName.  Used by the AddItemHelpMenu.
         /// </summary>
@@ -896,8 +892,6 @@ namespace Boku
                 InGame.inGame.RenderWorldAsThumbnail = true;
 
                 HelpOverlay.Push(@"HelpCardAddItem");
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.AddItemHelpCards);
             }
         }   // end of Activate
 
@@ -918,8 +912,6 @@ namespace Boku
                 InGame.inGame.RenderWorldAsThumbnail = false;
 
                 HelpOverlay.Pop();
-
-                Instrumentation.StopTimer(timerInstrument);
             }
         }
 

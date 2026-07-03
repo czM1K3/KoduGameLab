@@ -81,8 +81,6 @@ namespace Boku
 
             }   // end of EditObjectParametersUpdateObj Update()
 
-            private object timerInstrument = null;
-
             public override void Activate()
             {
                 if (!active)
@@ -91,8 +89,6 @@ namespace Boku
 
                     parent.cursor3D.Deactivate();
                     shared.editObjectParameters.Activate();
-
-                    timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameEditObjectParameters);
                 }
             }   // end of EditObjectParametersUpdateObj Activate()
 
@@ -101,8 +97,6 @@ namespace Boku
                 if (active)
                 {
                     shared.editObjectParameters.Deactivate();
-
-                    Instrumentation.StopTimer(timerInstrument);
 
                     base.Deactivate();
                 }

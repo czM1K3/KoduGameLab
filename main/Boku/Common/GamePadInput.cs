@@ -2027,10 +2027,6 @@ namespace Boku.Common
         }   // end of GamePadInput ClearAllWasPressedState()
 
 
-        private static object timerInstrumentGamepad = null;
-        private static object timerInstrumentKeyboard = null;
-        private static object activeTimer = new object();
-
         /// <summary>
         /// See whether the user is actively using the keyboard/mouse or the game pad
         /// (or neither). Note this is sticky, so touching the gamepad will leave it in
@@ -2040,12 +2036,6 @@ namespace Boku.Common
         {
             if (gamePad0.wasTouched)
             {
-                if (activeTimer != timerInstrumentGamepad)
-                {
-                    stopActiveInputTimer();
-                    timerInstrumentGamepad = Instrumentation.StartTimer(Instrumentation.TimerId.GamePadInputTime);
-                    activeTimer = timerInstrumentGamepad;
-                }
                 previousMode = activeMode;
                 activeMode = InputMode.GamePad;
                 BokuGame.bokuGame.IsMouseVisible = false;
@@ -2054,12 +2044,6 @@ namespace Boku.Common
             //if we recieve keyboard input and we're in touch mode, stay in touch mode
             else if (TouchInput.IsTouched || (KeyboardInput.WasTouched && activeMode == InputMode.Touch))
             {
-                if (activeTimer != timerInstrumentKeyboard)
-                {
-                    stopActiveInputTimer();
-                    timerInstrumentKeyboard = Instrumentation.StartTimer(Instrumentation.TimerId.KeyboardMouseInputTime);
-                    activeTimer = timerInstrumentKeyboard;
-                }
                 previousMode = activeMode;
                 activeMode = InputMode.Touch;
                 BokuGame.bokuGame.IsMouseVisible = false;
@@ -2067,12 +2051,6 @@ namespace Boku.Common
             }
             else if (KeyboardInput.WasTouched || MouseInput.WasTouched)
             {
-                if (activeTimer != timerInstrumentKeyboard)
-                {
-                    stopActiveInputTimer();
-                    timerInstrumentKeyboard = Instrumentation.StartTimer(Instrumentation.TimerId.KeyboardMouseInputTime);
-                    activeTimer = timerInstrumentKeyboard;
-                }
                 previousMode = activeMode;
                 activeMode = InputMode.KeyboardMouse;
                 BokuGame.bokuGame.IsMouseVisible = true;
@@ -2099,12 +2077,6 @@ namespace Boku.Common
 
         public static void stopActiveInputTimer()
         {
-            //check if a timer is active, and then stop it
-            if (activeTimer == timerInstrumentGamepad ||
-                activeTimer == timerInstrumentKeyboard)
-            {
-                Instrumentation.StopTimer(activeTimer);
-            }
         }
 
         private bool Touched()

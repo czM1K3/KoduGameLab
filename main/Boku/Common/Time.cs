@@ -80,28 +80,12 @@ namespace Boku.Common
             get { return instrumentationTotalSeconds; }
         }
 
-        static object sessionTimerInstrument;
-
         /// <summary>
         /// Indicates if the instrumentation clock needs to be active
         /// </summary>
         public static bool ActiveGameClock
         {
-            set
-            {
-                if (activeGameClock != value)
-                {
-                    if (value == true)
-                    {
-                        sessionTimerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.ActiveSession);
-                    }
-                    else
-                    {
-                        Instrumentation.StopTimer(sessionTimerInstrument);
-                    }
-                }
-               activeGameClock = value;
-            }
+            set { activeGameClock = value; }
             get { return activeGameClock; }
         }
 
@@ -415,17 +399,6 @@ namespace Boku.Common
                 maxMS = (float)(maxFrame * 1000.0);
                 minFrame = delta;
                 maxFrame = delta;
-
-                //for recording frame rate, sample every time fps is updated,
-                // as long as the game is active (i.e., do not sample during
-                // idle time) and in RunSim mode
-                if (ActiveGameClock == true
-                    && InGame.inGame != null
-                    && InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.RunSim
-                    && InGame.inGame.State == InGame.States.Active)
-                {
-                    Instrumentation.recordFrameRate(fps);
-                }
             }
 
             delta *= clockRatio;

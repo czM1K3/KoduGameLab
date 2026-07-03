@@ -79,8 +79,6 @@ namespace Boku.Programming
 
                 tw.Close();
 
-                Instrumentation.IncrementCounter(Instrumentation.CounterId.PrintKode);
-
                 SendToPrinter(fullPath);
             }
         }   // end of PrintProgramming()

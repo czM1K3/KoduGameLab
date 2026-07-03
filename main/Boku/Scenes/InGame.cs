@@ -3661,7 +3661,6 @@ namespace Boku
                 else if (OverBudget && !ignoreResourceBudget)
                 {
                     thing.ExitScene();
-                    Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItemNoBudget);
                     if (Terrain.Current.ShowResourceMeter)
                         Foley.PlayNoBudget();
                     ActorFactory.Recycle(thing as GameActor);
@@ -4126,8 +4125,6 @@ namespace Boku
             return result;
         }   // end of InGame Refresh()
 
-        private object timerInstrument = null;
-
         override public void Activate()
         {
             if (state != States.Active)
@@ -4138,8 +4135,6 @@ namespace Boku
                 }
                 pendingState = States.Active;
                 BokuGame.objectListDirty = true;
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGame);
 
                 Foley.PlaySimEnter();
 
@@ -4154,9 +4149,6 @@ namespace Boku
             {
                 pendingState = States.Inactive;
                 BokuGame.objectListDirty = true;
-
-                // stop timer
-                Instrumentation.StopTimer(timerInstrument);
 
                 // Whether we were in sim mode or edit mode we 
                 // need to pop everything off the stack.
@@ -4539,8 +4531,6 @@ namespace Boku
         {
             if (thing != null)
             {
-                Instrumentation.IncrementCounter(Instrumentation.CounterId.DeleteItem);
-
                 thing.Deactivate();
                 GameActor actor = thing as GameActor;
 
@@ -4583,8 +4573,6 @@ namespace Boku
                 }
 
                 ExplosionManager.CreateSpark(thing.Movement.Position, 100, 0.1f, 1.5f, new Vector4(0.2f, 0.1f, 3.0f, 1.0f));
-
-                Instrumentation.IncrementCounter(Instrumentation.CounterId.CutItem);
             }
         }
 

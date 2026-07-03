@@ -187,10 +187,8 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 selected[i].MakeSelected(false, Vector4.Zero);
             }
         }
-        private object timerInstrument = null;
         public override void OnActivate()
         {
-            timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameDeleteTool);
             base.OnActivate();
 
             PickerX = brushPicker;      // Assign X button to brush picker and activate.
@@ -209,7 +207,6 @@ namespace Boku.Scenes.InGame.MouseEditTools
             UnSelectAll();
 
             inGame.HideCursor();
-            Instrumentation.StopTimer(timerInstrument);
         }
 
         #endregion Internal

@@ -397,8 +397,6 @@ namespace Boku
                 }
                 else
                 {
-                    Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItem);
-
                     GameActor thingToColor = null;
                     GameActor thingToDistort = null;
 
@@ -454,8 +452,6 @@ namespace Boku
                             }
                             else
                             {
-                                Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItemNoBudget);
-
                                 Foley.PlayNoBudget();
                             }
                         }

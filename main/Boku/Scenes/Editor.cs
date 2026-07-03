@@ -2482,7 +2482,6 @@ namespace Boku
             }
         }
         
-        private object timerInstrument = null;
         private Texture2D prevToolIcon = null;  // Keep track of the HelpOverlay's toolIcon so we can restore it when done.
 
         override public void Activate()
@@ -2506,7 +2505,6 @@ namespace Boku
                 HelpOverlay.ToolIcon = CardSpace.Cards.CardFaceTexture(gameActor.StaticActor.MenuTextureFile);
 
                 InGame.inGame.RenderWorldAsThumbnail = true;
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.ProgrammingTime);
             }
         }  
 
@@ -2549,7 +2547,6 @@ namespace Boku
                 }
 
                 //stop the timer for programming time
-                Instrumentation.StopTimer(timerInstrument);
                 StringWriter tw = new StringWriter();
                 Print.SerializeActorProgramming(tw, gameActor);
                 tw.Close();

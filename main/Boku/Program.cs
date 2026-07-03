@@ -46,8 +46,6 @@ namespace Boku
     static partial class Program2
     {
         public static Mutex InstanceMutex;
-        private static string kOptInForUpdatesFilename = @"Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt";
-        private static string kOptInForInstrumentationFilename = @"Options\C90D3C0E-D0B4-4aa6-B35D-0A1D9931FB38.opt";
 
         public static Version ThisVersion;
         public static string CurrentKCodeVersion="10";  // Version of the KCode.
@@ -61,9 +59,6 @@ namespace Boku
         public static CmdLine CmdLine;
 
         public static SiteOptions SiteOptions;
-
-        public static bool InstallerOptCheckForUpdates;
-        public static bool InstallerOptSendInstrumentation;
 
         public static bool bShowVersionWarning = false;
 
@@ -104,16 +99,11 @@ namespace Boku
                         "  /NOEFFECTS \t- turn off depth of field and bloom effects\r\n" +
                         "  /NOAUDIO \t- turn off audio\r\n" +
                         "  /PATH <save folder> \t- override save folder\r\n" +
-                        "  /UPDATE \t- check for updates\r\n" +
-                        "  /NOUPDATE \t- do not check for updates\r\n" +
-                        "  /INSTRUMENTATION \t- send usage information\r\n" +
-                        "  /NOINSTRUMENTATION \t- do not send usage information\r\n" +
                         "  /IMPORT <filename> \t- unpack the kodu level package to your downloads area\r\n" +
                         "  /LOGON \t- ask player for username\r\n" +
                         "  /ANALYTICS \t- run analytics on game being loaded\r\n" +
                         "  /LOCALIZATION <language> \t- report localization information that is missing in the specified language.\r\n" +
                         "  /PIESIZE <int> \t- pie menu maximum size.\r\n" +
-                        "  /SERVICE_API_URL <URL>\r\n" +
                         "");
 
                     return;
@@ -348,12 +338,6 @@ namespace Boku
                             }
                         }
                     }
-
-                    // Record current language to instrumentation.
-                    if (!String.IsNullOrEmpty(lang))
-                    {
-                        Instrumentation.RecordDataItem(Instrumentation.DataItemId.Language, lang);
-                    }
                 }
 
                 {
@@ -378,11 +362,6 @@ namespace Boku
                     settings.LowModels = CmdLine.GetBool("LowModels", settings.LowModels);
                     settings.Audio = !CmdLine.GetBool("NoAudio", !settings.Audio);
 
-                    // Update flags for update checking and instrumentation gathering from both the command line arguments and privacy options chosen during installation.
-
-                    // XmlOptionsData will default to these values if these options have not been overridden in the Options screen.
-                    InstallerOptCheckForUpdates = File.Exists(Storage4.TitleLocation + @"\" + kOptInForUpdatesFilename);
-                    InstallerOptSendInstrumentation = File.Exists(Storage4.TitleLocation + @"\" + kOptInForInstrumentationFilename);
 
                     // XmlOptionData.CheckForUpdates combines the installer option
                     // as well as any user override.
@@ -397,26 +376,6 @@ namespace Boku
                     {
                         // Note that this seems inverted because of the stupid naming.
                         SiteOptions.InstrumentationUnchecked = XmlOptionsData.SendInstrumentation;
-                    }
-
-                    // Allow command line arguments to override in-game settings.
-                    if (CmdLine.Exists("Update"))
-                    {
-                        SiteOptions.CheckForUpdates = true;
-                    }
-                    if (CmdLine.Exists("NoUpdate"))
-                    {
-                        SiteOptions.CheckForUpdates = false;
-                    }
-                    if (CmdLine.Exists("Instrumentation"))
-                    {
-                        // Note that this seems inverted because of the stupid naming.
-                        SiteOptions.InstrumentationUnchecked = true;
-                    }
-                    if (CmdLine.Exists("NoInstrumentation"))
-                    {
-                        // Note that this seems inverted because of the stupid naming.
-                        SiteOptions.InstrumentationUnchecked = false;
                     }
 
                     /// This is fortuitously timed. We have already pulled the settings file
@@ -437,14 +396,6 @@ namespace Boku
                 }
 
                 {
-                    // Record this installation's unique ID to instrumentation.
-                    Instrumentation.RecordDataItem(Instrumentation.DataItemId.InstallationUniqueId, SiteID.Instance.Value.ToString());
-
-                    // We just fetched the latest ServiceApiUrl.  Now override it if needed.
-                    if (CmdLine.Exists("SERVICE_API_URL"))
-                    {
-                        KoduService.ServiceApiUrl = CmdLine.GetString("SERVICE_API_URL", "");
-                    }
 
                     // ====================================================
 

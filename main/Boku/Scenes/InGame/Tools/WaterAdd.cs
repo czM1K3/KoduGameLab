@@ -109,12 +109,8 @@ namespace Boku.Scenes.InGame.Tools
             Water.CurrentType = wasType;
         }
 
-        private object timerInstrument = null;
-
         public override void OnActivate()
         {
-            timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameWaterTool);
-            
             base.OnActivate();
 
             PickerY = waterPicker;
@@ -127,8 +123,6 @@ namespace Boku.Scenes.InGame.Tools
             inGame.HideCursor();
 
             base.OnDeactivate();
-
-            Instrumentation.StopTimer(timerInstrument);
         }   // end of WaterAdd OnDeactivate()
         #endregion Internal
 

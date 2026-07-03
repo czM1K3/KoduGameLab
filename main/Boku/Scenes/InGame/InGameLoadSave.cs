@@ -1446,9 +1446,6 @@ namespace Boku
                 }
             }
 
-
-            Instrumentation.RecordEvent(Instrumentation.EventId.LevelLoaded, xmlWorldData.id.ToString());
-
             xmlLevelDataFullPath = null;
 
             // Reset focus actor

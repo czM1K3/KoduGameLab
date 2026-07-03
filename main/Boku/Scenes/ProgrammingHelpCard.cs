@@ -807,9 +807,7 @@ namespace Boku
                         }
                     }
                 }
-
-                Instrumentation.IncrementCounter(Instrumentation.CounterId.ProgrammingHelpCardInsertExample);
-
+                
                 parent.Deactivate();
 
             }   // end of Insert()
@@ -1274,8 +1272,6 @@ namespace Boku
             Activate(null, null);
         }
 
-        private object timerInstrument = null;
-
         public void Activate(ProgrammingElement focusElement, PieSelector parent)
         {
             this.parent = parent;
@@ -1304,8 +1300,6 @@ namespace Boku
                 HelpOverlay.Push(@"HelpCardProgramming");
 
                 ToolTipManager.Clear();
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.ProgrammingHelpCards);
             }
         }   // end of Activate
 
@@ -1328,8 +1322,6 @@ namespace Boku
                 }
 
                 HelpOverlay.Pop();
-
-                Instrumentation.StopTimer(timerInstrument);
             }
         }
 

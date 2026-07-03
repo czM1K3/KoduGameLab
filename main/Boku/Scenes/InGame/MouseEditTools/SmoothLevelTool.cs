@@ -87,11 +87,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
         #endregion Public
 
         #region Internal
-        private object timerInstrument = null;
 
         public override void OnActivate()
         {
-            timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameSmoothLevelTool);
             base.OnActivate();
 
             PickerX = brushPicker;      // Assign X button to brush picker and activate.
@@ -118,7 +116,6 @@ namespace Boku.Scenes.InGame.MouseEditTools
         public override void OnDeactivate()
         {
             base.OnDeactivate();
-            Instrumentation.StopTimer(timerInstrument);
         }   // end of OnDeactivate()
         #endregion Internal
 

@@ -1127,24 +1127,18 @@ namespace Boku
                         }
                         break;
                     case ModeChange.Add:
-                        Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItem);
-
                         if (!quiet)
                         {
                             Foley.PlayMakePath();
                         }
                         break;
                     case ModeChange.Delete:
-                        Instrumentation.IncrementCounter(Instrumentation.CounterId.DeleteItem);
-
                         if (!quiet)
                         {
                             Foley.PlayCut();
                         }
                         break;
                     case ModeChange.NoBudget:
-                        Instrumentation.IncrementCounter(Instrumentation.CounterId.AddItemNoBudget);
-
                         if (!quiet)
                         {
                             Foley.PlayNoBudget();

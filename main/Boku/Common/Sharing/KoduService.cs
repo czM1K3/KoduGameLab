@@ -134,8 +134,6 @@ namespace Boku.Common.Sharing
 		{
 			string url = ServiceApiUrl + "search";
 
-            Instrumentation.RecordEvent(Instrumentation.EventId.SearchLevels, args.ToString());
-
 			MakeHttpRequest(url, args, callback);
 
 		}   // end of Search()
@@ -168,9 +166,6 @@ namespace Boku.Common.Sharing
 		{
 			string url = ServiceApiUrl + "deleteWorld";
 
-			//todo. validate.
-			Instrumentation.RecordEvent(Instrumentation.EventId.LevelDeleted, args.ToString());
-
 			MakeHttpRequest(url, args, callback);
 
 		}   // end of DeleteWorld()
@@ -200,8 +195,6 @@ namespace Boku.Common.Sharing
 
 						// Pass on data url and callback to DownloadData.
 						DownloadData(dataUrl, callback);
-
-						Instrumentation.RecordEvent(Instrumentation.EventId.LevelDownloaded, args.ToString());
 					}
 					catch
 					{
@@ -222,9 +215,7 @@ namespace Boku.Common.Sharing
         /// <param name="callback">Gets null on failure.</param>
 		public static void UploadWorld(object args, string levelPath,string thumbPath,string screenPath, GenericObjectCallback callback)
 		{
-            Instrumentation.RecordEvent(Instrumentation.EventId.LevelUploaded, args.ToString());
-
-			// Create an upload request.
+            // Create an upload request.
 			string url = ServiceApiUrl + "authorizeUpload/";
 			MakeHttpRequest(url, args, (response) => {
 				if (response == null)
@@ -493,17 +484,8 @@ namespace Boku.Common.Sharing
 						});
 					}
 				});
-			}catch(Exception ex)
+			}catch(Exception)
             {
-				Instrumentation.RecordException(new
-				{
-					type = "HTP",
-					url = url,
-					args = args,
-					message = ex.Message,
-					//body = ex.InnerException.Message
-					/*, time = timer.Elapsed */
-				});
 				callback(null);
 			}
 		}
@@ -551,17 +533,8 @@ namespace Boku.Common.Sharing
 					}
 				});
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
-				Instrumentation.RecordException(new
-				{
-					type = "HTP",
-					url = url,
-					args = "",
-					message = ex.Message,
-					//body = ex.InnerException.Message
-					/*, time = timer.Elapsed */
-				});
 				callback(null);
 			}
 
@@ -593,17 +566,8 @@ namespace Boku.Common.Sharing
 					callback(response);
 				});
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
-				Instrumentation.RecordException(new
-				{
-					type = "HTP",
-					url = url,
-					args = "",
-					message = ex.Message,
-					//body = ex.InnerException.Message
-					/*, time = timer.Elapsed */
-				});
 				callback(null);
 			}
 
@@ -631,11 +595,9 @@ namespace Boku.Common.Sharing
 						body = reader.ReadToEnd();
 					}
 				}
-				Instrumentation.RecordException(new { type = "WEX", url = url, args = args, message = ex.Message, body = "", time = elapsed });
             }
             else
             {
-				Instrumentation.RecordException(new { type = "EX", url = url, args = args, message = ex.Message, time = elapsed });
 			}
 		}
         /// <summary>
@@ -662,17 +624,8 @@ namespace Boku.Common.Sharing
 					callback("");
 				});
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
-				Instrumentation.RecordException(new
-				{
-					type = "HTP",
-					url = url,
-					args = "",
-					message = ex.Message,
-					//body = ex.InnerException.Message
-					/*, time = timer.Elapsed */
-				});
 				callback(null);
 			}
 			//response.EnsureSuccessStatusCode();

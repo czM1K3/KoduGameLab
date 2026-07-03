@@ -835,8 +835,6 @@ namespace Boku
             return result;
         }   // end of MainMenu Refresh()
 
-        private object timerInstrument = null;
-
         override public void Activate()
         {
             if (state != States.Active)
@@ -857,8 +855,6 @@ namespace Boku
 
                 // Not persisting, make sure it's empty.
                 XmlOptionsData.WebUserSecret = String.Empty;
-
-                timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.MainMenuTime);
 
                 Foley.PlayMenuLoop();
             }
@@ -883,8 +879,6 @@ namespace Boku
                 BokuGame.objectListDirty = true;
 
                 GamePadInput.IgnoreUntilReleased(Buttons.A);
-
-                Instrumentation.StopTimer(timerInstrument);
 
                 Foley.StopMenuLoop();
             }
