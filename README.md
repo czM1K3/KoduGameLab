@@ -3,6 +3,8 @@ This fork is about stripping down unnecessary code, so that porting to newer tec
 
 ## TODO
 - [x] Remove BBC micro:bit support
+- [x] Remove setup
+- [x] Remove tests
 - [ ] Remove community features
 - [x] Remove news features
 - [ ] Remove multi user prompt
